@@ -16,7 +16,7 @@ namespace Find_A_Name
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new farmLogin());
         }
     }
 }

@@ -45,16 +45,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="farmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="farmHome.Designer.cs">
+      <DependentUpon>farmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="farmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="farmLogin.Designer.cs">
+      <DependentUpon>farmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabourerPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LabourerPage.Designer.cs">
+      <DependentUpon>LabourerPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="farmHome.resx">
+      <DependentUpon>farmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="farmLogin.resx">
+      <DependentUpon>farmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabourerPage.resx">
+      <DependentUpon>LabourerPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
