@@ -12,7 +12,7 @@ using System.Data;
 
 namespace Find_A_Name
 {
-    public class MYSQLCon : DbConection
+    public class MySQLCon : DbConection
     {
         //
         // Based on example from

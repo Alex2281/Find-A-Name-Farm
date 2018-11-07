@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Find_A_Name
 {
-    class Employee
+    public class Employee
     {
         private int m_id;
-        public int ID { get { return m_id; } set { m_id = value; } }
+        public int Id { get { return m_id; } set { m_id = value; } }
 
         private String m_name;
         public String Name { get { return m_name; } set { m_name = value; } }
