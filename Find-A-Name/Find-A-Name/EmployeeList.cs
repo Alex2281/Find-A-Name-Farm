@@ -54,22 +54,5 @@ namespace Find_A_Name
 
         }
 
-        private void btnTest_Click_1(object sender, EventArgs e)
-        {
-            BusinessMetaLayer ml = BusinessMetaLayer.instance();
-            m_employees = ml.getEmployees();
-            m_bs.DataSource = m_employees;
-            m_bs.ResetBindings(false);
-
-            // Fill data grid
-            DbConection con = DbFactory.instance();
-            con.OpenConnection();
-            dataSet = con.getDataSet("Select * from Employees");
-            DataTable table = dataSet.Tables[0];
-            //FillInTextFields(table, 1);
-            //set up the data grid view
-            this.dataGridView1.DataSource = table;
-        }
-
     }
 }

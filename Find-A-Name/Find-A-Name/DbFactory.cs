@@ -15,7 +15,7 @@ namespace Find_A_Name
         private static DbConection m_instance = null;
 
         Dictionary<string, string> m_properties;
-        private static string propfile = "properties-odbc.dat";
+        private static string propfile = "properties-odbc-v12.dat";
 
         private DbFactory()
         {
@@ -38,10 +38,9 @@ namespace Find_A_Name
             {
                 m_properties = getProperties();
                 string provider = m_properties["Provider"];
-                //if (provider.Equals("MySQL"))
-                  //  connection = new MySQLCon(m_properties);
-                //else 
-                if (provider.Equals("Microsoft.ACE.OLEDB.16.0"))
+               if (provider.Equals("MySQL"))
+                   connection = new MySQLCon(m_properties);
+                else if (provider.Equals("Microsoft.ACE.OLEDB.16.0"))
                     connection = new OleDatabaseConnection(m_properties);
                 else if (provider.Equals("Microsoft.ACE.OLEDB.12.0"))
                     connection = new OleDatabaseConnection(m_properties);

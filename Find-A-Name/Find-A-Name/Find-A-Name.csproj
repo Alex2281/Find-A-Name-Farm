@@ -73,6 +73,7 @@
     <Compile Include="LabourerPage.Designer.cs">
       <DependentUpon>LabourerPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MYSQLCon.cs" />
     <Compile Include="OleDatabaseConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
