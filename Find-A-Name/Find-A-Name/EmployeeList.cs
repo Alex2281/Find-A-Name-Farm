@@ -34,7 +34,7 @@ namespace Find_A_Name
             // Fill data grid
             DbConection con = DbFactory.instance();
             con.OpenConnection();
-            dataSet = con.getDataSet("Select * from customers");
+            dataSet = con.getDataSet("Select * from Employees");
             DataTable table = dataSet.Tables[0];
             //FillInTextFields(table, 1);
             //set up the data grid view
@@ -64,7 +64,7 @@ namespace Find_A_Name
             // Fill data grid
             DbConection con = DbFactory.instance();
             con.OpenConnection();
-            dataSet = con.getDataSet("Select * from customers");
+            dataSet = con.getDataSet("Select * from Employees");
             DataTable table = dataSet.Tables[0];
             //FillInTextFields(table, 1);
             //set up the data grid view
