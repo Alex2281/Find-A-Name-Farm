@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessMetaLayer.cs" />
+    <Compile Include="DbFactory.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="farmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +66,8 @@
     <Compile Include="LabourerPage.Designer.cs">
       <DependentUpon>LabourerPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="MYSQLCon.cs" />
+    <Compile Include="OleDatabaseConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="farmHome.resx">
