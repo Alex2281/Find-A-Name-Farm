@@ -1,0 +1,17 @@
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.csprojAssemblyReference.cache
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.farmHome.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.farmLogin.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.LabourerPage.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.Properties.Resources.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.csproj.GenerateResource.cache
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.csproj.CoreCompileInputs.cache
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\bin\Debug\Find-A-Name.exe.config
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\bin\Debug\Find-A-Name.exe
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\bin\Debug\Find-A-Name.pdb
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\bin\Debug\MySql.Data.dll
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\bin\Debug\Google.Protobuf.dll
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\bin\Debug\MySql.Data.xml
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.csproj.CopyComplete
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.exe
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.pdb
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.EmployeeList.resources
