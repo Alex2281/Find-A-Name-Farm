@@ -30,7 +30,7 @@ namespace Find_A_Name
             DbConection con = DbFactory.instance();
             if (con.OpenConnection())
             {
-                DbDataReader dr = con.Select("SELECT employeeId, firstName, lastName, emailAddress FROM Employees;");
+                DbDataReader dr = con.Select("SELECT EmployeeId, EmployeeName, EmployeeAddress, EmployeeCity FROM Employees;");
 
                 //Read the data and store them in the list
                 while (dr.Read())
