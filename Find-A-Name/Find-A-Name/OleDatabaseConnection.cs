@@ -104,7 +104,7 @@ namespace Find_A_Name
 
             DataSet dataSet;
 
-            // create the object dataAdapter to manipulate a table from the database StudentDissertations specified by connectionToDB
+            // create the object dataAdapter to manipulate a table from the database FindAName.accb specified by connectionToDB
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStatement, connection);
             // create the dataset
             dataSet = new System.Data.DataSet();

@@ -34,11 +34,9 @@ namespace Find_A_Name
             // Fill data grid
             DbConection con = DbFactory.instance();
             con.OpenConnection();
-            dataSet = con.getDataSet("Select * from Employees");
-            DataTable table = dataSet.Tables[0];
-            //FillInTextFields(table, 1);
-            //set up the data grid view
-            this.dataGridView1.DataSource = table;
+
+            //Display To Form Object
+            this.dataGridView1.DataSource = m_bs.DataSource;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
