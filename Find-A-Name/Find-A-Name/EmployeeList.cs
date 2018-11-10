@@ -20,8 +20,8 @@ namespace Find_A_Name
         {
             InitializeComponent();
             m_bs = new BindingSource();
-            m_bs.DataSource = m_employees;
-            cmbEmployees.DataSource = m_bs;
+            //m_bs.DataSource = m_employees;
+            //cmbEmployees.DataSource = m_bs;
         }
 
         private void btnTest_Click(object sender, EventArgs e)
@@ -32,8 +32,8 @@ namespace Find_A_Name
             m_bs.ResetBindings(false);
 
             // Fill data grid
-            DbConection con = DbFactory.instance();
-            con.OpenConnection();
+            //DbConection con = DbFactory.instance();
+            //con.OpenConnection();
 
             //Display To Form Object
             this.dataGridView1.DataSource = m_bs.DataSource;
