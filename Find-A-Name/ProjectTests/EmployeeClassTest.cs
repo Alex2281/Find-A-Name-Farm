@@ -24,8 +24,8 @@ namespace ProjectTests
         [TestMethod]
         public void PhoneTest()
         {
-            e.Phone = 2;
-            Assert.AreEqual(2, e.Phone);
+            e.Phone = 07968790700;
+            Assert.AreEqual(07968790700, e.Phone);
         }
         [TestMethod]
         public void AddressTest()

@@ -14,8 +14,8 @@ namespace Find_A_Name
         private String m_name;
         public String Name { get { return m_name; } set { m_name = value; } }
 
-        private int m_phone;
-        public int Phone { get { return m_phone; } set { m_phone = value; } }
+        private Int64 m_phone;
+        public Int64 Phone { get { return m_phone; } set { m_phone = value; } }
 
         private String m_address;
         public String Address { get { return m_address; } set { m_address = value; } }

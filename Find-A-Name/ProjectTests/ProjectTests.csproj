@@ -49,8 +49,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CropClassTest.cs" />
     <Compile Include="EmployeeClassTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehicleClassTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
