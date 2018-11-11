@@ -69,6 +69,7 @@
       <DependentUpon>farmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Fertiliser.cs" />
+    <Compile Include="Field.cs" />
     <Compile Include="LabourerPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +80,8 @@
     <Compile Include="OleDatabaseConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StorageUnit.cs" />
+    <Compile Include="Task.cs" />
     <Compile Include="Vehicle.cs" />
     <EmbeddedResource Include="EmployeeList.resx">
       <DependentUpon>EmployeeList.cs</DependentUpon>
