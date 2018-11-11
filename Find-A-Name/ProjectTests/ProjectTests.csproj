@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="CropClassTest.cs" />
     <Compile Include="EmployeeClassTest.cs" />
+    <Compile Include="FertiliserClassTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VehicleClassTest.cs" />
   </ItemGroup>
