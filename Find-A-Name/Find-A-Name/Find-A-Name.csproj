@@ -68,6 +68,7 @@
     <Compile Include="farmLogin.Designer.cs">
       <DependentUpon>farmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fertiliser.cs" />
     <Compile Include="LabourerPage.cs">
       <SubType>Form</SubType>
     </Compile>
