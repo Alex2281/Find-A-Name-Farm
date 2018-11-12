@@ -30,7 +30,7 @@ namespace Find_A_Name
             DbConection con = DbFactory.instance();
             if (con.OpenConnection())
             {
-                DbDataReader dr = con.Select("SELECT employeeId AS ID, lastName+', '+firstName AS Name, postCode AS Address, contactNumber AS Phone, emailAddress AS Email, accessPrivilage AS Privilage, dateCreated AS Created FROM Employees;");
+                DbDataReader dr = con.Select("SELECT employeeId AS ID, lastName+', '+firstName AS Name, postCode AS Address, contactNumber AS Phone, emailAddress AS Email, username AS UserName, password AS Secret, accessPrivilage AS Privilage, dateCreated AS Created FROM Employees;");
 
                 //Read the data and store them in the list
                 while (dr.Read())
@@ -38,11 +38,13 @@ namespace Find_A_Name
                     Employee employee = new Employee();
                     employee.Id = dr.GetInt32(0);
                     employee.Name = dr.GetString(1);
-                    employee.Phone = dr.GetInt32(2);
-                    employee.Address = dr.GetString(3);
+                    employee.Address = dr.GetString(2);
+                    employee.Phone = dr.GetInt32(3);
                     employee.Email = dr.GetString(4);
-                    employee.Privilage = dr.GetBoolean(5);
-                    //employee.Created = dr.GetDateTime(6);
+                    employee.UserName = dr.GetString(5);
+                    employee.Secret = dr.GetString(6);
+                    employee.Privilage = dr.GetBoolean(7);
+                    //employee.Created = dr.GetDateTime(8);
                     employees.Add(employee);
                 }
                 //close Data Reader

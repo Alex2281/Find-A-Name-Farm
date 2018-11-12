@@ -40,6 +40,18 @@ namespace ProjectTests
             Assert.AreEqual("Home", e.Address);
         }
         [TestMethod]
+        public void UserNameTest()
+        {
+            e.UserName = "User";
+            Assert.AreEqual("User", e.UserName);
+        }
+        [TestMethod]
+        public void PasswordTest()
+        {
+            e.Password = "Guest";
+            Assert.AreEqual("Guest", e.Password);
+        }
+        [TestMethod]
         public void PrivilageTest()
         {
             e.Privilage = true;

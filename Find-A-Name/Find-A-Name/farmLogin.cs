@@ -15,13 +15,14 @@ namespace Find_A_Name
 {
     public partial class farmLogin : Form
     {
-        SqlConnection con = new SqlConnection();
+        private OleDbConnection connection = new OleDbConnection();
         public farmLogin()
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\repos\Find-A-Name-Farm\Find-A-Name\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30";
 
             InitializeComponent();
+            OleDbConnection connection = new OleDbConnection();
+            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\myFolder\myAccessFile.accdb;
+Persist Security Info=False;";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -31,26 +32,33 @@ namespace Find_A_Name
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\repos\Find-A-Name-Farm\Find-A-Name\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30";
-            con.Open();
-            string userid = txtUsername.Text;
-            string password = txtPassword.Text;
-            SqlCommand cmd = new SqlCommand("select userid,password from login where userid='" + txtUsername.Text + "'and password='" + txtPassword.Text + "'", con);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            connection.Open();
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = connection;
+            command.CommandText = "select * from Employees where userName='"+ txtUsername.Text + "' and password='" + txtPassword.Text + "'";
 
-            if (dt.Rows.Count > 0)
+
+            OleDbDataReader reader = command.ExecuteReader();
+            int count = 0;
+            while(reader.Read())
             {
-                MessageBox.Show("Login sucess Welcome to Homepage");
-                System.Diagnostics.Process.Start("");
+                count = count + 1;
+            }
+            if(count == 1)
+            {
+                MessageBox.Show("Username and password is correct");
+            }
+            else if(count > 1)
+            {
+                MessageBox.Show("Duplicate username and password");
+
             }
             else
             {
-                MessageBox.Show("Invalid Login please check username and password");
+                MessageBox.Show("Username and password is not correct");
             }
-            con.Close();
+
+            connection.Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -60,8 +68,27 @@ namespace Find_A_Name
 
         private void farmLogin_Load(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\repos\Find-A-Name-Farm\Find-A-Name\DB\LoginDB.mdf;Integrated Security=True;Connect Timeout=30");
-            con.Open();
+            
+            try
+            {
+                
+                connection.Open();
+                checkConnection.Text = "Connection successful";
+                connection.Close();
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error " + ex);
+            }
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
