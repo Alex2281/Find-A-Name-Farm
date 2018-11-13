@@ -50,6 +50,7 @@
             this.cmbEmployees.Name = "cmbEmployees";
             this.cmbEmployees.Size = new System.Drawing.Size(121, 21);
             this.cmbEmployees.TabIndex = 1;
+            this.cmbEmployees.SelectedIndexChanged += new System.EventHandler(this.cmbEmployees_SelectedIndexChanged);
             // 
             // btnTest
             // 
