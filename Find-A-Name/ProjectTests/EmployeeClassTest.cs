@@ -57,5 +57,10 @@ namespace ProjectTests
             e.Privilage = true;
             Assert.IsTrue(e.Privilage);
         }
+        [TestMethod]
+        public void DateTimeTest()
+        {
+            e.Created = DateTime.(10 / 10 / 2010);
+        }
     }
 }
