@@ -30,24 +30,25 @@ namespace Find_A_Name
         private void btnLogin_Click(object sender, EventArgs e)
         {
             BusinessMetaLayer ln = BusinessMetaLayer.instance();
+            
             m_privilage = ln.farmLogin(txtUsername.Text, txtPassword.Text);
-            //*
-            //if(retv = 0)
-            //{
+            
+            if(m_privilage == 0)
+            {
 
-            //}
-            //else if (retv = 1)
-            //{
-
-            //}
-            //else if (retv = 2)
-            //{
-
-            //}
-            //else
-            //{
-
-            //}
+            }
+            else if (m_privilage == 1)
+            {
+                
+            }
+            else if (m_privilage == 2)
+            {
+                
+            }
+            else
+            {
+                MessageBox.Show("Username / password combimation incorrect");
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
