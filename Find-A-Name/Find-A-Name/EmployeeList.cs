@@ -20,8 +20,8 @@ namespace Find_A_Name
         {
             InitializeComponent();
             m_bs = new BindingSource();
-            //m_bs.DataSource = m_employees;
-            //cmbEmployees.DataSource = m_bs;
+            m_bs.DataSource = m_employees;
+            cmbEmployees.DataSource = m_bs;
         }
 
         private void btnTest_Click(object sender, EventArgs e)
@@ -52,5 +52,9 @@ namespace Find_A_Name
 
         }
 
+        private void cmbEmployees_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
