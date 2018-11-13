@@ -35,15 +35,11 @@ namespace Find_A_Name
             
             if(m_privilage == 0)
             {
-
+                MessageBox.Show("User is a Manager");
             }
             else if (m_privilage == 1)
             {
-                
-            }
-            else if (m_privilage == 2)
-            {
-                
+                MessageBox.Show("User is a Worker");
             }
             else
             {
@@ -59,13 +55,6 @@ namespace Find_A_Name
         private void farmLogin_Load(object sender, EventArgs e)
         {
             
-            try
-            {
-                
-            }catch(Exception ex)
-            {
-                MessageBox.Show("Error " + ex);
-            }
         }
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
@@ -74,6 +63,11 @@ namespace Find_A_Name
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
