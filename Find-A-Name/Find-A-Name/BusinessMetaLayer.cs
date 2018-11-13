@@ -24,36 +24,37 @@ namespace Find_A_Name
 
         public int farmLogin(String txtUsername, String txtPassword)
         {
-            string message = "";
             int retv = -1;
+            
             DbConection con = DbFactory.instance();
             
             if (con.OpenConnection())
             {
-                String sql = "SELECT * from Employees where userName='"+ txtUsername + "' AND password='" + txtPassword +"'";
+                String sql = "SELECT accessPrivilage FROM Employees WHERE userName = '" + txtUsername + "' AND password = '" + txtPassword +"'";
                 DbDataReader reader = con.Select(sql);
-                
-                       
-                int count = 0;
-                //Read the data and store them in the list
+
+                //if(reader)
+                //{
                 while (reader.Read())
                 {
-                    count = count + 1;
-                }
-                if (count == 1)
-                {
-                    message = "Username and password is correct";
-                }
-                else if (count > 1)
-                {
-                    message = "Duplicate username and password";
+                    //Read the data
+                    bool privilage = reader.GetBoolean(0);
 
+                    if (privilage)
+                    {
+                        retv = 0;
+                    }
+                    else if (!privilage)
+                    {
+                        retv = 1;
+                    }
+                    else
+                    {
+                        retv = 2;
+                    }
+                    //close Data Reader
                 }
-                else
-                {
-                    message = "Username and password is not correct";
-                }
-                //close Data Reader
+                //}
                 reader.Close();
                 con.CloseConnection();
             }

@@ -16,7 +16,6 @@ namespace Find_A_Name
 {
     public partial class farmLogin : Form
     {
-        private OleDbConnection connection = new OleDbConnection();
         private int m_privilage = -1;
         public farmLogin()
         {
@@ -31,7 +30,24 @@ namespace Find_A_Name
         private void btnLogin_Click(object sender, EventArgs e)
         {
             BusinessMetaLayer ln = BusinessMetaLayer.instance();
-            m_privilage = ln.farmLogin(txtPassword.Text, txtPassword.Text);
+            m_privilage = ln.farmLogin(txtUsername.Text, txtPassword.Text);
+            //*
+            //if(retv = 0)
+            //{
+
+            //}
+            //else if (retv = 1)
+            //{
+
+            //}
+            //else if (retv = 2)
+            //{
+
+            //}
+            //else
+            //{
+
+            //}
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -45,9 +61,6 @@ namespace Find_A_Name
             try
             {
                 
-                connection.Open();
-                checkConnection.Text = "Connection successful";
-                connection.Close();
             }catch(Exception ex)
             {
                 MessageBox.Show("Error " + ex);

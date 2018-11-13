@@ -28,6 +28,7 @@ namespace Find_A_Name
 
         private String m_password;
         public String Password { get { return m_password; } set { m_password = value; } }
+
         private bool m_privilage;
         public bool Privilage { get { return m_privilage; } set { m_privilage = value; } }
 
