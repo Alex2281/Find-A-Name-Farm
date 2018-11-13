@@ -22,11 +22,11 @@ namespace Find_A_Name
             return m_instance;
         }
 
+        DbConection con = DbFactory.instance();
+
         public int farmLogin(String txtUsername, String txtPassword)
         {
-            int retv = -1;
-            
-            DbConection con = DbFactory.instance();
+            int retv = -1;  
             
             if (con.OpenConnection())
             {
@@ -63,10 +63,9 @@ namespace Find_A_Name
         {
             List<Employee> employees = new List<Employee>();
 
-            DbConection con = DbFactory.instance();
             if (con.OpenConnection())
             {
-                DbDataReader dr = con.Select("SELECT employeeId AS ID, lastName+', '+firstName AS Name, postCode AS Address, contactNumber AS Phone, emailAddress AS Email, userName AS Username, password AS Secret, accessPrivilage AS Privilage, dateCreated AS Created FROM Employees;");
+                DbDataReader dr = con.Select("SELECT employeeId AS Id, lastName+', '+firstName AS Name, postCode AS Address, contactNumber AS Phone, emailAddress AS Email, userName AS Username, password AS Secret, accessPrivilage AS Privilage, dateCreated AS Created FROM Employees;");
 
                 //Read the data and store them in the list
                 while (dr.Read())
@@ -80,7 +79,7 @@ namespace Find_A_Name
                     employee.Username = dr.GetString(5);
                     employee.Password = dr.GetString(6);
                     employee.Privilage = dr.GetBoolean(7);
-                    //employee.Created = dr.GetDateTime(8);
+                    employee.Created = dr.GetDateTime(8);
                     employees.Add(employee);
                 }
                 //close Data Reader

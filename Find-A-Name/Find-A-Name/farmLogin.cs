@@ -7,10 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.Sql;
-using System.Data.OleDb;
-using System.Data.SqlClient;
-using System.Data.Common;
+
 
 namespace Find_A_Name
 {
@@ -33,17 +30,18 @@ namespace Find_A_Name
             
             m_privilage = ln.farmLogin(txtUsername.Text, txtPassword.Text);
             
-            if(m_privilage == -1)
+            if (m_privilage == 0)
             {
-                MessageBox.Show("Please Enter a 'Username' & 'Password' in the fields provided!");
-            }
-            else if (m_privilage == 0)
-            {
-                MessageBox.Show("User is a Manager");
+                Inventory n = new Inventory();
+                n.Show();
             }
             else if (m_privilage == 1)
             {
                 MessageBox.Show("User is a Worker");
+            }
+            else if (m_privilage == -1)
+            {
+                MessageBox.Show("Please Enter a valid 'Username' & 'Password' in the fields provided!");
             }
             else
             {

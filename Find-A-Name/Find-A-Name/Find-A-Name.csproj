@@ -50,11 +50,11 @@
     <Compile Include="Crop.cs" />
     <Compile Include="DbFactory.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="EmployeeList.cs">
+    <Compile Include="Inventory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EmployeeList.Designer.cs">
-      <DependentUpon>EmployeeList.cs</DependentUpon>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
     <Compile Include="farmHome.cs">
       <SubType>Form</SubType>
@@ -83,8 +83,8 @@
     <Compile Include="StorageUnit.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="Vehicle.cs" />
-    <EmbeddedResource Include="EmployeeList.resx">
-      <DependentUpon>EmployeeList.cs</DependentUpon>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="farmHome.resx">
       <DependentUpon>farmHome.cs</DependentUpon>
