@@ -18,7 +18,6 @@ namespace Find_A_Name
         private OleDbConnection connection = new OleDbConnection();
         public farmLogin()
         {
-
             InitializeComponent();
             OleDbConnection connection = new OleDbConnection();
             connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\myFolder\myAccessFile.accdb;
