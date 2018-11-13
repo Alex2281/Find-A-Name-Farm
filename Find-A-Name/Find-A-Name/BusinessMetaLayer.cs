@@ -89,5 +89,31 @@ namespace Find_A_Name
 
             return employees;
         }
+
+        public List<Vehicle> getVehicles()
+        {
+            List<Vehicle> vehicles = new List<Vehicle>();
+
+            if (con.OpenConnection())
+            {
+                DbDataReader dr = con.Select("SELECT vehicleId AS Id, vehicleType AS Name, vehicleDescription AS Details, vehicleStatusId AS Status FROM Vehicles;");
+
+                //Read the data and store them in the list
+                while (dr.Read())
+                {
+                    Vehicle vehicle = new Vehicle();
+                    vehicle.Id = dr.GetInt32(0);
+                    vehicle.Type = dr.GetString(1);
+                    vehicle.Description = dr.GetString(2);
+                    vehicle.VehicleStatusId = dr.GetInt32(3);
+                    vehicles.Add(vehicle);
+                }
+                //close Data Reader
+                dr.Close();
+                con.CloseConnection();
+            }
+
+            return vehicles;
+        }
     }
 }

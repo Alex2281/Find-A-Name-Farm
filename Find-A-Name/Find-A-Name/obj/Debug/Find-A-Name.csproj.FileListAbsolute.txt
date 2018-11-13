@@ -14,7 +14,6 @@ C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\bin\Debug
 C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.csproj.CopyComplete
 C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.exe
 C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.pdb
-C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.EmployeeList.resources
 H:\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name\Find-A-Name\bin\Debug\Find-A-Name.exe.config
 H:\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name\Find-A-Name\bin\Debug\Find-A-Name.exe
 H:\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name\Find-A-Name\bin\Debug\Find-A-Name.pdb
@@ -47,3 +46,4 @@ C:\Users\411558\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\
 C:\Users\411558\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.csproj.CopyComplete
 C:\Users\411558\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.exe
 C:\Users\411558\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.pdb
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.Inventory.resources

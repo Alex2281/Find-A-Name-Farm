@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lstEmployees = new System.Windows.Forms.Button();
             this.navBack = new System.Windows.Forms.Button();
             this.lstVehicles = new System.Windows.Forms.Button();
             this.lstFields = new System.Windows.Forms.Button();
             this.lstCrops = new System.Windows.Forms.Button();
             this.lstStorage = new System.Windows.Forms.Button();
+            this.lstEmployees = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,16 +46,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(825, 422);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // lstEmployees
-            // 
-            this.lstEmployees.Location = new System.Drawing.Point(12, 12);
-            this.lstEmployees.Name = "lstEmployees";
-            this.lstEmployees.Size = new System.Drawing.Size(75, 23);
-            this.lstEmployees.TabIndex = 2;
-            this.lstEmployees.Text = "Employees";
-            this.lstEmployees.UseVisualStyleBackColor = true;
-            this.lstEmployees.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // navBack
             // 
@@ -74,6 +64,7 @@
             this.lstVehicles.TabIndex = 4;
             this.lstVehicles.Text = "Vehicles";
             this.lstVehicles.UseVisualStyleBackColor = true;
+            this.lstVehicles.Click += new System.EventHandler(this.lstVehicles_Click);
             // 
             // lstFields
             // 
@@ -102,17 +93,27 @@
             this.lstStorage.Text = "Storage";
             this.lstStorage.UseVisualStyleBackColor = true;
             // 
-            // EmployeeList
+            // lstEmployees
+            // 
+            this.lstEmployees.Location = new System.Drawing.Point(12, 12);
+            this.lstEmployees.Name = "lstEmployees";
+            this.lstEmployees.Size = new System.Drawing.Size(75, 23);
+            this.lstEmployees.TabIndex = 8;
+            this.lstEmployees.Text = "Employees";
+            this.lstEmployees.UseVisualStyleBackColor = true;
+            this.lstEmployees.Click += new System.EventHandler(this.lstEmployees_Click);
+            // 
+            // Inventory
             // 
             this.ClientSize = new System.Drawing.Size(849, 475);
+            this.Controls.Add(this.lstEmployees);
             this.Controls.Add(this.lstStorage);
             this.Controls.Add(this.lstCrops);
             this.Controls.Add(this.lstFields);
             this.Controls.Add(this.lstVehicles);
             this.Controls.Add(this.navBack);
-            this.Controls.Add(this.lstEmployees);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "EmployeeList";
+            this.Name = "Inventory";
             this.Load += new System.EventHandler(this.EmployeeList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -122,11 +123,11 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button lstEmployees;
         private System.Windows.Forms.Button navBack;
         private System.Windows.Forms.Button lstVehicles;
         private System.Windows.Forms.Button lstFields;
         private System.Windows.Forms.Button lstCrops;
         private System.Windows.Forms.Button lstStorage;
+        private System.Windows.Forms.Button lstEmployees;
     }
 }
