@@ -74,6 +74,7 @@
             this.lstFields.TabIndex = 5;
             this.lstFields.Text = "Fields";
             this.lstFields.UseVisualStyleBackColor = true;
+            this.lstFields.Click += new System.EventHandler(this.lstFields_Click);
             // 
             // lstCrops
             // 

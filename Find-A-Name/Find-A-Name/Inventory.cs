@@ -14,6 +14,7 @@ namespace Find_A_Name
     {
         List<Employee> m_employees;
         List<Vehicle> m_vehicles;
+        List<Field> m_fields;
         BindingSource m_bs;
 
         public Inventory()
@@ -37,6 +38,14 @@ namespace Find_A_Name
             m_bs.ResetBindings(false);
             this.dataGridView1.DataSource = m_bs.DataSource;
         }
+        private void lstFields_Click(object sender, EventArgs e)
+        {
+            BusinessMetaLayer ml = BusinessMetaLayer.instance();
+            m_fields = ml.getFields();
+            m_bs.DataSource = m_fields;
+            m_bs.ResetBindings(false);
+            this.dataGridView1.DataSource = m_bs.DataSource;
+        }
         private void navBack_Click(object sender, EventArgs e)
         {
             
@@ -50,5 +59,6 @@ namespace Find_A_Name
 
         }
 
+        
     }
 }

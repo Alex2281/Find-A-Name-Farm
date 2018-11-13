@@ -89,7 +89,6 @@ namespace Find_A_Name
 
             return employees;
         }
-
         public List<Vehicle> getVehicles()
         {
             List<Vehicle> vehicles = new List<Vehicle>();
@@ -114,6 +113,31 @@ namespace Find_A_Name
             }
 
             return vehicles;
+        }
+        public List<Field> getFields()
+        {
+            List<Field> fields = new List<Field>();
+
+            if (con.OpenConnection())
+            {
+                DbDataReader dr = con.Select("SELECT fieldId AS Id, fieldReference AS Locator, fieldSize AS Size, fieldStatusId AS Status FROM Fields;");
+
+                //Read the data and store them in the list
+                while (dr.Read())
+                {
+                    Field field = new Field();
+                    field.Id = dr.GetInt32(0);
+                    field.Reference = dr.GetString(1);
+                    field.Size = dr.GetInt32(2);
+                    field.StatusId = dr.GetInt32(3);
+                    fields.Add(field);
+                }
+                //close Data Reader
+                dr.Close();
+                con.CloseConnection();
+            }
+
+            return fields;
         }
     }
 }
