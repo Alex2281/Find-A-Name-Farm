@@ -22,6 +22,44 @@ namespace Find_A_Name
             return m_instance;
         }
 
+        public int farmLogin(String txtUsername, String txtPassword)
+        {
+            string message = "";
+            int retv = -1;
+            DbConection con = DbFactory.instance();
+            
+            if (con.OpenConnection())
+            {
+                String sql = "SELECT * from Employees where userName='"+ txtUsername + "' AND password='" + txtPassword +"'";
+                DbDataReader reader = con.Select(sql);
+                
+                       
+                int count = 0;
+                //Read the data and store them in the list
+                while (reader.Read())
+                {
+                    count = count + 1;
+                }
+                if (count == 1)
+                {
+                    message = "Username and password is correct";
+                }
+                else if (count > 1)
+                {
+                    message = "Duplicate username and password";
+
+                }
+                else
+                {
+                    message = "Username and password is not correct";
+                }
+                //close Data Reader
+                reader.Close();
+                con.CloseConnection();
+            }
+            return retv;
+        }
+
         // Could just have a set of static helper methods rather than a singleton!
         public List<Employee> getEmployees()
         {

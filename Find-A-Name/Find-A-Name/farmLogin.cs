@@ -10,20 +10,19 @@ using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace Find_A_Name
 {
     public partial class farmLogin : Form
     {
         private OleDbConnection connection = new OleDbConnection();
+        private int m_privilage = -1;
         public farmLogin()
         {
             InitializeComponent();
-            OleDbConnection connection = new OleDbConnection();
-            connection.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\myFolder\myAccessFile.accdb;
-Persist Security Info=False;";
-        }
 
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -31,33 +30,8 @@ Persist Security Info=False;";
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = connection;
-            command.CommandText = "select * from Employees where userName='"+ txtUsername.Text + "' and password='" + txtPassword.Text + "'";
-
-
-            OleDbDataReader reader = command.ExecuteReader();
-            int count = 0;
-            while(reader.Read())
-            {
-                count = count + 1;
-            }
-            if(count == 1)
-            {
-                MessageBox.Show("Username and password is correct");
-            }
-            else if(count > 1)
-            {
-                MessageBox.Show("Duplicate username and password");
-
-            }
-            else
-            {
-                MessageBox.Show("Username and password is not correct");
-            }
-
-            connection.Close();
+            BusinessMetaLayer ln = BusinessMetaLayer.instance();
+            m_privilage = ln.farmLogin(txtPassword.Text, txtPassword.Text);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
