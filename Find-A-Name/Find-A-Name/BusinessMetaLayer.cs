@@ -33,9 +33,7 @@ namespace Find_A_Name
                 String sql = "SELECT accessPrivilage FROM Employees WHERE userName = '" + txtUsername + "' AND password = '" + txtPassword +"'";
                 DbDataReader reader = con.Select(sql);
 
-                //if(reader)
-                //{
-                while (reader.Read())
+                if (reader.Read())
                 {
                     //Read the data
                     bool privilage = reader.GetBoolean(0);
@@ -53,9 +51,8 @@ namespace Find_A_Name
                         retv = 2;
                     }
                     //close Data Reader
+                    reader.Close();
                 }
-                //}
-                reader.Close();
                 con.CloseConnection();
             }
             return retv;

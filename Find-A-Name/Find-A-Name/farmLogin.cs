@@ -33,7 +33,11 @@ namespace Find_A_Name
             
             m_privilage = ln.farmLogin(txtUsername.Text, txtPassword.Text);
             
-            if(m_privilage == 0)
+            if(m_privilage == -1)
+            {
+                MessageBox.Show("Please Enter a 'Username' & 'Password' in the fields provided!");
+            }
+            else if (m_privilage == 0)
             {
                 MessageBox.Show("User is a Manager");
             }
