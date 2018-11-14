@@ -220,7 +220,7 @@
             this.btnCreate.TabIndex = 18;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.button1_Click);
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // button2
             // 
