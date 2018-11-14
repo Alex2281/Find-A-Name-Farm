@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setTaskToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addVehicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,6 @@
             this.cropToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storageUnitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.farmShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setTaskToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,9 +75,15 @@
             // viewInventoryToolStripMenuItem
             // 
             this.viewInventoryToolStripMenuItem.Name = "viewInventoryToolStripMenuItem";
-            this.viewInventoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewInventoryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.viewInventoryToolStripMenuItem.Text = "View Inventory";
             this.viewInventoryToolStripMenuItem.Click += new System.EventHandler(this.viewInventoryToolStripMenuItem_Click);
+            // 
+            // setTaskToolStripMenuItem1
+            // 
+            this.setTaskToolStripMenuItem1.Name = "setTaskToolStripMenuItem1";
+            this.setTaskToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.setTaskToolStripMenuItem1.Text = "Set Task";
             // 
             // mainToolStripMenuItem
             // 
@@ -95,31 +101,32 @@
             // addEmployeeToolStripMenuItem
             // 
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
+            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
             // addVehicleToolStripMenuItem
             // 
             this.addVehicleToolStripMenuItem.Name = "addVehicleToolStripMenuItem";
-            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addVehicleToolStripMenuItem.Text = "Add Vehicle";
             // 
             // addFieldToolStripMenuItem
             // 
             this.addFieldToolStripMenuItem.Name = "addFieldToolStripMenuItem";
-            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addFieldToolStripMenuItem.Text = "Add Field";
             // 
             // addCropToolStripMenuItem
             // 
             this.addCropToolStripMenuItem.Name = "addCropToolStripMenuItem";
-            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addCropToolStripMenuItem.Text = "Add Crop";
             // 
             // addStorageUnitToolStripMenuItem
             // 
             this.addStorageUnitToolStripMenuItem.Name = "addStorageUnitToolStripMenuItem";
-            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addStorageUnitToolStripMenuItem.Text = "Add Storage Unit";
             // 
             // deleteItemToolStripMenuItem
@@ -176,12 +183,6 @@
             this.farmShopToolStripMenuItem.Name = "farmShopToolStripMenuItem";
             this.farmShopToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.farmShopToolStripMenuItem.Text = "Farm Shop";
-            // 
-            // setTaskToolStripMenuItem1
-            // 
-            this.setTaskToolStripMenuItem1.Name = "setTaskToolStripMenuItem1";
-            this.setTaskToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.setTaskToolStripMenuItem1.Text = "Set Task";
             // 
             // AdminMain
             // 

@@ -28,11 +28,17 @@ namespace Find_A_Name
         }
         private void mainToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addEmployee AddEmploy = new addEmployee();
+            AddEmploy.ShowDialog();
         }
     }
 }
