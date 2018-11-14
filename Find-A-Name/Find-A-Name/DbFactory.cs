@@ -48,7 +48,6 @@ namespace Find_A_Name
                     connection = new OleDatabaseConnection(m_properties);
                 else
                 {
-                    // should throw unsupport exception here
                     throw new DBException("Not supported provider '" + provider + "'");
                 }
             }
@@ -66,7 +65,6 @@ namespace Find_A_Name
             }
             return connection;
         }
-
         private Dictionary<string, string> getProperties()
         {
             string fileData = "";
@@ -89,32 +87,13 @@ namespace Find_A_Name
     {
         public DBException(string message) : base(message) { }
     }
-
     public interface DbConection
     {
         bool OpenConnection();
 
         bool CloseConnection();
 
-        /*
-        //Insert statement
-        public void Insert(); 
-        //Update statement
-        public void Update();
-        //Delete statement
-        public void Delete();
-        */
-
-
-        //Select statement
         DbDataReader Select(String query);
-        /*
-        //Count statement
-        public int Count();
-        public void Backup();
-        public void Restore();
-       
-        */
 
         DataSet getDataSet(string sqlStatement);
 

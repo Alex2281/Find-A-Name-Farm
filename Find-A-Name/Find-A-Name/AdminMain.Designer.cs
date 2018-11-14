@@ -46,6 +46,7 @@
             this.cropToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storageUnitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.farmShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addFertiliserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +93,8 @@
             this.addVehicleToolStripMenuItem,
             this.addFieldToolStripMenuItem,
             this.addCropToolStripMenuItem,
-            this.addStorageUnitToolStripMenuItem});
+            this.addStorageUnitToolStripMenuItem,
+            this.addFertiliserToolStripMenuItem});
             this.mainToolStripMenuItem.Name = "mainToolStripMenuItem";
             this.mainToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.mainToolStripMenuItem.Text = "Add Item";
@@ -101,31 +103,32 @@
             // addEmployeeToolStripMenuItem
             // 
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
+            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
             // addVehicleToolStripMenuItem
             // 
             this.addVehicleToolStripMenuItem.Name = "addVehicleToolStripMenuItem";
-            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addVehicleToolStripMenuItem.Text = "Add Vehicle";
             // 
             // addFieldToolStripMenuItem
             // 
             this.addFieldToolStripMenuItem.Name = "addFieldToolStripMenuItem";
-            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addFieldToolStripMenuItem.Text = "Add Field";
             // 
             // addCropToolStripMenuItem
             // 
             this.addCropToolStripMenuItem.Name = "addCropToolStripMenuItem";
-            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addCropToolStripMenuItem.Text = "Add Crop";
             // 
             // addStorageUnitToolStripMenuItem
             // 
             this.addStorageUnitToolStripMenuItem.Name = "addStorageUnitToolStripMenuItem";
-            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addStorageUnitToolStripMenuItem.Text = "Add Storage Unit";
             // 
             // deleteItemToolStripMenuItem
@@ -183,6 +186,12 @@
             this.farmShopToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.farmShopToolStripMenuItem.Text = "Farm Shop";
             // 
+            // addFertiliserToolStripMenuItem
+            // 
+            this.addFertiliserToolStripMenuItem.Name = "addFertiliserToolStripMenuItem";
+            this.addFertiliserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addFertiliserToolStripMenuItem.Text = "Add Fertiliser";
+            // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,5 +229,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewInventoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setTaskToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem farmShopToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addFertiliserToolStripMenuItem;
     }
 }
