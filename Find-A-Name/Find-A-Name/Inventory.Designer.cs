@@ -130,6 +130,7 @@
             this.Controls.Add(this.lstVehicles);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Inventory";
+            this.Text = "Inventory";
             this.Load += new System.EventHandler(this.EmployeeList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

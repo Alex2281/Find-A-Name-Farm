@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setTaskToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mainToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addVehicleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,6 @@
             this.cropToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storageUnitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.farmShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setTaskToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,9 +75,15 @@
             // viewInventoryToolStripMenuItem
             // 
             this.viewInventoryToolStripMenuItem.Name = "viewInventoryToolStripMenuItem";
-            this.viewInventoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewInventoryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.viewInventoryToolStripMenuItem.Text = "View Inventory";
             this.viewInventoryToolStripMenuItem.Click += new System.EventHandler(this.viewInventoryToolStripMenuItem_Click);
+            // 
+            // setTaskToolStripMenuItem1
+            // 
+            this.setTaskToolStripMenuItem1.Name = "setTaskToolStripMenuItem1";
+            this.setTaskToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.setTaskToolStripMenuItem1.Text = "Set Task";
             // 
             // mainToolStripMenuItem
             // 
@@ -177,12 +183,6 @@
             this.farmShopToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.farmShopToolStripMenuItem.Text = "Farm Shop";
             // 
-            // setTaskToolStripMenuItem1
-            // 
-            this.setTaskToolStripMenuItem1.Name = "setTaskToolStripMenuItem1";
-            this.setTaskToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.setTaskToolStripMenuItem1.Text = "Set Task";
-            // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,7 +192,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminMain";
-            this.Text = "Admin page";
+            this.Text = "Admin Home Page";
             this.Load += new System.EventHandler(this.AdminMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
