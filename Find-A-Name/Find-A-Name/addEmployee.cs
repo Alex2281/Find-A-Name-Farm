@@ -16,5 +16,12 @@ namespace Find_A_Name
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminMain f = new AdminMain();
+            f.ShowDialog();
+        }
     }
 }
