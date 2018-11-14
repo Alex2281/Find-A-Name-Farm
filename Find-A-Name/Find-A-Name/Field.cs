@@ -11,11 +11,11 @@ namespace Find_A_Name
         private int m_id;
         public int Id { get { return m_id; } set { m_id = value; } }
 
-        private String m_reference;
-        public String Reference { get { return m_reference; } set { m_reference = value; } }
+        private string m_reference;
+        public string Reference { get { return m_reference; } set { m_reference = value; } }
 
-        private Int32 m_size;
-        public Int32 Size { get { return m_size; } set { m_size = value; } }
+        private int m_size;
+        public int Size { get { return m_size; } set { m_size = value; } }
 
         private int m_statusId;
         public int StatusId { get { return m_statusId; } set { m_statusId = value; } }

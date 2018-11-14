@@ -120,7 +120,7 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                DbDataReader dr = con.Select("SELECT fieldId AS Id, fieldReference AS Locator, fieldSize AS Size, fieldStatusId AS Status FROM Fields;");
+                DbDataReader dr = con.Select("SELECT fieldId AS Id, fieldReference AS Locator, fieldSize AS Area, fieldStatusId AS Status FROM Fields;");
 
                 //Read the data and store them in the list
                 while (dr.Read())
@@ -138,6 +138,59 @@ namespace Find_A_Name
             }
 
             return fields;
+        }
+        public List<Crop> getCrops()
+        {
+            List<Crop> crops = new List<Crop>();
+
+            if (con.OpenConnection())
+            {
+                DbDataReader dr = con.Select("SELECT cropId AS Id, cropName AS Name, cultivationTime AS CultivationTime, fertiliserFrequency AS FertiniserFrequency, yieldvalue AS YealdValue, fertiliserId AS Fertiliser FROM Crops;");
+
+                //Read the data and store them in the list
+                while (dr.Read())
+                {
+                    Crop crop = new Crop();
+                    crop.Id = dr.GetInt32(0);
+                    crop.Name = dr.GetString(1);
+                    crop.CultivationTime = dr.GetInt16(2);
+                    crop.FertiliserFrequency = dr.GetInt16(3);
+                    crop.YieldValue = dr.GetInt32(4);
+                    crop.FertiliserId = dr.GetInt32(5);
+                    crops.Add(crop);
+                }
+                //close Data Reader
+                dr.Close();
+                con.CloseConnection();
+            }
+
+            return crops;
+        }
+        public List<StorageUnit> getStorageUnits()
+        {
+            List<StorageUnit> storageUnits = new List<StorageUnit>();
+
+            if (con.OpenConnection())
+            {
+                DbDataReader dr = con.Select("SELECT storageUnitId AS Id, storageReference AS Name, storageUnitCapacity AS Total, storedCapacity, storedCropId AS Crop FROM StorageUnits;");
+
+                //Read the data and store them in the list
+                while (dr.Read())
+                {
+                    StorageUnit storage = new StorageUnit();
+                    storage.Id = dr.GetInt32(0);
+                    storage.Reference = dr.GetString(1);
+                    storage.TotalCapacity = dr.GetInt16(2);
+                    storage.CropId = dr.GetInt16(3);
+                    storage.CropId = dr.GetInt32(4);
+                    storageUnits.Add(storage);
+                }
+                //close Data Reader
+                dr.Close();
+                con.CloseConnection();
+            }
+
+            return storageUnits;
         }
     }
 }

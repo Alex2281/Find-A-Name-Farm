@@ -19,6 +19,10 @@ namespace Find_A_Name
             InitializeComponent();
 
         }
+        private void farmLogin_Load(object sender, EventArgs e)
+        {
+            
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -32,8 +36,9 @@ namespace Find_A_Name
             
             if (m_privilage == 0)
             {
+                this.Hide();
                 Inventory n = new Inventory();
-                n.Show();
+                n.ShowDialog();
             }
             else if (m_privilage == 1)
             {
@@ -54,10 +59,7 @@ namespace Find_A_Name
             Application.Exit();
         }
 
-        private void farmLogin_Load(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {

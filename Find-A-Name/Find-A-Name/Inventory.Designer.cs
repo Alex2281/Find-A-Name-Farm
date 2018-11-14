@@ -84,6 +84,7 @@
             this.lstCrops.TabIndex = 6;
             this.lstCrops.Text = "Crops";
             this.lstCrops.UseVisualStyleBackColor = true;
+            this.lstCrops.Click += new System.EventHandler(this.lstCrops_Click);
             // 
             // lstStorage
             // 
@@ -93,6 +94,7 @@
             this.lstStorage.TabIndex = 7;
             this.lstStorage.Text = "Storage";
             this.lstStorage.UseVisualStyleBackColor = true;
+            this.lstStorage.Click += new System.EventHandler(this.lstStorage_Click);
             // 
             // lstEmployees
             // 

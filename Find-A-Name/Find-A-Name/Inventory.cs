@@ -15,6 +15,8 @@ namespace Find_A_Name
         List<Employee> m_employees;
         List<Vehicle> m_vehicles;
         List<Field> m_fields;
+        List<Crop> m_crops;
+        List<StorageUnit> m_storageUnits;
         BindingSource m_bs;
 
         public Inventory()
@@ -43,6 +45,22 @@ namespace Find_A_Name
             BusinessMetaLayer ml = BusinessMetaLayer.instance();
             m_fields = ml.getFields();
             m_bs.DataSource = m_fields;
+            m_bs.ResetBindings(false);
+            this.dataGridView1.DataSource = m_bs.DataSource;
+        }
+        private void lstCrops_Click(object sender, EventArgs e)
+        {
+            BusinessMetaLayer ml = BusinessMetaLayer.instance();
+            m_crops = ml.getCrops();
+            m_bs.DataSource = m_crops;
+            m_bs.ResetBindings(false);
+            this.dataGridView1.DataSource = m_bs.DataSource;
+        }
+        private void lstStorage_Click(object sender, EventArgs e)
+        {
+            BusinessMetaLayer ml = BusinessMetaLayer.instance();
+            m_storageUnits = ml.getStorageUnits();
+            m_bs.DataSource = m_storageUnits;
             m_bs.ResetBindings(false);
             this.dataGridView1.DataSource = m_bs.DataSource;
         }
