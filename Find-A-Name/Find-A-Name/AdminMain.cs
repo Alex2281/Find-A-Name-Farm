@@ -34,5 +34,11 @@ namespace Find_A_Name
         {
 
         }
+
+        private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addEmployee addEmploy = new addEmployee();
+            addEmploy.ShowDialog();
+        }
     }
 }
