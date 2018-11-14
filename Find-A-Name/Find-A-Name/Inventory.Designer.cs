@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.navBack = new System.Windows.Forms.Button();
             this.lstVehicles = new System.Windows.Forms.Button();
             this.lstFields = new System.Windows.Forms.Button();
             this.lstCrops = new System.Windows.Forms.Button();
             this.lstStorage = new System.Windows.Forms.Button();
             this.lstEmployees = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnFertiliser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,15 +47,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(825, 422);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // navBack
-            // 
-            this.navBack.Location = new System.Drawing.Point(762, 7);
-            this.navBack.Name = "navBack";
-            this.navBack.Size = new System.Drawing.Size(75, 23);
-            this.navBack.TabIndex = 3;
-            this.navBack.Text = "Back";
-            this.navBack.UseVisualStyleBackColor = true;
             // 
             // lstVehicles
             // 
@@ -88,7 +80,7 @@
             // 
             // lstStorage
             // 
-            this.lstStorage.Location = new System.Drawing.Point(336, 12);
+            this.lstStorage.Location = new System.Drawing.Point(417, 12);
             this.lstStorage.Name = "lstStorage";
             this.lstStorage.Size = new System.Drawing.Size(75, 23);
             this.lstStorage.TabIndex = 7;
@@ -106,15 +98,36 @@
             this.lstEmployees.UseVisualStyleBackColor = true;
             this.lstEmployees.Click += new System.EventHandler(this.lstEmployees_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(762, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnFertiliser
+            // 
+            this.btnFertiliser.Location = new System.Drawing.Point(336, 12);
+            this.btnFertiliser.Name = "btnFertiliser";
+            this.btnFertiliser.Size = new System.Drawing.Size(75, 23);
+            this.btnFertiliser.TabIndex = 10;
+            this.btnFertiliser.Text = "Fertiliser";
+            this.btnFertiliser.UseVisualStyleBackColor = true;
+            this.btnFertiliser.Click += new System.EventHandler(this.btnFertiliser_Click);
+            // 
             // Inventory
             // 
             this.ClientSize = new System.Drawing.Size(849, 475);
+            this.Controls.Add(this.btnFertiliser);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lstEmployees);
             this.Controls.Add(this.lstStorage);
             this.Controls.Add(this.lstCrops);
             this.Controls.Add(this.lstFields);
             this.Controls.Add(this.lstVehicles);
-            this.Controls.Add(this.navBack);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Inventory";
             this.Load += new System.EventHandler(this.EmployeeList_Load);
@@ -126,11 +139,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button navBack;
         private System.Windows.Forms.Button lstVehicles;
         private System.Windows.Forms.Button lstFields;
         private System.Windows.Forms.Button lstCrops;
         private System.Windows.Forms.Button lstStorage;
         private System.Windows.Forms.Button lstEmployees;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnFertiliser;
     }
 }
