@@ -153,8 +153,8 @@ namespace Find_A_Name
                     Crop crop = new Crop();
                     crop.Id = dr.GetInt32(0);
                     crop.Name = dr.GetString(1);
-                    crop.CultivationTime = dr.GetInt16(2);
-                    crop.FertiliserFrequency = dr.GetInt16(3);
+                    crop.CultivationTime = dr.GetInt32(2);
+                    crop.FertiliserFrequency = dr.GetInt32(3);
                     crop.YieldValue = dr.GetInt32(4);
                     crop.FertiliserId = dr.GetInt32(5);
                     crops.Add(crop);
