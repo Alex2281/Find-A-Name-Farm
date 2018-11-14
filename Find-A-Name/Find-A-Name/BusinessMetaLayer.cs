@@ -86,7 +86,6 @@ namespace Find_A_Name
                 dr.Close();
                 con.CloseConnection();
             }
-
             return employees;
         }
         public List<Vehicle> getVehicles()
@@ -111,7 +110,6 @@ namespace Find_A_Name
                 dr.Close();
                 con.CloseConnection();
             }
-
             return vehicles;
         }
         public List<Field> getFields()
@@ -136,7 +134,6 @@ namespace Find_A_Name
                 dr.Close();
                 con.CloseConnection();
             }
-
             return fields;
         }
         public List<Crop> getCrops()
@@ -153,8 +150,8 @@ namespace Find_A_Name
                     Crop crop = new Crop();
                     crop.Id = dr.GetInt32(0);
                     crop.Name = dr.GetString(1);
-                    crop.CultivationTime = dr.GetInt16(2);
-                    crop.FertiliserFrequency = dr.GetInt16(3);
+                    crop.CultivationTime = dr.GetInt32(2);
+                    crop.FertiliserFrequency = dr.GetInt32(3);
                     crop.YieldValue = dr.GetInt32(4);
                     crop.FertiliserId = dr.GetInt32(5);
                     crops.Add(crop);
@@ -163,7 +160,6 @@ namespace Find_A_Name
                 dr.Close();
                 con.CloseConnection();
             }
-
             return crops;
         }
         public List<Fertiliser> getFertilisers()
@@ -187,7 +183,6 @@ namespace Find_A_Name
                 dr.Close();
                 con.CloseConnection();
             }
-
             return fertilisers;
         }
         public List<StorageUnit> getStorageUnits()
@@ -213,7 +208,6 @@ namespace Find_A_Name
                 dr.Close();
                 con.CloseConnection();
             }
-
             return storageUnits;
         }
 

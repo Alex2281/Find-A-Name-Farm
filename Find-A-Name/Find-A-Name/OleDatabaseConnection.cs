@@ -21,8 +21,6 @@ namespace Find_A_Name
             open = false;
             initialize();
         }
-
-
         private void initialize()
         {
             try
@@ -50,7 +48,6 @@ namespace Find_A_Name
                 throw new DBException("DBException - OleDatabaseConnection::initialize()\n" + e.Message);
             }
         }
-
         public bool OpenConnection()
         {
             try
@@ -66,7 +63,6 @@ namespace Find_A_Name
             }
             return true;
         }
-
         public bool CloseConnection()
         {
             try
@@ -81,7 +77,6 @@ namespace Find_A_Name
             }
             return true;
         }
-
         public DbDataReader Select(string query)
         {
             DbDataReader reader = null;
@@ -98,7 +93,6 @@ namespace Find_A_Name
             }
             return reader;
         }
-
         public DataSet getDataSet(string sqlStatement)
         {
 
