@@ -101,31 +101,32 @@
             // addEmployeeToolStripMenuItem
             // 
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
+            this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
             // addVehicleToolStripMenuItem
             // 
             this.addVehicleToolStripMenuItem.Name = "addVehicleToolStripMenuItem";
-            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addVehicleToolStripMenuItem.Text = "Add Vehicle";
             // 
             // addFieldToolStripMenuItem
             // 
             this.addFieldToolStripMenuItem.Name = "addFieldToolStripMenuItem";
-            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addFieldToolStripMenuItem.Text = "Add Field";
             // 
             // addCropToolStripMenuItem
             // 
             this.addCropToolStripMenuItem.Name = "addCropToolStripMenuItem";
-            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addCropToolStripMenuItem.Text = "Add Crop";
             // 
             // addStorageUnitToolStripMenuItem
             // 
             this.addStorageUnitToolStripMenuItem.Name = "addStorageUnitToolStripMenuItem";
-            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addStorageUnitToolStripMenuItem.Text = "Add Storage Unit";
             // 
             // deleteItemToolStripMenuItem
