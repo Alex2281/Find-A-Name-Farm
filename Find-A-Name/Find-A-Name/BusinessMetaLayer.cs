@@ -166,13 +166,37 @@ namespace Find_A_Name
 
             return crops;
         }
+        public List<Fertiliser> getFertilisers()
+        {
+            List<Fertiliser> fertilisers = new List<Fertiliser>();
+
+            if (con.OpenConnection())
+            {
+                DbDataReader dr = con.Select("SELECT fertiliserId AS Id, fertiliserName AS Name, fertiliserStockQuantity AS Stock FROM Fertilisers;");
+
+                //Read the data and store them in the list
+                while (dr.Read())
+                {
+                    Fertiliser fertiliser = new Fertiliser();
+                    fertiliser.Id = dr.GetInt32(0);
+                    fertiliser.Name = dr.GetString(1);
+                    fertiliser.StockQuantity = dr.GetInt16(2);
+                    fertilisers.Add(fertiliser);
+                }
+                //close Data Reader
+                dr.Close();
+                con.CloseConnection();
+            }
+
+            return fertilisers;
+        }
         public List<StorageUnit> getStorageUnits()
         {
             List<StorageUnit> storageUnits = new List<StorageUnit>();
 
             if (con.OpenConnection())
             {
-                DbDataReader dr = con.Select("SELECT storageUnitId AS Id, storageReference AS Name, storageUnitCapacity AS Total, storedCapacity, storedCropId AS Crop FROM StorageUnits;");
+                DbDataReader dr = con.Select("SELECT storageUnitId AS Id, storageReference AS Name, storageUnitCapacity AS Total, storedCapacity AS Stock, storedCropId AS Crop FROM StorageUnits;");
 
                 //Read the data and store them in the list
                 while (dr.Read())
@@ -181,7 +205,7 @@ namespace Find_A_Name
                     storage.Id = dr.GetInt32(0);
                     storage.Reference = dr.GetString(1);
                     storage.TotalCapacity = dr.GetInt16(2);
-                    storage.CropId = dr.GetInt16(3);
+                    storage.CurrentCapacity = dr.GetInt16(3);
                     storage.CropId = dr.GetInt32(4);
                     storageUnits.Add(storage);
                 }

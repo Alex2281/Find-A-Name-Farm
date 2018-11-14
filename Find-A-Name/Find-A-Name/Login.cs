@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Find_A_Name
 {
-    public partial class farmLogin : Form
+    public partial class Login : Form
     {
         private int m_privilage = -1;
-        public farmLogin()
+        public Login()
         {
             InitializeComponent();
 
@@ -37,7 +37,7 @@ namespace Find_A_Name
             if (m_privilage == 0)
             {
                 this.Hide();
-                Inventory n = new Inventory();
+                AdminMain n = new AdminMain();
                 n.ShowDialog();
             }
             else if (m_privilage == 1)

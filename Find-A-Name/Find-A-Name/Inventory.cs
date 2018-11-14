@@ -16,6 +16,7 @@ namespace Find_A_Name
         List<Vehicle> m_vehicles;
         List<Field> m_fields;
         List<Crop> m_crops;
+        List<Fertiliser> m_fertilisers;
         List<StorageUnit> m_storageUnits;
         BindingSource m_bs;
 
@@ -23,6 +24,10 @@ namespace Find_A_Name
         {
             InitializeComponent();
             m_bs = new BindingSource();
+        }
+        private void EmployeeList_Load(object sender, EventArgs e)
+        {
+
         }
         private void lstEmployees_Click(object sender, EventArgs e)
         {
@@ -56,6 +61,14 @@ namespace Find_A_Name
             m_bs.ResetBindings(false);
             this.dataGridView1.DataSource = m_bs.DataSource;
         }
+        private void btnFertiliser_Click(object sender, EventArgs e)
+        {
+            BusinessMetaLayer ml = BusinessMetaLayer.instance();
+            m_fertilisers = ml.getFertilisers();
+            m_bs.DataSource = m_fertilisers;
+            m_bs.ResetBindings(false);
+            this.dataGridView1.DataSource = m_bs.DataSource;
+        }
         private void lstStorage_Click(object sender, EventArgs e)
         {
             BusinessMetaLayer ml = BusinessMetaLayer.instance();
@@ -64,19 +77,15 @@ namespace Find_A_Name
             m_bs.ResetBindings(false);
             this.dataGridView1.DataSource = m_bs.DataSource;
         }
-        private void navBack_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            
-        }
-        private void EmployeeList_Load(object sender, EventArgs e)
-        {
-
+            this.Hide();
+            AdminMain f = new AdminMain();
+            f.ShowDialog();
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
-        
     }
 }
