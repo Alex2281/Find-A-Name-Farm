@@ -22,5 +22,10 @@ namespace Find_A_Name
             BusinessMetaLayer create = BusinessMetaLayer.instance();
 
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
