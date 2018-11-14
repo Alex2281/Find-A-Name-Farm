@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Find_A_Name
 {
-    public partial class LabourerPage : Form
+    public partial class LabourerMain : Form
     {
-        public LabourerPage()
+        public LabourerMain()
         {
             InitializeComponent();
         }
