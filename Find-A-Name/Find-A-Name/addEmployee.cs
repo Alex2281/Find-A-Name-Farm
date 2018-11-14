@@ -17,11 +17,15 @@ namespace Find_A_Name
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AdminMain f = new AdminMain();
-            f.ShowDialog();
+            BusinessMetaLayer create = BusinessMetaLayer.instance();
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

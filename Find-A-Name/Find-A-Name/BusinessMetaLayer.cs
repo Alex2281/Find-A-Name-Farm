@@ -210,5 +210,31 @@ namespace Find_A_Name
             }
             return storageUnits;
         }
+
+        public int addEmployees()
+        {
+
+            int retv = 0;
+
+            if (con.OpenConnection())
+            {
+                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage";
+                DbDataReader reader = con.Select(sql);
+
+
+                if (reader.Read())
+                {
+                    retv = 1;
+                    reader.Close();
+                }
+                else
+                {
+                    retv = 2;
+                    reader.Close();
+                }
+                con.CloseConnection();
+            }
+            return retv;
+        }
     }
 }
