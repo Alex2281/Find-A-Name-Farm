@@ -16,5 +16,11 @@ namespace Find_A_Name
         {
             InitializeComponent();
         }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            BusinessMetaLayer create = BusinessMetaLayer.instance();
+
+        }
     }
 }
