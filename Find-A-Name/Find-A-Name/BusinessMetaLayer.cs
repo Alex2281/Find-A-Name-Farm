@@ -211,14 +211,14 @@ namespace Find_A_Name
             return storageUnits;
         }
 
-        public int addEmployees(String txtFirstname, String txtLastname, String txtPostcode, String txt)
+        public int addEmployees(String txtFirstname, String txtLastName, String txtPostCode, String txtContactNumber, String txtEmailAddress, String txtUserName, String txtPassword, Boolean accessPrivilage)
         {
 
             int retv = 0;
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage";
+                String sql = "INSERT INTO Employees (" + txtFirstname + ","+ txtLastName + "," + txtPostCode + "," + txtContactNumber + "," + txtEmailAddress + "," + txtUserName + "," + txtPassword + "," + accessPrivilage + ", dateNow())";
                 DbDataReader reader = con.Select(sql);
 
 
