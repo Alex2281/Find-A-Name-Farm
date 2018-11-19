@@ -111,14 +111,14 @@
             this.FormLabel.LinkColor = System.Drawing.Color.Black;
             this.FormLabel.Location = new System.Drawing.Point(12, 28);
             this.FormLabel.Name = "FormLabel";
-            this.FormLabel.Size = new System.Drawing.Size(289, 35);
+            this.FormLabel.Size = new System.Drawing.Size(213, 35);
             this.FormLabel.TabIndex = 7;
             this.FormLabel.TabStop = true;
-            this.FormLabel.Text = "Find A Name Farm";
+            this.FormLabel.Text = "FoundAName";
             this.FormLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.FormLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // farmLogin
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,8 +132,8 @@
             this.Controls.Add(this.btnLogin);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
-            this.Name = "farmLogin";
-            this.Text = "Login";
+            this.Name = "Login";
+            this.Text = "Find A Name Farm - Login Page";
             this.Load += new System.EventHandler(this.farmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

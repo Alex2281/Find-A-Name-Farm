@@ -76,11 +76,11 @@
     </Compile>
     <Compile Include="Fertiliser.cs" />
     <Compile Include="Field.cs" />
-    <Compile Include="LabourerPage.cs">
+    <Compile Include="LabourerMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LabourerPage.Designer.cs">
-      <DependentUpon>LabourerPage.cs</DependentUpon>
+    <Compile Include="LabourerMain.Designer.cs">
+      <DependentUpon>LabourerMain.cs</DependentUpon>
     </Compile>
     <Compile Include="MYSQLCon.cs" />
     <Compile Include="OleDatabaseConnection.cs" />
@@ -101,8 +101,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LabourerPage.resx">
-      <DependentUpon>LabourerPage.cs</DependentUpon>
+    <EmbeddedResource Include="LabourerMain.resx">
+      <DependentUpon>LabourerMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

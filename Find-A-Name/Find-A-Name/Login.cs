@@ -42,7 +42,9 @@ namespace Find_A_Name
             }
             else if (m_privilage == 1)
             {
-                MessageBox.Show("User is a Worker");
+                this.Hide();
+                LabourerMain n = new LabourerMain();
+                n.ShowDialog();
             }
             else if (m_privilage == -1)
             {
@@ -53,24 +55,18 @@ namespace Find_A_Name
                 MessageBox.Show("Username / password combimation incorrect");
             }
         }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        
-
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
