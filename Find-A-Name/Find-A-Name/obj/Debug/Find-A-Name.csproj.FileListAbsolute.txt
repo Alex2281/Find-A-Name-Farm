@@ -1,5 +1,4 @@
 C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.csprojAssemblyReference.cache
-C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.LabourerPage.resources
 C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.Properties.Resources.resources
 C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.csproj.GenerateResource.cache
 C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.csproj.CoreCompileInputs.cache
@@ -64,3 +63,5 @@ C:\Users\411558\source\repos\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name\Find-
 C:\Users\411558\source\repos\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.exe
 C:\Users\411558\source\repos\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find-A-Name.pdb
 C:\Users\411558\source\repos\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.addEmployee.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.addEmployee.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.LabourerMain.resources

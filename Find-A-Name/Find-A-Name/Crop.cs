@@ -23,7 +23,7 @@ namespace Find_A_Name
         private int m_yeildValue;
         public int YieldValue { get { return m_yeildValue; } set { m_yeildValue = value; } }
 
-        private int m_fertiliserId;
-        public int FertiliserId { get { return m_fertiliserId; } set { m_fertiliserId = value; } }
+        private string m_fertiliserName;
+        public string FertiliserName { get { return m_fertiliserName; } set { m_fertiliserName = value; } }
     }
 }
