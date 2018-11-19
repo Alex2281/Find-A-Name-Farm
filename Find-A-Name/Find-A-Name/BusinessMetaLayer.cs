@@ -142,7 +142,7 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                DbDataReader dr = con.Select("SELECT C.cropId AS Id, C.cropName AS Name, C.cultivationTime AS CultivationTime, C.fertiliserFrequency AS FertiniserFrequency, C.yieldvalue AS YealdValue, F.fertiliserName AS Fertiliser FROM Crops AS C,  Fertilisers AS F WHERE C.fertiliserID = F.fertiliserID;");
+                DbDataReader dr = con.Select("SELECT C.cropId AS Id, C.cropName AS Name, C.cultivationTime AS CultivationTime, C.fertiliserFrequency AS FertiliserFrequency, C.yieldvalue AS YealdValue, F.fertiliserName AS Fertiliser FROM Crops AS C,  Fertilisers AS F WHERE C.fertiliserID = F.fertiliserID;");
 
                 //Read the data and store them in the list
                 while (dr.Read())
