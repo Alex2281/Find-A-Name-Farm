@@ -211,7 +211,7 @@ namespace Find_A_Name
             return storageUnits;
         }
 
-        public int addEmployees()
+        public int addEmployees(String txtFirstname, String txtLastname, String txtPostcode, String txt)
         {
 
             int retv = 0;
