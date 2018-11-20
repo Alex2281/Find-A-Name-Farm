@@ -219,7 +219,7 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage, dateCreated) VALUES (" + txtFirstname +','+ txtSurname +','+ txtPostcode +','+ txtPhone +','+ txtEmail +','+ txtUsername +','+ txtPassword +','+ accessPrivilage +',' + createdToday + ")";
+                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage, dateCreated) VALUES ('"+ txtFirstname +"','"+ txtSurname +"','"+ txtPostcode +"','"+ txtPhone +"','"+ txtEmail +"','"+ txtUsername +"','"+ txtPassword +"','"+ accessPrivilage +"','" + createdToday +"');";
                 DbDataReader reader = con.Select(sql);
 
 
