@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.lblAddVehicle = new System.Windows.Forms.Label();
-            this.txtVehDescription = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.lblVehicleDescription = new System.Windows.Forms.Label();
             this.lblVehicleType = new System.Windows.Forms.Label();
-            this.txtVehType = new System.Windows.Forms.TextBox();
+            this.txtType = new System.Windows.Forms.TextBox();
             this.lblVehicleStatus = new System.Windows.Forms.Label();
-            this.chboxVehicleStatus = new System.Windows.Forms.CheckBox();
+            this.chboxStatus = new System.Windows.Forms.CheckBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnAddVeh = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -49,12 +49,12 @@
             this.lblAddVehicle.TabIndex = 15;
             this.lblAddVehicle.Text = "Add Vehicle";
             // 
-            // txtVehDescription
+            // txtDescription
             // 
-            this.txtVehDescription.Location = new System.Drawing.Point(177, 130);
-            this.txtVehDescription.Name = "txtVehDescription";
-            this.txtVehDescription.Size = new System.Drawing.Size(100, 20);
-            this.txtVehDescription.TabIndex = 20;
+            this.txtDescription.Location = new System.Drawing.Point(177, 130);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(100, 20);
+            this.txtDescription.TabIndex = 20;
             // 
             // lblVehicleDescription
             // 
@@ -76,12 +76,12 @@
             this.lblVehicleType.TabIndex = 17;
             this.lblVehicleType.Text = "Vehicle Type";
             // 
-            // txtVehType
+            // txtType
             // 
-            this.txtVehType.Location = new System.Drawing.Point(177, 94);
-            this.txtVehType.Name = "txtVehType";
-            this.txtVehType.Size = new System.Drawing.Size(100, 20);
-            this.txtVehType.TabIndex = 16;
+            this.txtType.Location = new System.Drawing.Point(177, 94);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(100, 20);
+            this.txtType.TabIndex = 16;
             // 
             // lblVehicleStatus
             // 
@@ -92,15 +92,15 @@
             this.lblVehicleStatus.TabIndex = 19;
             this.lblVehicleStatus.Text = "Vehicle Status";
             // 
-            // chboxVehicleStatus
+            // chboxStatus
             // 
-            this.chboxVehicleStatus.AutoSize = true;
-            this.chboxVehicleStatus.Location = new System.Drawing.Point(177, 168);
-            this.chboxVehicleStatus.Name = "chboxVehicleStatus";
-            this.chboxVehicleStatus.Size = new System.Drawing.Size(63, 17);
-            this.chboxVehicleStatus.TabIndex = 21;
-            this.chboxVehicleStatus.Text = "Yes/No";
-            this.chboxVehicleStatus.UseVisualStyleBackColor = true;
+            this.chboxStatus.AutoSize = true;
+            this.chboxStatus.Location = new System.Drawing.Point(177, 168);
+            this.chboxStatus.Name = "chboxStatus";
+            this.chboxStatus.Size = new System.Drawing.Size(63, 17);
+            this.chboxStatus.TabIndex = 21;
+            this.chboxStatus.Text = "Yes/No";
+            this.chboxStatus.UseVisualStyleBackColor = true;
             // 
             // btnBack
             // 
@@ -120,6 +120,7 @@
             this.btnAddVeh.TabIndex = 24;
             this.btnAddVeh.Text = "Create";
             this.btnAddVeh.UseVisualStyleBackColor = true;
+            this.btnAddVeh.Click += new System.EventHandler(this.btnAddVeh_Click);
             // 
             // addVehicle
             // 
@@ -129,12 +130,12 @@
             this.ClientSize = new System.Drawing.Size(445, 326);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnAddVeh);
-            this.Controls.Add(this.chboxVehicleStatus);
-            this.Controls.Add(this.txtVehDescription);
+            this.Controls.Add(this.chboxStatus);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblVehicleStatus);
             this.Controls.Add(this.lblVehicleDescription);
             this.Controls.Add(this.lblVehicleType);
-            this.Controls.Add(this.txtVehType);
+            this.Controls.Add(this.txtType);
             this.Controls.Add(this.lblAddVehicle);
             this.Name = "addVehicle";
             this.Text = "addVehicle";
@@ -146,12 +147,12 @@
         #endregion
 
         private System.Windows.Forms.Label lblAddVehicle;
-        private System.Windows.Forms.TextBox txtVehDescription;
+        private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lblVehicleDescription;
         private System.Windows.Forms.Label lblVehicleType;
-        private System.Windows.Forms.TextBox txtVehType;
+        private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.Label lblVehicleStatus;
-        private System.Windows.Forms.CheckBox chboxVehicleStatus;
+        private System.Windows.Forms.CheckBox chboxStatus;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnAddVeh;
     }

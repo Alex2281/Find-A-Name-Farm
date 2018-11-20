@@ -23,5 +23,35 @@ namespace Find_A_Name
             AdminMain f = new AdminMain();
             f.ShowDialog();
         }
+
+        private void btnAddVeh_Click(object sender, EventArgs e)
+        {
+            BusinessMetaLayer create = BusinessMetaLayer.instance();
+            int accessPrivilage;
+            if (chboxStatus.Checked == true)
+            {
+                accessPrivilage = 1;
+            }
+            else
+            {
+                accessPrivilage = 2;
+            }
+
+
+            int success;
+            success = create.addVehicle(txtType.Text, txtDescription.Text);
+
+            if (success == 1)
+            {
+                MessageBox.Show("Account Created");
+                txtType.Clear();
+                txtDescription.Clear();
+                chboxStatus.Checked = false;
+            }
+            else
+            {
+                MessageBox.Show("A Input is Incorrect.");
+            }
+        }
     }
 }

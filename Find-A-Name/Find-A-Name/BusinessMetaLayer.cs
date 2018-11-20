@@ -78,7 +78,7 @@ namespace Find_A_Name
                     employee.Email = dr.GetString(4);
                     employee.Username = dr.GetString(5);
                     employee.Password = dr.GetString(6);
-                    employee.Privilage = dr.GetBoolean(7);
+                    employee.Privilage = dr.GetString(7);
                     employee.Created = dr.GetDateTime(8);
                     employees.Add(employee);
                 }
@@ -237,13 +237,13 @@ namespace Find_A_Name
             }
             return retv;
         }
-        public int addVehicle(String txtType, String txtDescription, String txtStatus)
+        public int addVehicle(String txtType, String txtDescription)
         {
             int retv = 0;
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Vehicles (vehicleType, vehicleDescription, vehicleStatus) VALUES (" + txtType + ',' + txtDescription + ',' + txtStatus + ")";
+                String sql = "INSERT INTO Vehicles (vehicleType, vehicleDescription) VALUES ('" + txtType + "','" + txtDescription + "')";
                 DbDataReader reader = con.Select(sql);
 
 
@@ -254,7 +254,7 @@ namespace Find_A_Name
                 }
                 else
                 {
-                    retv = 2;
+                    retv = 0;
                     reader.Close();
                 }
                 con.CloseConnection();
