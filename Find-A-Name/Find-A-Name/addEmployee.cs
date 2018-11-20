@@ -30,14 +30,14 @@ namespace Find_A_Name
         private void btnAdd_Click(object sender, EventArgs e)
         {
             BusinessMetaLayer create = BusinessMetaLayer.instance();
-            int accessPrivilage;
+            string accessPrivilage;
             if (cboxPrivilege.Checked == true)
             {
-                accessPrivilage = -1;
+                accessPrivilage = "Yes";
             }
             else
             {
-                accessPrivilage = 0;
+                accessPrivilage = "No";
             }
             
             

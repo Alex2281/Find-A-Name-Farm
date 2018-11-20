@@ -211,7 +211,7 @@ namespace Find_A_Name
             return storageUnits;
         }
 
-        public int addEmployee(String txtFirstname, String txtLastName, String txtPostCode, String txtContactNumber, String txtEmailAddress, String txtUserName, String txtPassword, int accessPrivilage)
+        public int addEmployee(String txtFirstname, String txtSurname, String txtPostcode, String txtPhone, String txtEmail, String txtUsername, String txtPassword, String accessPrivilage)
         {
 
             DateTime createdToday = DateTime.Now;
@@ -219,7 +219,7 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage, dateCreated) VALUES (" + txtFirstname +','+ txtLastName +','+ txtPostCode +','+ txtContactNumber +','+ txtEmailAddress +','+ txtUserName +','+ txtPassword +','+ accessPrivilage +',' + createdToday + ")";
+                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage, dateCreated) VALUES (" + txtFirstname +','+ txtSurname +','+ txtPostcode +','+ txtPhone +','+ txtEmail +','+ txtUsername +','+ txtPassword +','+ accessPrivilage +',' + createdToday + ")";
                 DbDataReader reader = con.Select(sql);
 
 
