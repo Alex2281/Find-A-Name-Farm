@@ -40,5 +40,22 @@ namespace Find_A_Name
             addEmployee AddEmploy = new addEmployee();
             AddEmploy.ShowDialog();
         }
+
+        private void deleteItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addVehicleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addVehicle AddVehicle = new addVehicle();
+            AddVehicle.ShowDialog();
+        }
+
+        private void addFieldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addField AddField = new addField();
+            AddField.ShowDialog();
+        }
     }
 }

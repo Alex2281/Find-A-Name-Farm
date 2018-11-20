@@ -75,14 +75,14 @@
             // viewInventoryToolStripMenuItem
             // 
             this.viewInventoryToolStripMenuItem.Name = "viewInventoryToolStripMenuItem";
-            this.viewInventoryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewInventoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewInventoryToolStripMenuItem.Text = "View Inventory";
             this.viewInventoryToolStripMenuItem.Click += new System.EventHandler(this.viewInventoryToolStripMenuItem_Click);
             // 
             // setTaskToolStripMenuItem1
             // 
             this.setTaskToolStripMenuItem1.Name = "setTaskToolStripMenuItem1";
-            this.setTaskToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.setTaskToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.setTaskToolStripMenuItem1.Text = "Set Task";
             // 
             // mainToolStripMenuItem
@@ -110,12 +110,14 @@
             this.addVehicleToolStripMenuItem.Name = "addVehicleToolStripMenuItem";
             this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addVehicleToolStripMenuItem.Text = "Add Vehicle";
+            this.addVehicleToolStripMenuItem.Click += new System.EventHandler(this.addVehicleToolStripMenuItem_Click);
             // 
             // addFieldToolStripMenuItem
             // 
             this.addFieldToolStripMenuItem.Name = "addFieldToolStripMenuItem";
             this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addFieldToolStripMenuItem.Text = "Add Field";
+            this.addFieldToolStripMenuItem.Click += new System.EventHandler(this.addFieldToolStripMenuItem_Click);
             // 
             // addCropToolStripMenuItem
             // 
@@ -139,43 +141,44 @@
             this.cropToolStripMenuItem,
             this.storageUnitToolStripMenuItem});
             this.deleteItemToolStripMenuItem.Name = "deleteItemToolStripMenuItem";
-            this.deleteItemToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
-            this.deleteItemToolStripMenuItem.Text = "Delete Item";
+            this.deleteItemToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.deleteItemToolStripMenuItem.Text = "Edit Item";
+            this.deleteItemToolStripMenuItem.Click += new System.EventHandler(this.deleteItemToolStripMenuItem_Click);
             // 
             // taskToolStripMenuItem
             // 
             this.taskToolStripMenuItem.Name = "taskToolStripMenuItem";
-            this.taskToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.taskToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.taskToolStripMenuItem.Text = "Task";
             // 
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.employeeToolStripMenuItem.Text = "Employee";
             // 
             // vehicleToolStripMenuItem
             // 
             this.vehicleToolStripMenuItem.Name = "vehicleToolStripMenuItem";
-            this.vehicleToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.vehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vehicleToolStripMenuItem.Text = "Vehicle";
             // 
             // fieldToolStripMenuItem
             // 
             this.fieldToolStripMenuItem.Name = "fieldToolStripMenuItem";
-            this.fieldToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.fieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fieldToolStripMenuItem.Text = "Field";
             // 
             // cropToolStripMenuItem
             // 
             this.cropToolStripMenuItem.Name = "cropToolStripMenuItem";
-            this.cropToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.cropToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cropToolStripMenuItem.Text = "Crop";
             // 
             // storageUnitToolStripMenuItem
             // 
             this.storageUnitToolStripMenuItem.Name = "storageUnitToolStripMenuItem";
-            this.storageUnitToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.storageUnitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.storageUnitToolStripMenuItem.Text = "Storage Unit";
             // 
             // farmShopToolStripMenuItem
