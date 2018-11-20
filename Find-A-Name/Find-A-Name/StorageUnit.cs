@@ -20,7 +20,7 @@ namespace Find_A_Name
         private int m_currentCapacity;
         public int CurrentCapacity { get { return m_currentCapacity; } set { m_currentCapacity = value; } }
 
-        private int m_cropId;
-        public int CropId { get { return m_cropId; } set { m_cropId = value; } }
+        private string m_currentCrop;
+        public string StoredCrop { get { return m_currentCrop; } set { m_currentCrop = value; } }
     }
 }

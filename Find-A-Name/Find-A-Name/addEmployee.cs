@@ -30,8 +30,10 @@ namespace Find_A_Name
         private void btnAdd_Click(object sender, EventArgs e)
         {
             BusinessMetaLayer create = BusinessMetaLayer.instance();
+            //temporay fix so program can compile - Josh to impliment in form
+            bool txtAccessPrivilage = false;
             int success;
-            success = create.addEmployees(txtFirstname.Text, txtSurname.Text, txtPostcode.Text, txtPhone.Text, txtEmail.Text, txtUsername.Text, txtPassword.Text);
+            success = create.addEmployee(txtFirstname.Text, txtSurname.Text, txtPostcode.Text, txtPhone.Text, txtEmail.Text, txtUsername.Text, txtPassword.Text, txtAccessPrivilage);
 
             if (success == 1)
             {

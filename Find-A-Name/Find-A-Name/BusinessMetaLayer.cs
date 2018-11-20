@@ -191,7 +191,7 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                DbDataReader dr = con.Select("SELECT storageUnitId AS Id, storageReference AS Name, storageUnitCapacity AS Total, storedCapacity AS Stock, storedCropId AS Crop FROM StorageUnits;");
+                DbDataReader dr = con.Select("SELECT s.storageUnitId AS Id, s.storageReference AS Name, s.storageUnitCapacity AS Total, s.storedCapacity AS Stock, c.cropName AS Crop FROM StorageUnits AS s, Crops AS c WHERE s.storedCropId = c.cropId;");
 
                 //Read the data and store them in the list
                 while (dr.Read())
@@ -201,7 +201,7 @@ namespace Find_A_Name
                     storage.Reference = dr.GetString(1);
                     storage.TotalCapacity = dr.GetInt16(2);
                     storage.CurrentCapacity = dr.GetInt16(3);
-                    storage.CropId = dr.GetInt32(4);
+                    storage.StoredCrop = dr.GetString(4);
                     storageUnits.Add(storage);
                 }
                 //close Data Reader
@@ -211,7 +211,7 @@ namespace Find_A_Name
             return storageUnits;
         }
 
-        public int addEmployees(String txtFirstname, String txtLastName, String txtPostCode, String txtContactNumber, String txtEmailAddress, String txtUserName, String txtPassword, Boolean accessPrivilage)
+        public int addEmployee(String txtFirstname, String txtLastName, String txtPostCode, String txtContactNumber, String txtEmailAddress, String txtUserName, String txtPassword, Boolean accessPrivilage)
         {
 
             DateTime createdToday = DateTime.Now;
@@ -220,6 +220,102 @@ namespace Find_A_Name
             if (con.OpenConnection())
             {
                 String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage, dateCreated) VALUES (" + txtFirstname +','+ txtLastName +','+ txtPostCode +','+ txtContactNumber +','+ txtEmailAddress +','+ txtUserName +','+ txtPassword +','+ accessPrivilage +',' + createdToday + ")";
+                DbDataReader reader = con.Select(sql);
+
+
+                if (reader.Read())
+                {
+                    retv = 1;
+                    reader.Close();
+                }
+                else
+                {
+                    retv = 2;
+                    reader.Close();
+                }
+                con.CloseConnection();
+            }
+            return retv;
+        }
+        public int addVehicle(String txtType, String txtDescription, String txtStatus)
+        {
+            int retv = 0;
+
+            if (con.OpenConnection())
+            {
+                String sql = "INSERT INTO Vehicles (vehicleType, vehicleDescription, vehicleStatus) VALUES (" + txtType + ',' + txtDescription + ',' + txtStatus + ")";
+                DbDataReader reader = con.Select(sql);
+
+
+                if (reader.Read())
+                {
+                    retv = 1;
+                    reader.Close();
+                }
+                else
+                {
+                    retv = 2;
+                    reader.Close();
+                }
+                con.CloseConnection();
+            }
+            return retv;
+        }
+        public int addField(String txtReference, int txtSize, String txtStatus)
+        {
+            int retv = 0;
+
+            if (con.OpenConnection())
+            {
+                String sql = "INSERT INTO Fields (fieldReference, fieldSize, fieldStatus) VALUES (" + txtReference + ',' + txtSize + ',' + txtStatus + ")";
+                DbDataReader reader = con.Select(sql);
+
+
+                if (reader.Read())
+                {
+                    retv = 1;
+                    reader.Close();
+                }
+                else
+                {
+                    retv = 2;
+                    reader.Close();
+                }
+                con.CloseConnection();
+            }
+            return retv;
+        }
+        public int addCrop(String txtCropName, int txtCultivationTime, int txtFertiliserFrequency, int txtYieldValue, string txtFertiliserName)
+        {
+            int retv = 0;
+
+            if (con.OpenConnection())
+            {
+                String sql = "INSERT INTO Fields (fieldReference, fieldSize, fieldStatus) VALUES (" + txtCropName + ',' + txtCultivationTime + ',' + txtFertiliserFrequency + ',' + txtYieldValue +','+ txtFertiliserName + ")";
+                DbDataReader reader = con.Select(sql);
+
+
+                if (reader.Read())
+                {
+                    retv = 1;
+                    reader.Close();
+                }
+                else
+                {
+                    retv = 2;
+                    reader.Close();
+                }
+                con.CloseConnection();
+            }
+            return retv;
+        }
+        public int addStorageUnit(String txtReference, int txtTotalCapicity, int txtCurrentCapacity, int txtCurrentCrop)
+        {
+            int retv = 0;
+
+            if (con.OpenConnection())
+            {
+                String sql = "INSERT INTO StorageUnits (storageReference, totalCapacity, currentCapacity, currentCrop) VALUES (" + txtReference + ',' + txtTotalCapicity + ',' + txtCurrentCapacity +',' + txtCurrentCrop + ")";
                 DbDataReader reader = con.Select(sql);
 
 
