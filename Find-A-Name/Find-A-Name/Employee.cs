@@ -34,10 +34,5 @@ namespace Find_A_Name
 
         private DateTime m_created;
         public DateTime Created { get { return m_created; } set { m_created = value; } }
-
-        public override string ToString()
-        {
-            return m_name + ", " + m_email;
-        }
     }
 }

@@ -65,7 +65,7 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                DbDataReader dr = con.Select("SELECT employeeId AS Id, lastName+', '+firstName AS Name, postCode AS Address, contactNumber AS Phone, emailAddress AS Email, userName AS Username, password AS Secret, accessPrivilage AS Privilage, dateCreated AS Created FROM Employees;");
+                DbDataReader dr = con.Select("SELECT employeeId AS Id, lastName +','+ firstName AS Name, postCode AS Address, contactNumber AS Phone, emailAddress AS Email, userName AS Username, password AS Secret, accessPrivilage AS Privilage, dateCreated AS Created FROM Employees;");
 
                 //Read the data and store them in the list
                 while (dr.Read())
