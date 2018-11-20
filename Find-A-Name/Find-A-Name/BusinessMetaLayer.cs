@@ -214,11 +214,12 @@ namespace Find_A_Name
         public int addEmployees(String txtFirstname, String txtLastName, String txtPostCode, String txtContactNumber, String txtEmailAddress, String txtUserName, String txtPassword, Boolean accessPrivilage)
         {
 
+            DateTime createdToday = DateTime.Now;
             int retv = 0;
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Employees (" + txtFirstname + ","+ txtLastName + "," + txtPostCode + "," + txtContactNumber + "," + txtEmailAddress + "," + txtUserName + "," + txtPassword + "," + accessPrivilage + ", dateNow())";
+                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage, dateCreated) VALUES (" + txtFirstname +','+ txtLastName +','+ txtPostCode +','+ txtContactNumber +','+ txtEmailAddress +','+ txtUserName +','+ txtPassword +','+ accessPrivilage +',' + createdToday + ")";
                 DbDataReader reader = con.Select(sql);
 
 
