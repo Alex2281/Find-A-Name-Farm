@@ -211,7 +211,7 @@ namespace Find_A_Name
             return storageUnits;
         }
 
-        public int addEmployee(String txtFirstname, String txtLastName, String txtPostCode, String txtContactNumber, String txtEmailAddress, String txtUserName, String txtPassword, Boolean accessPrivilage)
+        public int addEmployee(String txtFirstname, String txtLastName, String txtPostCode, String txtContactNumber, String txtEmailAddress, String txtUserName, String txtPassword, int accessPrivilage)
         {
 
             DateTime createdToday = DateTime.Now;

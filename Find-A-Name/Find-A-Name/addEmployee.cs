@@ -30,10 +30,19 @@ namespace Find_A_Name
         private void btnAdd_Click(object sender, EventArgs e)
         {
             BusinessMetaLayer create = BusinessMetaLayer.instance();
-            //temporay fix so program can compile - Josh to impliment in form
-            bool txtAccessPrivilage = false;
+            int accessPrivilage;
+            if (cboxPrivilege.Checked == true)
+            {
+                accessPrivilage = -1;
+            }
+            else
+            {
+                accessPrivilage = 0;
+            }
+            
+            
             int success;
-            success = create.addEmployee(txtFirstname.Text, txtSurname.Text, txtPostcode.Text, txtPhone.Text, txtEmail.Text, txtUsername.Text, txtPassword.Text, txtAccessPrivilage);
+            success = create.addEmployee(txtFirstname.Text, txtSurname.Text, txtPostcode.Text, txtPhone.Text, txtEmail.Text, txtUsername.Text, txtPassword.Text, accessPrivilage);
 
             if (success == 1)
             {
@@ -45,6 +54,7 @@ namespace Find_A_Name
                 txtPhone.Clear();
                 txtPassword.Clear();
                 txtEmail.Clear();
+                cboxPrivilege.Checked = false;
             }
             else
             {

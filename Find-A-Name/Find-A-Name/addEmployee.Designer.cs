@@ -45,6 +45,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cboxPrivilege = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtFirstname
@@ -177,7 +179,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(123, 243);
+            this.btnAdd.Location = new System.Drawing.Point(120, 269);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 15;
@@ -187,18 +189,39 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(221, 243);
+            this.btnBack.Location = new System.Drawing.Point(209, 269);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(75, 23);
             this.btnBack.TabIndex = 16;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(116, 246);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Privilege";
+            // 
+            // cboxPrivilege
+            // 
+            this.cboxPrivilege.AutoSize = true;
+            this.cboxPrivilege.Location = new System.Drawing.Point(184, 246);
+            this.cboxPrivilege.Name = "cboxPrivilege";
+            this.cboxPrivilege.Size = new System.Drawing.Size(63, 17);
+            this.cboxPrivilege.TabIndex = 20;
+            this.cboxPrivilege.Text = "Yes/No";
+            this.cboxPrivilege.UseVisualStyleBackColor = true;
+            // 
             // addEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(445, 326);
+            this.Controls.Add(this.cboxPrivilege);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label1);
@@ -242,5 +265,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox cboxPrivilege;
     }
 }
