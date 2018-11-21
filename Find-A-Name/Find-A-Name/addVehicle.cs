@@ -15,6 +15,9 @@ namespace Find_A_Name
         public addVehicle()
         {
             InitializeComponent();
+            cmbVehStatus.Items.Add("Available");
+            cmbVehStatus.Items.Add("Out of Service");
+            cmbVehStatus.Items.Add("In Repair");
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -27,26 +30,15 @@ namespace Find_A_Name
         private void btnAddVeh_Click(object sender, EventArgs e)
         {
             BusinessMetaLayer create = BusinessMetaLayer.instance();
-            int accessPrivilage;
-            if (chboxStatus.Checked == true)
-            {
-                accessPrivilage = 1;
-            }
-            else
-            {
-                accessPrivilage = 2;
-            }
-
-
+           
             int success;
-            success = create.addVehicle(txtType.Text, txtDescription.Text, accessPrivilage);
+            success = create.addVehicle(txtType.Text, txtDescription.Text);
 
             if (success == 1)
             {
                 MessageBox.Show("Account Created");
                 txtType.Clear();
                 txtDescription.Clear();
-                chboxStatus.Checked = false;
             }
             else
             {
