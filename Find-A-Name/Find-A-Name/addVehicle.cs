@@ -39,7 +39,7 @@ namespace Find_A_Name
 
 
             int success;
-            success = create.addVehicle(txtType.Text, txtDescription.Text);
+            success = create.addVehicle(txtType.Text, txtDescription.Text, accessPrivilage);
 
             if (success == 1)
             {
