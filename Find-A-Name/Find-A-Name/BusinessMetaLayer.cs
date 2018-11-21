@@ -36,13 +36,13 @@ namespace Find_A_Name
                 if (reader.Read())
                 {
                     //Read the data
-                    bool privilage = reader.GetBoolean(0);
+                    string privilage = reader.GetString(0);
 
-                    if (privilage)
+                    if (privilage == "Yes")
                     {
                         retv = 0;
                     }
-                    else if (!privilage)
+                    else if (privilage == "No")
                     {
                         retv = 1;
                     }
@@ -220,8 +220,10 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage, dateCreated) VALUES ('"+ txtFirstname +"','"+ txtSurname +"','"+ txtPostcode +"','"+ txtPhone +"','"+ txtEmail +"','"+ txtUsername +"','"+ txtPassword +"','"+ accessPrivilage +"','" + createdToday +"')";
+                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage) VALUES ('"+ txtFirstname +"','"+ txtSurname +"','"+ txtPostcode +"','"+ txtPhone +"','"+ txtEmail +"','"+ txtUsername +"','"+ txtPassword +"','"+ accessPrivilage +"')";
+                sql = "INSERT INTO Employees (firstName, lastName, postCode,contactNumber) VALUES ('" + txtFirstname + "','"+ txtSurname +"','"+ txtPostcode +"','" + txtPhone +"')";
                 int reader = con.Insert(sql);
+
 
 
                 if (reader == 1)
