@@ -32,7 +32,7 @@ namespace Find_A_Name
         private String m_privilage;
         public String Privilage { get { return m_privilage; } set { m_privilage = value; } }
 
-        private DateTime m_created;
-        public DateTime Created { get { return m_created; } set { m_created = value; } }
+        private String m_created;
+        public String Created { get { return m_created; } set { m_created = value; } }
     }
 }

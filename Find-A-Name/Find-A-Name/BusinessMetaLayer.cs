@@ -79,7 +79,7 @@ namespace Find_A_Name
                     employee.Username = dr.GetString(5);
                     employee.Password = dr.GetString(6);
                     employee.Privilage = dr.GetString(7);
-                    employee.Created = dr.GetDateTime(8);
+                    employee.Created = dr.GetString(8);
                     employees.Add(employee);
                 }
                 //close Data Reader
@@ -94,7 +94,7 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                DbDataReader dr = con.Select("SELECT vehicleId AS Id, vehicleType AS Name, vehicleDescription AS Details, vehicleStatusId AS Status FROM Vehicles;");
+                DbDataReader dr = con.Select("SELECT vehicleId AS Id, vehicleType AS Name, vehicleDescription AS Details, statusType AS Status FROM VechiclesQuery;");
 
                 //Read the data and store them in the list
                 while (dr.Read())
@@ -103,7 +103,7 @@ namespace Find_A_Name
                     vehicle.Id = dr.GetInt32(0);
                     vehicle.Type = dr.GetString(1);
                     vehicle.Description = dr.GetString(2);
-                    vehicle.VehicleStatusId = dr.GetInt32(3);
+                    vehicle.Status = dr.GetString(3);
                     vehicles.Add(vehicle);
                 }
                 //close Data Reader
@@ -214,53 +214,54 @@ namespace Find_A_Name
         public int addEmployee(String txtFirstname, String txtSurname, String txtPostcode, String txtPhone, String txtEmail, String txtUsername, String txtPassword, String accessPrivilage)
         {
 
-            DateTime createdToday = DateTime.Now;
+            DateTime createdToday = DateTime.Now.Date;
+            string Date = createdToday.ToString();
             int retv = 0;
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage, dateCreated) VALUES ('"+ txtFirstname +"','"+ txtSurname +"','"+ txtPostcode +"','"+ txtPhone +"','"+ txtEmail +"','"+ txtUsername +"','"+ txtPassword +"','"+ accessPrivilage +"','" + createdToday +"');";
-                DbDataReader reader = con.Select(sql);
+                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage, dateCreated) VALUES ('"+ txtFirstname +"','"+ txtSurname +"','"+ txtPostcode +"','"+ txtPhone +"','"+ txtEmail +"','"+ txtUsername +"','"+ txtPassword +"','"+ accessPrivilage +"','" + createdToday +"')";
+                int reader = con.Insert(sql);
 
 
-                if (reader.Read())
+                if (reader == 1)
                 {
                     retv = 1;
-                    reader.Close();
+                    
                 }
                 else
                 {
                     retv = 2;
-                    reader.Close();
+                    
                 }
                 con.CloseConnection();
             }
             return retv;
         }
-        public int addVehicle(String txtType, String txtDescription)
+        public int addVehicle(String txtType, String txtDescription, int accessPrivilage)
         {
-            int retv = 0;
+            int success = 0;
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Vehicles (vehicleType, vehicleDescription) VALUES ('" + txtType + "','" + txtDescription + "')";
+                String sql = "INSERT INTO Vehicles (vehicleType, vehicleDescription, vehicleStatusId) VALUES ('" + txtType + "','" + txtDescription + "','" + accessPrivilage +"')";
                 int result = con.Insert(sql);
                 
 
 
                 if (result == 1)
                 {
-                    retv = 1;
+                    success = 1;
                   
                 }
                 else
                 {
-                    retv = 0;
+                    success = 0;
                     
                 }
                 con.CloseConnection();
             }
-            return retv;
+            return success;
         }
         public int addField(String txtReference, int txtSize, String txtStatus)
         {

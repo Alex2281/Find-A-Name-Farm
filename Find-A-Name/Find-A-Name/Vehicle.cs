@@ -17,7 +17,7 @@ namespace Find_A_Name
         private String m_description;
         public String Description { get { return m_description; } set { m_description = value; } }
 
-        private int m_vehicleStatusId;
-        public int VehicleStatusId { get { return m_vehicleStatusId; } set { m_vehicleStatusId = value; } }
+        private String m_Status;
+        public String Status { get { return m_Status; } set { m_Status = value; } }
     }
 }
