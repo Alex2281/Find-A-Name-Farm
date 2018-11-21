@@ -106,5 +106,25 @@ namespace Find_A_Name
             //return the dataSet
             return dataSet;
         }
+
+        public int Insert(string query)
+        {
+            int result = 0;
+            try
+            {
+                OleDbCommand command = new OleDbCommand(query);
+                command.Connection = (OleDbConnection)connection;
+                result = command.ExecuteNonQuery();
+
+            }
+            catch (Exception e)
+            {
+                // Wrap exception up and throw it on
+                throw new DBException("DBException - OleDatabaseConnection::RunQuery()\n" + e.Message);
+            }
+            return result;
+
+
+        }
     }
 }

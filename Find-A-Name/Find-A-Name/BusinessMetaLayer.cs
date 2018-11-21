@@ -244,18 +244,19 @@ namespace Find_A_Name
             if (con.OpenConnection())
             {
                 String sql = "INSERT INTO Vehicles (vehicleType, vehicleDescription) VALUES ('" + txtType + "','" + txtDescription + "')";
-                DbDataReader reader = con.Select(sql);
+                int result = con.Insert(sql);
+                
 
 
-                if (reader.Read())
+                if (result = 1())
                 {
                     retv = 1;
-                    reader.Close();
+                  
                 }
                 else
                 {
                     retv = 0;
-                    reader.Close();
+                    
                 }
                 con.CloseConnection();
             }

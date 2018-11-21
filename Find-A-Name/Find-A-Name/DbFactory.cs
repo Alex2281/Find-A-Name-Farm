@@ -95,6 +95,8 @@ namespace Find_A_Name
 
         DbDataReader Select(String query);
 
+        int Insert(String query);
+
         DataSet getDataSet(string sqlStatement);
 
     }
