@@ -248,7 +248,7 @@ namespace Find_A_Name
                 
 
 
-                if (result = 1())
+                if (result == 1)
                 {
                     retv = 1;
                   

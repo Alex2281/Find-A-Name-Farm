@@ -106,7 +106,6 @@
     <Compile Include="LabourerMain.Designer.cs">
       <DependentUpon>LabourerMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="MYSQLCon.cs" />
     <Compile Include="OleDatabaseConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

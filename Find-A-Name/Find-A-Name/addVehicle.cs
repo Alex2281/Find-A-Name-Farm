@@ -41,7 +41,7 @@ namespace Find_A_Name
             int success;
             success = create.addVehicle(txtType.Text, txtDescription.Text);
 
-            if (success == 0)
+            if (success == 1)
             {
                 MessageBox.Show("Account Created");
                 txtType.Clear();
