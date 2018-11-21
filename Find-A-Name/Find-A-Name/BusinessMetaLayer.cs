@@ -219,19 +219,18 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage, dateCreated) VALUES ('"+ txtFirstname +"','"+ txtSurname +"','"+ txtPostcode +"','"+ txtPhone +"','"+ txtEmail +"','"+ txtUsername +"','"+ txtPassword +"','"+ accessPrivilage +"','" + createdToday +"');";
-                DbDataReader reader = con.Select(sql);
+                //String sql = "INSERT INTO Employees (firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage, dateCreated) VALUES ('" + txtFirstname +  "','"+ txtSurname + "','" + txtPostcode + "','" + txtPhone + "','" + txtEmail + "','" + txtUsername + "','" + txtPassword + "','" + accessPrivilage + "','"  + createdToday.ToShortDateString() + "')";
+                string sql = "INSERT INTO Employees (EmployeeId, firstName, lastName, postCode, contactNumber, emailAddress, userName, password, accessPrivilage) VALUES (NULL,'First','Last','PO23 CD','07136529','email@address.com','User','Password','yes')";
+                int result = con.Insert(sql);
 
 
-                if (reader.Read())
+                if (result > 0)
                 {
-                    retv = 1;
-                    reader.Close();
+
                 }
                 else
                 {
-                    retv = 2;
-                    reader.Close();
+
                 }
                 con.CloseConnection();
             }
