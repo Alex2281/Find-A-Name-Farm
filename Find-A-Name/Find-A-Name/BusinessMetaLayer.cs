@@ -265,13 +265,13 @@ namespace Find_A_Name
             }
             return success;
         }
-        public int addField(String txtReference, int txtSize, String txtStatus)
+        public int addField(String txtReference, int txtSize, int fieldStatus)
         {
             int retv = 0;
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Fields (fieldReference, fieldSize, fieldStatus) VALUES (" + txtReference + ',' + txtSize + ',' + txtStatus + ")";
+                String sql = "INSERT INTO Fields (fieldReference, fieldSize, fieldStatus) VALUES (" + txtReference + ',' + txtSize + ',' + fieldStatus + ")";
                 DbDataReader reader = con.Select(sql);
 
 
@@ -322,6 +322,29 @@ namespace Find_A_Name
                 String sql = "INSERT INTO StorageUnits (storageReference, totalCapacity, currentCapacity, currentCrop) VALUES (" + txtReference + ',' + txtTotalCapicity + ',' + txtCurrentCapacity +',' + txtCurrentCrop + ")";
                 DbDataReader reader = con.Select(sql);
 
+
+                if (reader.Read())
+                {
+                    retv = 1;
+                    reader.Close();
+                }
+                else
+                {
+                    retv = 2;
+                    reader.Close();
+                }
+                con.CloseConnection();
+            }
+            return retv;
+        }
+        public int addTask(int txtDate, int txtSchedule)
+        {
+            int retv = 0;
+
+            if (con.OpenConnection())
+            {
+                String sql = "INSERT INTO Tasks(taskDate, scheduleTime VALUES (" + txtDate + ',' + txtSchedule + ")";
+                DbDataReader reader = con.Select(sql);
 
                 if (reader.Read())
                 {

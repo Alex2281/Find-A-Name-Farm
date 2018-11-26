@@ -64,6 +64,12 @@
     <Compile Include="addField.Designer.cs">
       <DependentUpon>addField.cs</DependentUpon>
     </Compile>
+    <Compile Include="addTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addTask.Designer.cs">
+      <DependentUpon>addTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="addVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addField.resx">
       <DependentUpon>addField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addTask.resx">
+      <DependentUpon>addTask.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addVehicle.resx">
       <DependentUpon>addVehicle.cs</DependentUpon>

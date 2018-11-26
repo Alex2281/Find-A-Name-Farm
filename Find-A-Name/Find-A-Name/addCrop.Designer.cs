@@ -35,6 +35,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblYieldValue = new System.Windows.Forms.Label();
             this.lblFertiliserFreq = new System.Windows.Forms.Label();
+            this.txtCultTime = new System.Windows.Forms.TextBox();
+            this.txtFertFreq = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblAddCrop
@@ -101,12 +103,28 @@
             this.lblFertiliserFreq.TabIndex = 26;
             this.lblFertiliserFreq.Text = "Fertiliser Frequency";
             // 
+            // txtCultTime
+            // 
+            this.txtCultTime.Location = new System.Drawing.Point(200, 145);
+            this.txtCultTime.Name = "txtCultTime";
+            this.txtCultTime.Size = new System.Drawing.Size(100, 20);
+            this.txtCultTime.TabIndex = 29;
+            // 
+            // txtFertFreq
+            // 
+            this.txtFertFreq.Location = new System.Drawing.Point(200, 182);
+            this.txtFertFreq.Name = "txtFertFreq";
+            this.txtFertFreq.Size = new System.Drawing.Size(100, 20);
+            this.txtFertFreq.TabIndex = 30;
+            // 
             // addCrop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(445, 326);
+            this.Controls.Add(this.txtFertFreq);
+            this.Controls.Add(this.txtCultTime);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblYieldValue);
             this.Controls.Add(this.lblFertiliserFreq);
@@ -130,5 +148,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblYieldValue;
         private System.Windows.Forms.Label lblFertiliserFreq;
+        private System.Windows.Forms.TextBox txtCultTime;
+        private System.Windows.Forms.TextBox txtFertFreq;
     }
 }
