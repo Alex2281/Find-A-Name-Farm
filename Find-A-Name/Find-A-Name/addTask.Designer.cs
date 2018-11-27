@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.lblAddTask = new System.Windows.Forms.Label();
-            this.lblTaskDate = new System.Windows.Forms.Label();
-            this.lblSchedTime = new System.Windows.Forms.Label();
-            this.txtTaskDate = new System.Windows.Forms.TextBox();
-            this.txtSchedTime = new System.Windows.Forms.TextBox();
+            this.lblTaskType = new System.Windows.Forms.Label();
+            this.lblTaskDesc = new System.Windows.Forms.Label();
+            this.txtTaskType = new System.Windows.Forms.TextBox();
+            this.txtTaskDesc = new System.Windows.Forms.TextBox();
+            this.btnAddTask = new System.Windows.Forms.Button();
+            this.btnTaskBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblAddTask
@@ -45,37 +47,56 @@
             this.lblAddTask.TabIndex = 15;
             this.lblAddTask.Text = "Add Task";
             // 
-            // lblTaskDate
+            // lblTaskType
             // 
-            this.lblTaskDate.AutoSize = true;
-            this.lblTaskDate.Location = new System.Drawing.Point(73, 125);
-            this.lblTaskDate.Name = "lblTaskDate";
-            this.lblTaskDate.Size = new System.Drawing.Size(57, 13);
-            this.lblTaskDate.TabIndex = 16;
-            this.lblTaskDate.Text = "Task Date";
+            this.lblTaskType.AutoSize = true;
+            this.lblTaskType.Location = new System.Drawing.Point(76, 114);
+            this.lblTaskType.Name = "lblTaskType";
+            this.lblTaskType.Size = new System.Drawing.Size(58, 13);
+            this.lblTaskType.TabIndex = 16;
+            this.lblTaskType.Text = "Task Type";
             // 
-            // lblSchedTime
+            // lblTaskDesc
             // 
-            this.lblSchedTime.AutoSize = true;
-            this.lblSchedTime.Location = new System.Drawing.Point(73, 205);
-            this.lblSchedTime.Name = "lblSchedTime";
-            this.lblSchedTime.Size = new System.Drawing.Size(78, 13);
-            this.lblSchedTime.TabIndex = 17;
-            this.lblSchedTime.Text = "Schedule Time";
+            this.lblTaskDesc.AutoSize = true;
+            this.lblTaskDesc.Location = new System.Drawing.Point(76, 152);
+            this.lblTaskDesc.Name = "lblTaskDesc";
+            this.lblTaskDesc.Size = new System.Drawing.Size(87, 13);
+            this.lblTaskDesc.TabIndex = 17;
+            this.lblTaskDesc.Text = "Task Description";
             // 
-            // txtTaskDate
+            // txtTaskType
             // 
-            this.txtTaskDate.Location = new System.Drawing.Point(169, 122);
-            this.txtTaskDate.Name = "txtTaskDate";
-            this.txtTaskDate.Size = new System.Drawing.Size(100, 20);
-            this.txtTaskDate.TabIndex = 18;
+            this.txtTaskType.Location = new System.Drawing.Point(172, 111);
+            this.txtTaskType.Name = "txtTaskType";
+            this.txtTaskType.Size = new System.Drawing.Size(100, 20);
+            this.txtTaskType.TabIndex = 18;
             // 
-            // txtSchedTime
+            // txtTaskDesc
             // 
-            this.txtSchedTime.Location = new System.Drawing.Point(169, 202);
-            this.txtSchedTime.Name = "txtSchedTime";
-            this.txtSchedTime.Size = new System.Drawing.Size(100, 20);
-            this.txtSchedTime.TabIndex = 19;
+            this.txtTaskDesc.Location = new System.Drawing.Point(172, 149);
+            this.txtTaskDesc.Name = "txtTaskDesc";
+            this.txtTaskDesc.Size = new System.Drawing.Size(100, 20);
+            this.txtTaskDesc.TabIndex = 19;
+            // 
+            // btnAddTask
+            // 
+            this.btnAddTask.Location = new System.Drawing.Point(118, 259);
+            this.btnAddTask.Name = "btnAddTask";
+            this.btnAddTask.Size = new System.Drawing.Size(75, 23);
+            this.btnAddTask.TabIndex = 20;
+            this.btnAddTask.Text = "Add";
+            this.btnAddTask.UseVisualStyleBackColor = true;
+            this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
+            // 
+            // btnTaskBack
+            // 
+            this.btnTaskBack.Location = new System.Drawing.Point(241, 259);
+            this.btnTaskBack.Name = "btnTaskBack";
+            this.btnTaskBack.Size = new System.Drawing.Size(75, 23);
+            this.btnTaskBack.TabIndex = 21;
+            this.btnTaskBack.Text = "Back";
+            this.btnTaskBack.UseVisualStyleBackColor = true;
             // 
             // addTask
             // 
@@ -83,10 +104,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(445, 326);
-            this.Controls.Add(this.txtSchedTime);
-            this.Controls.Add(this.txtTaskDate);
-            this.Controls.Add(this.lblSchedTime);
-            this.Controls.Add(this.lblTaskDate);
+            this.Controls.Add(this.btnTaskBack);
+            this.Controls.Add(this.btnAddTask);
+            this.Controls.Add(this.txtTaskDesc);
+            this.Controls.Add(this.txtTaskType);
+            this.Controls.Add(this.lblTaskDesc);
+            this.Controls.Add(this.lblTaskType);
             this.Controls.Add(this.lblAddTask);
             this.Name = "addTask";
             this.Text = "Add task";
@@ -98,9 +121,11 @@
         #endregion
 
         private System.Windows.Forms.Label lblAddTask;
-        private System.Windows.Forms.Label lblTaskDate;
-        private System.Windows.Forms.Label lblSchedTime;
-        private System.Windows.Forms.TextBox txtTaskDate;
-        private System.Windows.Forms.TextBox txtSchedTime;
+        private System.Windows.Forms.Label lblTaskType;
+        private System.Windows.Forms.Label lblTaskDesc;
+        private System.Windows.Forms.TextBox txtTaskType;
+        private System.Windows.Forms.TextBox txtTaskDesc;
+        private System.Windows.Forms.Button btnAddTask;
+        private System.Windows.Forms.Button btnTaskBack;
     }
 }

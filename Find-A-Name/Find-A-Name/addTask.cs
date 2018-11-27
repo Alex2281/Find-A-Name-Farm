@@ -16,5 +16,27 @@ namespace Find_A_Name
         {
             InitializeComponent();
         }
+
+        private void btnAddTask_Click(object sender, EventArgs e)
+        {
+            BusinessMetaLayer create = BusinessMetaLayer.instance();
+            
+
+            int success;
+            String taskType = txtTaskType.Text;
+            String taskDescription = txtTaskDesc.Text;
+            success = create.addTask(txtTaskType.Text, txtTaskDesc.Text);
+
+            if (success == 1)
+            {
+                MessageBox.Show("Task Created");
+                txtTaskDesc.Clear();
+                txtTaskType.Clear();
+            }
+            else
+            {
+                MessageBox.Show("An input is correct");
+            }
+        }
     }
 }

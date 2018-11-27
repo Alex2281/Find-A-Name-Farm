@@ -337,13 +337,13 @@ namespace Find_A_Name
             }
             return retv;
         }
-        public int addTask(int txtDate, int txtSchedule)
+        public int addTask(string txtTaskType, string txtTaskDesc)
         {
             int retv = 0;
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Tasks(taskDate, scheduleTime VALUES (" + txtDate + ',' + txtSchedule + ")";
+                String sql = "INSERT INTO Tasks(taskName, taskDesc VALUES (" + txtTaskType + ',' + txtTaskDesc + ")";
                 DbDataReader reader = con.Select(sql);
 
                 if (reader.Read())
