@@ -23,5 +23,37 @@ namespace Find_A_Name
             AdminMain f = new AdminMain();
             f.ShowDialog();
         }
+
+        private void btnAddField_Click(object sender, EventArgs e)
+        {
+            BusinessMetaLayer create = BusinessMetaLayer.instance();
+            int inUse;
+            if (chboxFieldStatus.Checked == true)
+            {
+                inUse = 1;
+            }
+            else
+            {
+                inUse = 2;
+            }
+
+            int success;
+            int fieldSize = Convert.ToInt32(this.txtFieldSize.Text);
+            success = create.addField(txtFieldRef.Text, fieldSize, inUse);
+
+            if (success == 1)
+            {
+                MessageBox.Show("Field Created");
+                txtFieldRef.Clear();
+                txtFieldSize.Clear();
+                chboxFieldStatus.Checked = false;
+            }
+            else
+            {
+                MessageBox.Show("An input is incorrect");
+            }
+
+
+        }
     }
 }

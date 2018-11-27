@@ -120,6 +120,7 @@
             this.btnAddField.TabIndex = 22;
             this.btnAddField.Text = "Create";
             this.btnAddField.UseVisualStyleBackColor = true;
+            this.btnAddField.Click += new System.EventHandler(this.btnAddField_Click);
             // 
             // addField
             // 
