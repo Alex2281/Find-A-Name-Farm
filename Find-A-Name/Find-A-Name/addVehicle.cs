@@ -15,6 +15,9 @@ namespace Find_A_Name
         public addVehicle()
         {
             InitializeComponent();
+            cmbVehStatus.Items.Add("Available");
+            cmbVehStatus.Items.Add("Out of Service");
+            cmbVehStatus.Items.Add("In Repair");
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -27,31 +30,52 @@ namespace Find_A_Name
         private void btnAddVeh_Click(object sender, EventArgs e)
         {
             BusinessMetaLayer create = BusinessMetaLayer.instance();
-            int accessPrivilage;
-            if (chboxStatus.Checked == true)
+            string cmbResult;
+            int accessPrivilage = 1;
+            int success;
+            cmbResult = cmbVehStatus.SelectedItem.ToString();
+
+            if (cmbResult == "Available")
             {
                 accessPrivilage = 1;
             }
-            else
+            else if (cmbResult == "Out of Service")
             {
                 accessPrivilage = 2;
             }
-
-
-            int success;
-            success = create.addVehicle(txtType.Text, txtDescription.Text, accessPrivilage);
-
-            if (success == 1)
+            else if (cmbResult == "In Repair")
             {
-                MessageBox.Show("Account Created");
-                txtType.Clear();
-                txtDescription.Clear();
-                chboxStatus.Checked = false;
+                accessPrivilage = 3;
             }
             else
             {
-                MessageBox.Show("A Input is Incorrect.");
+                MessageBox.Show("Status is Incorrect");
             }
+
+            if (txtDescription.Text == string.Empty)
+            {
+                MessageBox.Show("Description is Empty");
+            }
+            else if (txtType.Text == string.Empty)
+            {
+                MessageBox.Show("Type of Vehcile is Empty");
+            }
+            else
+            {
+                success = create.addVehicle(txtType.Text, txtDescription.Text, accessPrivilage);
+
+                if (success == 1)
+                {
+                    MessageBox.Show("Account Created");
+                    txtType.Clear();
+                    txtDescription.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("A Input is Incorrect.");
+                }
+            }
+
         }
     }
 }

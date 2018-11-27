@@ -34,9 +34,9 @@
             this.lblVehicleType = new System.Windows.Forms.Label();
             this.txtType = new System.Windows.Forms.TextBox();
             this.lblVehicleStatus = new System.Windows.Forms.Label();
-            this.chboxStatus = new System.Windows.Forms.CheckBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnAddVeh = new System.Windows.Forms.Button();
+            this.cmbVehStatus = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblAddVehicle
@@ -92,16 +92,6 @@
             this.lblVehicleStatus.TabIndex = 19;
             this.lblVehicleStatus.Text = "Vehicle Status";
             // 
-            // chboxStatus
-            // 
-            this.chboxStatus.AutoSize = true;
-            this.chboxStatus.Location = new System.Drawing.Point(177, 168);
-            this.chboxStatus.Name = "chboxStatus";
-            this.chboxStatus.Size = new System.Drawing.Size(63, 17);
-            this.chboxStatus.TabIndex = 21;
-            this.chboxStatus.Text = "Yes/No";
-            this.chboxStatus.UseVisualStyleBackColor = true;
-            // 
             // btnBack
             // 
             this.btnBack.Location = new System.Drawing.Point(221, 215);
@@ -122,15 +112,24 @@
             this.btnAddVeh.UseVisualStyleBackColor = true;
             this.btnAddVeh.Click += new System.EventHandler(this.btnAddVeh_Click);
             // 
+            // cmbVehStatus
+            // 
+            this.cmbVehStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbVehStatus.FormattingEnabled = true;
+            this.cmbVehStatus.Location = new System.Drawing.Point(177, 166);
+            this.cmbVehStatus.Name = "cmbVehStatus";
+            this.cmbVehStatus.Size = new System.Drawing.Size(121, 21);
+            this.cmbVehStatus.TabIndex = 26;
+            // 
             // addVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(445, 326);
+            this.Controls.Add(this.cmbVehStatus);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnAddVeh);
-            this.Controls.Add(this.chboxStatus);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblVehicleStatus);
             this.Controls.Add(this.lblVehicleDescription);
@@ -152,8 +151,8 @@
         private System.Windows.Forms.Label lblVehicleType;
         private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.Label lblVehicleStatus;
-        private System.Windows.Forms.CheckBox chboxStatus;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnAddVeh;
+        private System.Windows.Forms.ComboBox cmbVehStatus;
     }
 }
