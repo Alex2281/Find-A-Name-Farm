@@ -30,20 +30,52 @@ namespace Find_A_Name
         private void btnAddVeh_Click(object sender, EventArgs e)
         {
             BusinessMetaLayer create = BusinessMetaLayer.instance();
-           
+            string cmbResult;
+            int accessPrivilage = 1;
             int success;
-            success = create.addVehicle(txtType.Text, txtDescription.Text);
+            cmbResult = cmbVehStatus.SelectedItem.ToString();
 
-            if (success == 1)
+            if (cmbResult == "Available")
             {
-                MessageBox.Show("Account Created");
-                txtType.Clear();
-                txtDescription.Clear();
+                accessPrivilage = 1;
+            }
+            else if (cmbResult == "Out of Service")
+            {
+                accessPrivilage = 2;
+            }
+            else if (cmbResult == "In Repair")
+            {
+                accessPrivilage = 3;
             }
             else
             {
-                MessageBox.Show("A Input is Incorrect.");
+                MessageBox.Show("Status is Incorrect");
             }
+
+            if (txtDescription.Text == string.Empty)
+            {
+                MessageBox.Show("Description is Empty");
+            }
+            else if (txtType.Text == string.Empty)
+            {
+                MessageBox.Show("Type of Vehcile is Empty");
+            }
+            else
+            {
+                success = create.addVehicle(txtType.Text, txtDescription.Text, accessPrivilage);
+
+                if (success == 1)
+                {
+                    MessageBox.Show("Account Created");
+                    txtType.Clear();
+                    txtDescription.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("A Input is Incorrect.");
+                }
+            }
+
         }
     }
 }
