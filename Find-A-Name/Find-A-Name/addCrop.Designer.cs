@@ -29,14 +29,18 @@
         private void InitializeComponent()
         {
             this.lblAddCrop = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblFertName = new System.Windows.Forms.Label();
+            this.txtFertName = new System.Windows.Forms.TextBox();
+            this.btnAddCrop = new System.Windows.Forms.Button();
+            this.txtFertFreq = new System.Windows.Forms.TextBox();
+            this.txtCultTime = new System.Windows.Forms.TextBox();
+            this.txtYieldValue = new System.Windows.Forms.TextBox();
+            this.lblYieldValue = new System.Windows.Forms.Label();
+            this.lblFertiliserFreq = new System.Windows.Forms.Label();
             this.lblCultivationTime = new System.Windows.Forms.Label();
             this.lblCropName = new System.Windows.Forms.Label();
             this.txtCropName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblYieldValue = new System.Windows.Forms.Label();
-            this.lblFertiliserFreq = new System.Windows.Forms.Label();
-            this.txtCultTime = new System.Windows.Forms.TextBox();
-            this.txtFertFreq = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblAddCrop
@@ -49,73 +53,111 @@
             this.lblAddCrop.TabIndex = 16;
             this.lblAddCrop.Text = "Add Crop";
             // 
-            // lblCultivationTime
+            // btnBack
             // 
-            this.lblCultivationTime.AutoSize = true;
-            this.lblCultivationTime.Location = new System.Drawing.Point(116, 148);
-            this.lblCultivationTime.Margin = new System.Windows.Forms.Padding(12);
-            this.lblCultivationTime.Name = "lblCultivationTime";
-            this.lblCultivationTime.Size = new System.Drawing.Size(82, 13);
-            this.lblCultivationTime.TabIndex = 23;
-            this.lblCultivationTime.Text = "Cultivation Time";
+            this.btnBack.Location = new System.Drawing.Point(253, 264);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(56, 19);
+            this.btnBack.TabIndex = 46;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
             // 
-            // lblCropName
+            // lblFertName
             // 
-            this.lblCropName.AutoSize = true;
-            this.lblCropName.Location = new System.Drawing.Point(138, 113);
-            this.lblCropName.Margin = new System.Windows.Forms.Padding(12);
-            this.lblCropName.Name = "lblCropName";
-            this.lblCropName.Size = new System.Drawing.Size(60, 13);
-            this.lblCropName.TabIndex = 22;
-            this.lblCropName.Text = "Crop Name";
+            this.lblFertName.AutoSize = true;
+            this.lblFertName.Location = new System.Drawing.Point(96, 160);
+            this.lblFertName.Margin = new System.Windows.Forms.Padding(12);
+            this.lblFertName.Name = "lblFertName";
+            this.lblFertName.Size = new System.Drawing.Size(76, 13);
+            this.lblFertName.TabIndex = 45;
+            this.lblFertName.Text = "Fertiliser Name";
             // 
-            // txtCropName
+            // txtFertName
             // 
-            this.txtCropName.Location = new System.Drawing.Point(200, 110);
-            this.txtCropName.Name = "txtCropName";
-            this.txtCropName.Size = new System.Drawing.Size(100, 20);
-            this.txtCropName.TabIndex = 21;
+            this.txtFertName.Location = new System.Drawing.Point(180, 158);
+            this.txtFertName.Name = "txtFertName";
+            this.txtFertName.Size = new System.Drawing.Size(100, 20);
+            this.txtFertName.TabIndex = 44;
             // 
-            // textBox1
+            // btnAddCrop
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 218);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 28;
+            this.btnAddCrop.Location = new System.Drawing.Point(176, 264);
+            this.btnAddCrop.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddCrop.Name = "btnAddCrop";
+            this.btnAddCrop.Size = new System.Drawing.Size(56, 19);
+            this.btnAddCrop.TabIndex = 43;
+            this.btnAddCrop.Text = "Add";
+            this.btnAddCrop.UseVisualStyleBackColor = true;
+            this.btnAddCrop.Click += new System.EventHandler(this.btnAddCrop_Click);
+            // 
+            // txtFertFreq
+            // 
+            this.txtFertFreq.Location = new System.Drawing.Point(180, 197);
+            this.txtFertFreq.Name = "txtFertFreq";
+            this.txtFertFreq.Size = new System.Drawing.Size(100, 20);
+            this.txtFertFreq.TabIndex = 42;
+            // 
+            // txtCultTime
+            // 
+            this.txtCultTime.Location = new System.Drawing.Point(180, 121);
+            this.txtCultTime.Name = "txtCultTime";
+            this.txtCultTime.Size = new System.Drawing.Size(100, 20);
+            this.txtCultTime.TabIndex = 41;
+            // 
+            // txtYieldValue
+            // 
+            this.txtYieldValue.Location = new System.Drawing.Point(180, 233);
+            this.txtYieldValue.Name = "txtYieldValue";
+            this.txtYieldValue.Size = new System.Drawing.Size(100, 20);
+            this.txtYieldValue.TabIndex = 40;
             // 
             // lblYieldValue
             // 
             this.lblYieldValue.AutoSize = true;
-            this.lblYieldValue.Location = new System.Drawing.Point(138, 221);
+            this.lblYieldValue.Location = new System.Drawing.Point(118, 236);
             this.lblYieldValue.Margin = new System.Windows.Forms.Padding(12);
             this.lblYieldValue.Name = "lblYieldValue";
             this.lblYieldValue.Size = new System.Drawing.Size(60, 13);
-            this.lblYieldValue.TabIndex = 27;
+            this.lblYieldValue.TabIndex = 39;
             this.lblYieldValue.Text = "Yield Value";
             // 
             // lblFertiliserFreq
             // 
             this.lblFertiliserFreq.AutoSize = true;
-            this.lblFertiliserFreq.Location = new System.Drawing.Point(100, 185);
+            this.lblFertiliserFreq.Location = new System.Drawing.Point(80, 200);
             this.lblFertiliserFreq.Margin = new System.Windows.Forms.Padding(12);
             this.lblFertiliserFreq.Name = "lblFertiliserFreq";
             this.lblFertiliserFreq.Size = new System.Drawing.Size(98, 13);
-            this.lblFertiliserFreq.TabIndex = 26;
+            this.lblFertiliserFreq.TabIndex = 38;
             this.lblFertiliserFreq.Text = "Fertiliser Frequency";
             // 
-            // txtCultTime
+            // lblCultivationTime
             // 
-            this.txtCultTime.Location = new System.Drawing.Point(200, 145);
-            this.txtCultTime.Name = "txtCultTime";
-            this.txtCultTime.Size = new System.Drawing.Size(100, 20);
-            this.txtCultTime.TabIndex = 29;
+            this.lblCultivationTime.AutoSize = true;
+            this.lblCultivationTime.Location = new System.Drawing.Point(96, 124);
+            this.lblCultivationTime.Margin = new System.Windows.Forms.Padding(12);
+            this.lblCultivationTime.Name = "lblCultivationTime";
+            this.lblCultivationTime.Size = new System.Drawing.Size(82, 13);
+            this.lblCultivationTime.TabIndex = 37;
+            this.lblCultivationTime.Text = "Cultivation Time";
             // 
-            // txtFertFreq
+            // lblCropName
             // 
-            this.txtFertFreq.Location = new System.Drawing.Point(200, 182);
-            this.txtFertFreq.Name = "txtFertFreq";
-            this.txtFertFreq.Size = new System.Drawing.Size(100, 20);
-            this.txtFertFreq.TabIndex = 30;
+            this.lblCropName.AutoSize = true;
+            this.lblCropName.Location = new System.Drawing.Point(118, 89);
+            this.lblCropName.Margin = new System.Windows.Forms.Padding(12);
+            this.lblCropName.Name = "lblCropName";
+            this.lblCropName.Size = new System.Drawing.Size(60, 13);
+            this.lblCropName.TabIndex = 36;
+            this.lblCropName.Text = "Crop Name";
+            // 
+            // txtCropName
+            // 
+            this.txtCropName.Location = new System.Drawing.Point(180, 86);
+            this.txtCropName.Name = "txtCropName";
+            this.txtCropName.Size = new System.Drawing.Size(100, 20);
+            this.txtCropName.TabIndex = 35;
             // 
             // addCrop
             // 
@@ -123,9 +165,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(445, 326);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.lblFertName);
+            this.Controls.Add(this.txtFertName);
+            this.Controls.Add(this.btnAddCrop);
             this.Controls.Add(this.txtFertFreq);
             this.Controls.Add(this.txtCultTime);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtYieldValue);
             this.Controls.Add(this.lblYieldValue);
             this.Controls.Add(this.lblFertiliserFreq);
             this.Controls.Add(this.lblCultivationTime);
@@ -142,13 +188,17 @@
         #endregion
 
         private System.Windows.Forms.Label lblAddCrop;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblFertName;
+        private System.Windows.Forms.TextBox txtFertName;
+        private System.Windows.Forms.Button btnAddCrop;
+        private System.Windows.Forms.TextBox txtFertFreq;
+        private System.Windows.Forms.TextBox txtCultTime;
+        private System.Windows.Forms.TextBox txtYieldValue;
+        private System.Windows.Forms.Label lblYieldValue;
+        private System.Windows.Forms.Label lblFertiliserFreq;
         private System.Windows.Forms.Label lblCultivationTime;
         private System.Windows.Forms.Label lblCropName;
         private System.Windows.Forms.TextBox txtCropName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblYieldValue;
-        private System.Windows.Forms.Label lblFertiliserFreq;
-        private System.Windows.Forms.TextBox txtCultTime;
-        private System.Windows.Forms.TextBox txtFertFreq;
     }
 }
