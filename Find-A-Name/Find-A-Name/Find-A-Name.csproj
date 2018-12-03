@@ -58,6 +58,12 @@
     <Compile Include="addEmployee.Designer.cs">
       <DependentUpon>addEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="addFertiliser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addFertiliser.Designer.cs">
+      <DependentUpon>addFertiliser.cs</DependentUpon>
+    </Compile>
     <Compile Include="addField.cs">
       <SubType>Form</SubType>
     </Compile>
