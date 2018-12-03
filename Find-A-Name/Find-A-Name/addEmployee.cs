@@ -39,10 +39,10 @@ namespace Find_A_Name
             {
                 accessPrivilage = "No";
             }
-            
-            
+
+            string password = txtPassword.Text;
             int success;
-            success = create.addEmployee(txtFirstname.Text, txtSurname.Text, txtPostcode.Text, txtPhone.Text, txtEmail.Text, txtUsername.Text, txtPassword.Text, accessPrivilage);
+            success = create.addEmployee(txtFirstname.Text, txtSurname.Text, txtPostcode.Text, txtPhone.Text, txtEmail.Text, txtUsername.Text, password, accessPrivilage);
 
             if (success == 1)
             {
