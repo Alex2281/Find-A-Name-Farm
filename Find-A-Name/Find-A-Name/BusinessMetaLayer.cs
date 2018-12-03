@@ -211,6 +211,30 @@ namespace Find_A_Name
             return storageUnits;
         }
 
+        public List<TaskType> getTaskTypes()
+        {
+            List<TaskType> taskTypes = new List<TaskType>();
+
+            if (con.OpenConnection())
+            {
+                DbDataReader dr = con.Select("SELECT t.taskTypeId AS Id, t.taskName AS Name, t.taskDescription AS Description FROM TaskType AS t;");
+
+                //Read the data and store them in the list
+                while (dr.Read())
+                {
+                    TaskType taskType = new TaskType();
+                    taskType.Id = dr.GetInt32(0);
+                    taskType.Name = dr.GetString(1);
+                    taskType.Description = dr.GetString(2);
+                    taskTypes.Add(taskType);
+                }
+                //close Data Reader
+                dr.Close();
+                con.CloseConnection();
+            }
+            return taskTypes;
+        }
+
         public int addEmployee(String txtFirstname, String txtSurname, String txtPostcode, String txtPhone, String txtEmail, String txtUsername, String txtPassword, String accessPrivilage)
         {
 
