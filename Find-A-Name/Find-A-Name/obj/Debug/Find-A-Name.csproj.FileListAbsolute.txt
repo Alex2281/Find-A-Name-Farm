@@ -65,3 +65,10 @@ C:\Users\411558\source\repos\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name\Find-
 C:\Users\411558\source\repos\Find-A-Name-Farm\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.addEmployee.resources
 C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.addEmployee.resources
 C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.LabourerMain.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.addCrop.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.addField.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.addTask.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.addVehicle.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.editEmployee.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.editTask.resources
+C:\Users\ASMA116\Source\Repos\Find-A-Name-Farm\Find-A-Name\Find-A-Name\obj\Debug\Find_A_Name.SetTask.resources

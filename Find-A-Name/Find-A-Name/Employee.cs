@@ -34,5 +34,10 @@ namespace Find_A_Name
 
         private String m_created;
         public String Created { get { return m_created; } set { m_created = value; } }
+
+        public override string ToString()
+        {
+            return m_name + ", " + m_id;
+        }
     }
 }

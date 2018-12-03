@@ -121,8 +121,15 @@
     <Compile Include="OleDatabaseConnection.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetTask.Designer.cs">
+      <DependentUpon>SetTask.cs</DependentUpon>
+    </Compile>
     <Compile Include="StorageUnit.cs" />
     <Compile Include="Task.cs" />
+    <Compile Include="TaskType.cs" />
     <Compile Include="Vehicle.cs" />
     <EmbeddedResource Include="addCrop.resx">
       <DependentUpon>addCrop.cs</DependentUpon>
@@ -166,6 +173,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SetTask.resx">
+      <DependentUpon>SetTask.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
