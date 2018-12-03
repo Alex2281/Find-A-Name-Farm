@@ -58,6 +58,12 @@
     <Compile Include="addEmployee.Designer.cs">
       <DependentUpon>addEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="addFertiliser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addFertiliser.Designer.cs">
+      <DependentUpon>addFertiliser.cs</DependentUpon>
+    </Compile>
     <Compile Include="addField.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,12 @@
     <Compile Include="BusinessMetaLayer.cs" />
     <Compile Include="Crop.cs" />
     <Compile Include="DbFactory.cs" />
+    <Compile Include="editCrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editCrop.Designer.cs">
+      <DependentUpon>editCrop.cs</DependentUpon>
+    </Compile>
     <Compile Include="editEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +102,12 @@
     </Compile>
     <Compile Include="editTask.Designer.cs">
       <DependentUpon>editTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="editVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="editVehicle.Designer.cs">
+      <DependentUpon>editVehicle.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="Inventory.cs">
@@ -146,11 +164,17 @@
     <EmbeddedResource Include="addVehicle.resx">
       <DependentUpon>addVehicle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="editCrop.resx">
+      <DependentUpon>editCrop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="editEmployee.resx">
       <DependentUpon>editEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editTask.resx">
       <DependentUpon>editTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="editVehicle.resx">
+      <DependentUpon>editVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
