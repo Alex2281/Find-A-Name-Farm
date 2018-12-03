@@ -57,5 +57,11 @@ namespace Find_A_Name
             addField AddField = new addField();
             AddField.ShowDialog();
         }
+
+        private void setTaskToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            setTask SetTask = new setTask();
+            SetTask.ShowDialog();
+        }
     }
 }

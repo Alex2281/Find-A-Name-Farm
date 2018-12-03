@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Find_A_Name
 {
-    public partial class SetTask : Form
+    public partial class setTask : Form
     {
         BusinessMetaLayer tl = BusinessMetaLayer.instance();
 
@@ -20,7 +20,7 @@ namespace Find_A_Name
         BindingSource m_bs;
         BindingSource m_ts;
 
-        public SetTask()
+        public setTask()
         {
             InitializeComponent();
 

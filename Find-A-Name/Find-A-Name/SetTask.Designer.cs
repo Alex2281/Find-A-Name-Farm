@@ -1,6 +1,6 @@
 ﻿namespace Find_A_Name
 {
-    partial class SetTask
+    partial class setTask
     {
         /// <summary>
         /// Required designer variable.
