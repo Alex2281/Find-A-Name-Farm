@@ -425,7 +425,9 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                int reader = con.Insert("INSERT INTO Tasks (taskDate, scheduleTime, employeeId, taskTypeId, taskStatusId, cropId, fieldId, vehicleId, storageUnitId) VALUES (" + dtTaskDate +',' + cmbTimes + ',' + cmbEmployee + ',' + cmbTaskTypes + ',' + cmbCrops + ',' + cmbFields + ',' + cmbVehicles + ',' + cmbStorageUnits +")");
+                int taskStatusId = 1;
+
+                int reader = con.Insert("INSERT INTO Tasks (taskDate, scheduleTime, employeeId, taskTypeId, taskStatusId, cropId, fieldId, vehicleId, storageUnitId) VALUES (" + dtTaskDate +',' + cmbTimes + ',' + taskStatusId + ",1,1,1,1,1,1)"); // /* + cmbEmployee + ',' + cmbTaskTypes + ',' + cmbCrops + ',' + cmbFields + ',' + cmbVehicles + ',' + cmbStorageUnits +
 
                 if (reader == 1)
                 {

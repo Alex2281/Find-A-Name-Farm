@@ -19,5 +19,10 @@ namespace Find_A_Name
 
         private String m_Status;
         public String Status { get { return m_Status; } set { m_Status = value; } }
+
+        public override string ToString()
+        {
+            return m_type + "," + m_id;
+        }
     }
 }

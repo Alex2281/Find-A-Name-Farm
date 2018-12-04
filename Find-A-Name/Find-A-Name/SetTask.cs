@@ -50,7 +50,7 @@ namespace Find_A_Name
             //Load Times Combo Box
             cmbTimes.Items.Add("0600");
             cmbTimes.Items.Add("06/30");
-            cmbTimes.Items.Add("07:00");
+            cmbTimes.Items.Add("07:00:00");
             cmbTimes.Items.Add("07:30");
             cmbTimes.Items.Add("08:00");
             cmbTimes.Items.Add("09:00");
