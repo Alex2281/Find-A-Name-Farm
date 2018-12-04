@@ -30,7 +30,7 @@
         {
             this.lblEditEmp = new System.Windows.Forms.Label();
             this.btnEdEmpBack = new System.Windows.Forms.Button();
-            this.btnEdAddEmp = new System.Windows.Forms.Button();
+            this.btnEditEmp = new System.Windows.Forms.Button();
             this.cboxEdPrivilege = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEdPassword = new System.Windows.Forms.TextBox();
@@ -70,14 +70,14 @@
             this.btnEdEmpBack.Text = "Back";
             this.btnEdEmpBack.UseVisualStyleBackColor = true;
             // 
-            // btnEdAddEmp
+            // btnEditEmp
             // 
-            this.btnEdAddEmp.Location = new System.Drawing.Point(137, 291);
-            this.btnEdAddEmp.Name = "btnEdAddEmp";
-            this.btnEdAddEmp.Size = new System.Drawing.Size(75, 23);
-            this.btnEdAddEmp.TabIndex = 58;
-            this.btnEdAddEmp.Text = "Create";
-            this.btnEdAddEmp.UseVisualStyleBackColor = true;
+            this.btnEditEmp.Location = new System.Drawing.Point(322, 259);
+            this.btnEditEmp.Name = "btnEditEmp";
+            this.btnEditEmp.Size = new System.Drawing.Size(75, 23);
+            this.btnEditEmp.TabIndex = 58;
+            this.btnEditEmp.Text = "Edit";
+            this.btnEditEmp.UseVisualStyleBackColor = true;
             // 
             // cboxEdPrivilege
             // 
@@ -238,7 +238,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(445, 326);
             this.Controls.Add(this.btnEdEmpBack);
-            this.Controls.Add(this.btnEdAddEmp);
+            this.Controls.Add(this.btnEditEmp);
             this.Controls.Add(this.cboxEdPrivilege);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEdPassword);
@@ -268,7 +268,7 @@
         #endregion
         private System.Windows.Forms.Label lblEditEmp;
         private System.Windows.Forms.Button btnEdEmpBack;
-        private System.Windows.Forms.Button btnEdAddEmp;
+        private System.Windows.Forms.Button btnEditEmp;
         private System.Windows.Forms.CheckBox cboxEdPrivilege;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEdPassword;

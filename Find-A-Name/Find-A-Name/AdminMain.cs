@@ -63,5 +63,11 @@ namespace Find_A_Name
             setTask SetTask = new setTask();
             SetTask.ShowDialog();
         }
+
+        private void addCropToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            addCrop AddCrop = new addCrop();
+            AddCrop.ShowDialog();
+        }
     }
 }
