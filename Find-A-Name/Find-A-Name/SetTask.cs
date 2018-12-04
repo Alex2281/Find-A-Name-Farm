@@ -67,9 +67,10 @@ namespace Find_A_Name
             //Load Task Type Combo Box
             m_tt = new BindingSource();
             m_taskTypes = tl.getTaskTypes();
+
             m_tt.DataSource = m_taskTypes;
-            cmbTaskTypes.DisplayMember = "taskName";
-            cmbTaskTypes.ValueMember = "taskTypeId";
+            cmbTaskTypes.DisplayMember = "Name";
+            cmbTaskTypes.ValueMember = "Id";
             cmbTaskTypes.DataSource = m_tt;
             //Load Task Status Combo Box
             m_cr = new BindingSource();
@@ -98,7 +99,7 @@ namespace Find_A_Name
             BusinessMetaLayer create = BusinessMetaLayer.instance();
             //DateTime taskDate = dtTaskDate;
             int success;
-            success = create.setTask(dtTaskDate.Value.ToString("dd/MM/yyyy"), cmbTimes.Text, cmbEmployees.Text, cmbTaskTypes.Text, cmbCrops.Text, cmbFields.Text, cmbVehicles.Text, cmbStorageUnit.ValueMember);
+            success = create.setTask(dtTaskDate.Value.ToString("dd/MM/yyyy"), cmbTimes.Text, cmbEmployees.Text, cmbTaskTypes.ValueMember, cmbCrops.Text, cmbFields.Text, cmbVehicles.Text, cmbStorageUnit.ValueMember);
 
             if (success == 1)
             {
