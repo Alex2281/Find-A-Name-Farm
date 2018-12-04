@@ -63,5 +63,11 @@ namespace Find_A_Name
             setTask SetTask = new setTask();
             SetTask.ShowDialog();
         }
+
+        private void vehicleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            editVehicle editVeh = new editVehicle();
+            editVeh.ShowDialog();
+        }
     }
 }

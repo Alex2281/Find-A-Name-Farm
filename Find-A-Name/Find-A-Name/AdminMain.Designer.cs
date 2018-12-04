@@ -149,37 +149,38 @@
             // taskToolStripMenuItem
             // 
             this.taskToolStripMenuItem.Name = "taskToolStripMenuItem";
-            this.taskToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.taskToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.taskToolStripMenuItem.Text = "Task";
             // 
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.employeeToolStripMenuItem.Text = "Employee";
             // 
             // vehicleToolStripMenuItem
             // 
             this.vehicleToolStripMenuItem.Name = "vehicleToolStripMenuItem";
-            this.vehicleToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.vehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vehicleToolStripMenuItem.Text = "Vehicle";
+            this.vehicleToolStripMenuItem.Click += new System.EventHandler(this.vehicleToolStripMenuItem_Click);
             // 
             // fieldToolStripMenuItem
             // 
             this.fieldToolStripMenuItem.Name = "fieldToolStripMenuItem";
-            this.fieldToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.fieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fieldToolStripMenuItem.Text = "Field";
             // 
             // cropToolStripMenuItem
             // 
             this.cropToolStripMenuItem.Name = "cropToolStripMenuItem";
-            this.cropToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.cropToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cropToolStripMenuItem.Text = "Crop";
             // 
             // storageUnitToolStripMenuItem
             // 
             this.storageUnitToolStripMenuItem.Name = "storageUnitToolStripMenuItem";
-            this.storageUnitToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
+            this.storageUnitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.storageUnitToolStripMenuItem.Text = "Storage Unit";
             // 
             // farmShopToolStripMenuItem
