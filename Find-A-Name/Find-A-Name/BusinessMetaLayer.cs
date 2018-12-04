@@ -353,20 +353,17 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO Fields (fieldReference, fieldSize, fieldStatus) VALUES (" + txtCropName + ',' + txtCultivationTime + ',' + txtFertiliserFrequency + ',' + txtYieldValue +','+ txtFertiliserName + ")";
-                DbDataReader reader = con.Select(sql);
+                int reader = con.Insert("INSERT INTO Crops (cropName, cultivationTime, fertiliserFrequency, yieldValue, fertiliserId) VALUES (" + txtCropName + ',' + txtCultivationTime + ',' + txtFertiliserFrequency + ',' + txtYieldValue + ",1)");
 
 
-                if (reader.Read())
+                if (reader == 1)
                 {
                     retv = 1;
-                    reader.Close();
                 }
                 else
                 {
                     retv = 2;
-                    reader.Close();
-                }
+               }
                 con.CloseConnection();
             }
             return retv;
