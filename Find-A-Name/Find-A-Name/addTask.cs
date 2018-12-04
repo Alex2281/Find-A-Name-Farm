@@ -25,7 +25,7 @@ namespace Find_A_Name
             int success;
             String taskType = txtTaskType.Text;
             String taskDescription = txtTaskDesc.Text;
-            success = create.addTask(txtTaskType.Text, txtTaskDesc.Text);
+            success = create.addTaskType(txtTaskType.Text, txtTaskDesc.Text);
 
             if (success == 1)
             {

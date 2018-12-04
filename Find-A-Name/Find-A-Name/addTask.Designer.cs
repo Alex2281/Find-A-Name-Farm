@@ -43,9 +43,9 @@
             this.lblAddTask.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddTask.Location = new System.Drawing.Point(164, 32);
             this.lblAddTask.Name = "lblAddTask";
-            this.lblAddTask.Size = new System.Drawing.Size(108, 26);
+            this.lblAddTask.Size = new System.Drawing.Size(186, 26);
             this.lblAddTask.TabIndex = 15;
-            this.lblAddTask.Text = "Add Task";
+            this.lblAddTask.Text = "Add a Task Type";
             // 
             // lblTaskType
             // 

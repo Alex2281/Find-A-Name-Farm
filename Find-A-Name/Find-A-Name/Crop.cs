@@ -25,5 +25,10 @@ namespace Find_A_Name
 
         private string m_fertiliserName;
         public string FertiliserName { get { return m_fertiliserName; } set { m_fertiliserName = value; } }
+
+        public override string ToString()
+        {
+            return m_name + ", " + m_id;
+        }
     }
 }

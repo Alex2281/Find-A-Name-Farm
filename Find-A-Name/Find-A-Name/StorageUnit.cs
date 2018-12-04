@@ -22,5 +22,10 @@ namespace Find_A_Name
 
         private string m_currentCrop;
         public string StoredCrop { get { return m_currentCrop; } set { m_currentCrop = value; } }
+
+        public override string ToString()
+        {
+            return m_reference + ", " + m_id;
+        }
     }
 }

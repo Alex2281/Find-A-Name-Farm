@@ -147,6 +147,7 @@
     </Compile>
     <Compile Include="StorageUnit.cs" />
     <Compile Include="Task.cs" />
+    <Compile Include="TaskStatus.cs" />
     <Compile Include="TaskType.cs" />
     <Compile Include="Vehicle.cs" />
     <EmbeddedResource Include="addCrop.resx">
