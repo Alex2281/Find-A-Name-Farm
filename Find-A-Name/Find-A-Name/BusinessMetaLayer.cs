@@ -144,7 +144,7 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                DbDataReader dr = con.Select("SELECT fieldId AS Id, fieldReference AS Locator, fieldSize AS Area, fieldStatusId AS Status FROM Fields;");
+                DbDataReader dr = con.Select("SELECT f.fieldId AS Id, f.fieldReference AS Locator, f.fieldSize AS Area, fs.statusType AS Status FROM Fields AS f, FieldStatus AS fs WHERE f.fieldStatusId = fs.fieldStatusId;");
 
                 //Read the data and store them in the list
                 while (dr.Read())
@@ -153,7 +153,7 @@ namespace Find_A_Name
                     field.Id = dr.GetInt32(0);
                     field.Reference = dr.GetString(1);
                     field.Size = dr.GetInt32(2);
-                    field.StatusId = dr.GetInt32(3);
+                    field.Status = dr.GetString(3);
                     fields.Add(field);
                 }
                 //close Data Reader

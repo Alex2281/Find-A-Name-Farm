@@ -17,8 +17,8 @@ namespace Find_A_Name
         private int m_size;
         public int Size { get { return m_size; } set { m_size = value; } }
 
-        private int m_statusId;
-        public int StatusId { get { return m_statusId; } set { m_statusId = value; } }
+        private string m_status;
+        public string Status { get { return m_status; } set { m_status = value; } }
 
         public override string ToString()
         {
