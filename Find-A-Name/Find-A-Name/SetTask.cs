@@ -79,7 +79,7 @@ namespace Find_A_Name
             m_dg = new BindingSource();
             m_tasks = tl.getTasks();
             m_dg.DataSource = m_tasks;
-            m_dg.ResetBindings(false);
+            m_dg.ResetBindings(true);
             this.dgdTasksList.DataSource = m_dg.DataSource;
         }
 
