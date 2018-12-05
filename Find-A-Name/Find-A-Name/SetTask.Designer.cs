@@ -46,9 +46,9 @@
             this.lblStorageUnits = new System.Windows.Forms.Label();
             this.btnAddTask = new System.Windows.Forms.Button();
             this.bxSetTask = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgdTasksList = new System.Windows.Forms.DataGridView();
             this.bxSetTask.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgdTasksList)).BeginInit();
             this.SuspendLayout();
             // 
             // dtTaskDate
@@ -225,27 +225,27 @@
             this.bxSetTask.TabStop = false;
             this.bxSetTask.Text = "Set New Task";
             // 
-            // dataGridView1
+            // dgdTasksList
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(758, 208);
-            this.dataGridView1.TabIndex = 18;
+            this.dgdTasksList.AllowUserToOrderColumns = true;
+            this.dgdTasksList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgdTasksList.Location = new System.Drawing.Point(21, 20);
+            this.dgdTasksList.Name = "dgdTasksList";
+            this.dgdTasksList.Size = new System.Drawing.Size(758, 208);
+            this.dgdTasksList.TabIndex = 18;
             // 
             // setTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgdTasksList);
             this.Controls.Add(this.bxSetTask);
             this.Name = "setTask";
             this.Text = "SetTask";
             this.bxSetTask.ResumeLayout(false);
             this.bxSetTask.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgdTasksList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -270,6 +270,6 @@
         private System.Windows.Forms.Label lblStorageUnits;
         private System.Windows.Forms.Button btnAddTask;
         private System.Windows.Forms.GroupBox bxSetTask;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgdTasksList;
     }
 }

@@ -11,31 +11,28 @@ namespace Find_A_Name
         private int m_id;
         public int Id { get { return m_id; } set { m_id = value; } }
 
-        private DateTime m_entryDate;
-        public DateTime EntryDate { get { return m_entryDate; } set { m_entryDate = value; } }
+        private DateTime m_taskDate;
+        public DateTime TaskDate { get { return m_taskDate; } set { m_taskDate = value; } }
 
-        private DateTime m_scheduledDate;
-        public DateTime ScheduledDate { get { return m_scheduledDate; } set { m_scheduledDate = value; } }
+        private string m_employee;
+        public string Employee { get { return m_employee; } set { m_employee = value; } }
 
-        private int m_employeeId;
-        public int EmployeeId { get { return m_employeeId; } set { m_employeeId = value; } }
+        private string m_taskType;
+        public string TaskType { get { return m_taskType; } set { m_taskType = value; } }
 
-        private int m_taskTypeId;
-        public int TaskTypeId { get { return m_taskTypeId; } set { m_taskTypeId = value; } }
+        private string m_taskStatus;
+        public string TaskStatus { get { return m_taskStatus; } set { m_taskStatus = value; } }
 
-        private int m_taskStatusId;
-        public int TaskStatusId { get { return m_taskStatusId; } set { m_taskStatusId = value; } }
+        private string m_crop;
+        public string Crop { get { return m_crop; } set { m_crop = value; } }
 
-        private int m_cropId;
-        public int CropId { get { return m_cropId; } set { m_cropId = value; } }
+        private string m_field;
+        public string Field { get { return m_field; } set { m_field = value; } }
 
-        private int m_fieldId;
-        public int FieldId { get { return m_fieldId; } set { m_fieldId = value; } }
+        private string m_vehicle;
+        public string Vehicle { get { return m_vehicle; } set { m_vehicle = value; } }
 
-        private int m_vehicleId;
-        public int VehicleId { get { return m_vehicleId; } set { m_vehicleId = value; } }
-
-        private int m_storageUnitId;
-        public int StorageUnitId { get { return m_storageUnitId; } set { m_storageUnitId = value; } }
+        private string m_storageUnit;
+        public string StorageUnit { get { return m_storageUnit; } set { m_storageUnit = value; } }
     }
 }

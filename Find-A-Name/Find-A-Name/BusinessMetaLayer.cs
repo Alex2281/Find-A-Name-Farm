@@ -58,11 +58,33 @@ namespace Find_A_Name
             }
             return retv;
         }
-        //public List<Task> getTasks()
-        //{
-        //    List<Task> tasks = new 
-        //}
-        // 
+        public List<Task> getTasks()
+        {
+            List<Task> tasks = new List<Task>();
+
+            if (con.OpenConnection())
+            {
+                DbDataReader dr = con.Select("SELECT t.taskId AS TaskId, t.taskDate AS ScheduleDate, e.firstname +','+ e.lastName AS Employee, tt.taskName AS Task, ts.statusType AS Status, c.cropName AS Crop, f.fieldReference AS field, v.vehicleType AS Vehicle, s.storageReference AS StorageUnit FROM Tasks AS t, Employees AS e, TaskType AS tt, TaskStatus AS ts, Crops AS c, Fields AS f, Vehicles AS v, StorageUnits AS s WHERE t.employeeId = e.employeeId AND t.taskTypeId = tt.taskTypeId AND t.taskStatusId = ts.taskStatusId AND t.cropId = c.cropId AND t.fieldId = f.fieldId AND t.vehicleId = v.vehicleId AND t.storageUnitId = s.storageUnitId;");
+
+                while (dr.Read())
+                {
+                    Task task = new Task();
+                    task.Id = dr.GetInt32(0);
+                    task.TaskDate = dr.GetDateTime(1);
+                    task.Employee = dr.GetString(2);
+                    task.TaskType = dr.GetString(3);
+                    task.TaskStatus = dr.GetString(4);
+                    task.Crop = dr.GetString(5);
+                    task.Field =  dr.GetString(6);
+                    task.Vehicle = dr.GetString(7);
+                    task.StorageUnit = dr.GetString(8);
+                    tasks.Add(task);
+                }
+                dr.Close();
+                con.CloseConnection();
+            }
+            return tasks;
+        } 
         public List<Employee> getEmployees()
         {
             List<Employee> employees = new List<Employee>();

@@ -17,5 +17,10 @@ namespace Find_A_Name
         private int m_stockQuantity;
         public int StockQuantity { get { return m_stockQuantity; } set { m_stockQuantity = value; } }
 
+        public override string ToString()
+        {
+            return m_name;
+        }
+
     }
 }

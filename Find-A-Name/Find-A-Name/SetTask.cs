@@ -35,6 +35,9 @@ namespace Find_A_Name
         List<StorageUnit> m_storageUnits;
         BindingSource m_su;
 
+        List<Task> m_tasks;
+        BindingSource m_dg;
+
         public setTask()
         {
             InitializeComponent();
@@ -72,6 +75,12 @@ namespace Find_A_Name
             m_storageUnits = tl.getStorageUnits();
             m_su.DataSource = m_storageUnits;
             cmbStorageUnit.DataSource = m_storageUnits;
+            
+            m_dg = new BindingSource();
+            m_tasks = tl.getTasks();
+            m_dg.DataSource = m_tasks;
+            m_dg.ResetBindings(true);
+            this.dgdTasksList.DataSource = m_dg.DataSource;
         }
 
         private void btnAddTask_Click(object sender, EventArgs e)
