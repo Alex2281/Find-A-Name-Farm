@@ -440,5 +440,31 @@ namespace Find_A_Name
             }
             return success;
         }
+        public int EditVehicle(String ID, String txtType, String txtDescription, int vehStatusType)
+        {
+            int success = 0;
+            
+
+            if (con.OpenConnection())
+            {
+                String sql = "UPDATE Vehicles SET vehicleType = '" +txtType+ "', vehicleDescription = '" +txtDescription+"', vehicleStatusId = '"+ vehStatusType +"' WHERE vehicleId = " + ID + "";
+                int result = con.Insert(sql);
+
+
+
+                if (result == 1)
+                {
+                    success = 1;
+
+                }
+                else
+                {
+                    success = 0;
+
+                }
+                con.CloseConnection();
+            }
+            return success;
+        }
     }
 }
