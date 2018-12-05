@@ -41,17 +41,17 @@
             this.lblEdFirstname = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataEmployee = new System.Windows.Forms.DataGridView();
             this.btnEditEmpPrev = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnEdEmpNext = new System.Windows.Forms.Button();
+            this.txtEdEmpFirstName = new System.Windows.Forms.TextBox();
+            this.txtEdEmpSurname = new System.Windows.Forms.TextBox();
+            this.txtEdEmpUsern = new System.Windows.Forms.TextBox();
+            this.txtEdEmpPhone = new System.Windows.Forms.TextBox();
+            this.txtEdEmpPost = new System.Windows.Forms.TextBox();
+            this.txtEdEmpEmail = new System.Windows.Forms.TextBox();
+            this.txtEdEmpPass = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataEmployee)).BeginInit();
             this.SuspendLayout();
             // 
             // lblEditEmp
@@ -176,14 +176,14 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 39;
             // 
-            // dataGridView1
+            // dataEmployee
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(60, 333);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(657, 186);
-            this.dataGridView1.TabIndex = 60;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataEmployee.Location = new System.Drawing.Point(60, 333);
+            this.dataEmployee.Name = "dataEmployee";
+            this.dataEmployee.Size = new System.Drawing.Size(657, 186);
+            this.dataEmployee.TabIndex = 60;
+            this.dataEmployee.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnEditEmpPrev
             // 
@@ -193,64 +193,66 @@
             this.btnEditEmpPrev.TabIndex = 69;
             this.btnEditEmpPrev.Text = "Previous";
             this.btnEditEmpPrev.UseVisualStyleBackColor = true;
+            this.btnEditEmpPrev.Click += new System.EventHandler(this.btnEditEmpPrev_Click);
             // 
-            // button2
+            // btnEdEmpNext
             // 
-            this.button2.Location = new System.Drawing.Point(622, 304);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 70;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEdEmpNext.Location = new System.Drawing.Point(622, 304);
+            this.btnEdEmpNext.Name = "btnEdEmpNext";
+            this.btnEdEmpNext.Size = new System.Drawing.Size(75, 23);
+            this.btnEdEmpNext.TabIndex = 70;
+            this.btnEdEmpNext.Text = "Next";
+            this.btnEdEmpNext.UseVisualStyleBackColor = true;
+            this.btnEdEmpNext.Click += new System.EventHandler(this.btnEdEmpNext_Click);
             // 
-            // textBox1
+            // txtEdEmpFirstName
             // 
-            this.textBox1.Location = new System.Drawing.Point(301, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 71;
+            this.txtEdEmpFirstName.Location = new System.Drawing.Point(301, 101);
+            this.txtEdEmpFirstName.Name = "txtEdEmpFirstName";
+            this.txtEdEmpFirstName.Size = new System.Drawing.Size(100, 20);
+            this.txtEdEmpFirstName.TabIndex = 71;
             // 
-            // textBox2
+            // txtEdEmpSurname
             // 
-            this.textBox2.Location = new System.Drawing.Point(301, 128);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 72;
+            this.txtEdEmpSurname.Location = new System.Drawing.Point(301, 128);
+            this.txtEdEmpSurname.Name = "txtEdEmpSurname";
+            this.txtEdEmpSurname.Size = new System.Drawing.Size(100, 20);
+            this.txtEdEmpSurname.TabIndex = 72;
             // 
-            // textBox3
+            // txtEdEmpUsern
             // 
-            this.textBox3.Location = new System.Drawing.Point(301, 154);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 73;
+            this.txtEdEmpUsern.Location = new System.Drawing.Point(301, 154);
+            this.txtEdEmpUsern.Name = "txtEdEmpUsern";
+            this.txtEdEmpUsern.Size = new System.Drawing.Size(100, 20);
+            this.txtEdEmpUsern.TabIndex = 73;
             // 
-            // textBox4
+            // txtEdEmpPhone
             // 
-            this.textBox4.Location = new System.Drawing.Point(301, 263);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 74;
+            this.txtEdEmpPhone.Location = new System.Drawing.Point(301, 263);
+            this.txtEdEmpPhone.Name = "txtEdEmpPhone";
+            this.txtEdEmpPhone.Size = new System.Drawing.Size(100, 20);
+            this.txtEdEmpPhone.TabIndex = 74;
             // 
-            // textBox5
+            // txtEdEmpPost
             // 
-            this.textBox5.Location = new System.Drawing.Point(301, 236);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 75;
+            this.txtEdEmpPost.Location = new System.Drawing.Point(301, 236);
+            this.txtEdEmpPost.Name = "txtEdEmpPost";
+            this.txtEdEmpPost.Size = new System.Drawing.Size(100, 20);
+            this.txtEdEmpPost.TabIndex = 75;
             // 
-            // textBox6
+            // txtEdEmpEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(301, 208);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 76;
+            this.txtEdEmpEmail.Location = new System.Drawing.Point(301, 208);
+            this.txtEdEmpEmail.Name = "txtEdEmpEmail";
+            this.txtEdEmpEmail.Size = new System.Drawing.Size(100, 20);
+            this.txtEdEmpEmail.TabIndex = 76;
             // 
-            // textBox7
+            // txtEdEmpPass
             // 
-            this.textBox7.Location = new System.Drawing.Point(301, 181);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 77;
+            this.txtEdEmpPass.Location = new System.Drawing.Point(301, 181);
+            this.txtEdEmpPass.Name = "txtEdEmpPass";
+            this.txtEdEmpPass.Size = new System.Drawing.Size(100, 20);
+            this.txtEdEmpPass.TabIndex = 77;
             // 
             // editEmployee
             // 
@@ -258,16 +260,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(831, 531);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.txtEdEmpPass);
+            this.Controls.Add(this.txtEdEmpEmail);
+            this.Controls.Add(this.txtEdEmpPost);
+            this.Controls.Add(this.txtEdEmpPhone);
+            this.Controls.Add(this.txtEdEmpUsern);
+            this.Controls.Add(this.txtEdEmpSurname);
+            this.Controls.Add(this.txtEdEmpFirstName);
+            this.Controls.Add(this.btnEdEmpNext);
             this.Controls.Add(this.btnEditEmpPrev);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataEmployee);
             this.Controls.Add(this.btnEditEmp);
             this.Controls.Add(this.cboxEdPrivilege);
             this.Controls.Add(this.label2);
@@ -283,7 +285,7 @@
             this.Controls.Add(this.lblEditEmp);
             this.Name = "editEmployee";
             this.Text = "Edit Employee";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataEmployee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,15 +305,15 @@
         private System.Windows.Forms.Label lblEdFirstname;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataEmployee;
         private System.Windows.Forms.Button btnEditEmpPrev;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button btnEdEmpNext;
+        private System.Windows.Forms.TextBox txtEdEmpFirstName;
+        private System.Windows.Forms.TextBox txtEdEmpSurname;
+        private System.Windows.Forms.TextBox txtEdEmpUsern;
+        private System.Windows.Forms.TextBox txtEdEmpPhone;
+        private System.Windows.Forms.TextBox txtEdEmpPost;
+        private System.Windows.Forms.TextBox txtEdEmpEmail;
+        private System.Windows.Forms.TextBox txtEdEmpPass;
     }
 }
