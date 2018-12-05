@@ -12,12 +12,16 @@ namespace Find_A_Name
 {
     public partial class editEmployee : Form
     {
+
+        
+        BusinessMetaLayer bml = BusinessMetaLayer.instance();
         List<Employee> m_employees;
         BindingSource m_bs;
 
-        public  editEmployee()
+        public editEmployee()
         {
             InitializeComponent();
+            m_bs = new BindingSource();
             BusinessMetaLayer ml = BusinessMetaLayer.instance();
             m_employees = ml.getEmployees();
             m_bs.DataSource = m_employees;

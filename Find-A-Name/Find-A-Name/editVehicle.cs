@@ -12,7 +12,6 @@ namespace Find_A_Name
 {
     public partial class editVehicle : Form
     {
-        BusinessMetaLayer bml = BusinessMetaLayer.instance();
 
         List<Vehicle> m_vehicles;
         BindingSource m_ve;
