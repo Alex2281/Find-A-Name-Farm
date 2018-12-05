@@ -71,7 +71,14 @@ namespace Find_A_Name
         }
         private void addCropToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            addCrop AddCrop = new addCrop();
+            AddCrop.ShowDialog();
+        }
 
+        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            editEmployee EditEmp = new editEmployee();
+            EditEmp.ShowDialog();
         }
     }
 }

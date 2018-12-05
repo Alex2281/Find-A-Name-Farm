@@ -353,7 +353,7 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                int reader = con.Insert("INSERT INTO Crops (cropName, cultivationTime, fertiliserFrequency, yieldValue, fertiliserId) VALUES (" + txtCropName + ',' + txtCultivationTime + ',' + txtFertiliserFrequency + ',' + txtYieldValue + ",1)");
+                int reader = con.Insert("INSERT INTO Crops (cropName, cultivationTime, fertiliserFrequency, yieldValue, fertiliserId) VALUES ('" + txtCropName + "','" + txtCultivationTime + ',' + txtFertiliserFrequency + ',' + txtYieldValue + ",1)");
 
 
                 if (reader == 1)
