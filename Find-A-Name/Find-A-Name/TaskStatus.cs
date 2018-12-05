@@ -16,7 +16,7 @@ namespace Find_A_Name
 
         public override string ToString()
         {
-            return m_name + ", " + m_id;
+            return m_name;
         }
     }
 }

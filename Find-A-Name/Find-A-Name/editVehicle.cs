@@ -13,6 +13,7 @@ namespace Find_A_Name
     public partial class editVehicle : Form
     {
 
+        BusinessMetaLayer ml = BusinessMetaLayer.instance();
         List<Vehicle> m_vehicles;
         BindingSource m_ve;
         int rowNum = 1;
@@ -28,11 +29,13 @@ namespace Find_A_Name
             InitializeComponent();
 
             m_ve = new BindingSource();
-            BusinessMetaLayer ml = BusinessMetaLayer.instance();
             m_vehicles = ml.getVehicles();
             m_ve.DataSource = m_vehicles;
             m_ve.ResetBindings(false);
             this.dataGridView1.DataSource = m_ve.DataSource;
+            cmbStatus.Items.Add("Available");
+            cmbStatus.Items.Add("Out of Service");
+            cmbStatus.Items.Add("In Repair");
 
         }
 
@@ -42,7 +45,6 @@ namespace Find_A_Name
             for (int col = 0; col < dataGridView1.Rows[rowNum].Cells.Count; col++)
             {
                 string result = dataGridView1.Rows[rowNum].Cells[col].Value.ToString();
-                MessageBox.Show(result);
                 if (col == 0)
                 {
                     ID = result;
@@ -62,7 +64,7 @@ namespace Find_A_Name
             }
             txtName.Text = name;
             txtDescrip.Text = description;
-            txtStatus.Text = status;
+            cmbStatus.Text = status;
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
@@ -74,7 +76,6 @@ namespace Find_A_Name
                 for (int col= 0; col < dataGridView1.Rows[rowNum].Cells.Count; col++)
                 {
                     string result = dataGridView1.Rows[rowNum].Cells[col].Value.ToString();
-                    MessageBox.Show(result);
                     if (col == 0)
                     {
                         ID = result;
@@ -94,7 +95,8 @@ namespace Find_A_Name
                 }
                 txtName.Text = name;
                 txtDescrip.Text = description;
-                txtStatus.Text = status;
+                cmbStatus.Text = status;
+                cmbStatus.SelectedText = status;
             }
             else
             {
@@ -102,7 +104,52 @@ namespace Find_A_Name
             }
 
 
+
+
           
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            int success;
+
+            int vehStatusType;
+            vehStatusType = 0;
+            if (cmbStatus.Text == "Available")
+            {
+                vehStatusType = 1;
+            }
+            else if (cmbStatus.Text == "Out of Service")
+            {
+                vehStatusType = 2;
+            }
+            else if (cmbStatus.Text == "In Repair")
+            {
+                vehStatusType = 3;
+            }
+            else
+            {
+                MessageBox.Show("Invalid Selection");
+            }
+
+            success = ml.EditVehicle(ID, txtName.Text, txtDescrip.Text, vehStatusType );
+
+            if (success == 1)
+            {
+                MessageBox.Show("Account Created");
+                m_ve = new BindingSource();
+                m_vehicles = ml.getVehicles();
+                m_ve.DataSource = m_vehicles;
+                m_ve.ResetBindings(false);
+                this.dataGridView1.DataSource = m_ve.DataSource;
+                txtName.Clear();
+                txtDescrip.Clear();
+            }
+            else
+            {
+                MessageBox.Show("A Input is Incorrect.");
+            }
 
         }
     }

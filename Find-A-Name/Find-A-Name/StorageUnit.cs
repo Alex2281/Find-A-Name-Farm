@@ -25,7 +25,7 @@ namespace Find_A_Name
 
         public override string ToString()
         {
-            return m_reference + ", " + m_id;
+            return m_reference;
         }
     }
 }
