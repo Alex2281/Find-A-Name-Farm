@@ -35,6 +35,9 @@ namespace Find_A_Name
         List<StorageUnit> m_storageUnits;
         BindingSource m_su;
 
+        List<Task> m_tasks;
+        BindingSource m_dg;
+
         public setTask()
         {
             InitializeComponent();
@@ -47,30 +50,10 @@ namespace Find_A_Name
             m_employees = tl.getEmployees();
             m_em.DataSource = m_employees;
             cmbEmployees.DataSource = m_em;
-            //Load Times Combo Box
-            cmbTimes.Items.Add("0600");
-            cmbTimes.Items.Add("06/30");
-            cmbTimes.Items.Add("07:00:00");
-            cmbTimes.Items.Add("07:30");
-            cmbTimes.Items.Add("08:00");
-            cmbTimes.Items.Add("09:00");
-            cmbTimes.Items.Add("11:00");
-            cmbTimes.Items.Add("12:00");
-            cmbTimes.Items.Add("13:00");
-            cmbTimes.Items.Add("14:00");
-            cmbTimes.Items.Add("15:00");
-            cmbTimes.Items.Add("16:00");
-            cmbTimes.Items.Add("17:00");
-            cmbTimes.Items.Add("18:00");
-            cmbTimes.Items.Add("19:00");
-            cmbTimes.Items.Add("20:00");
             //Load Task Type Combo Box
             m_tt = new BindingSource();
             m_taskTypes = tl.getTaskTypes();
-            
             m_tt.DataSource = m_taskTypes;
-            cmbTaskTypes.DisplayMember = "Name";
-            cmbTaskTypes.ValueMember = "Id";
             cmbTaskTypes.DataSource = m_tt;
             //Load Task Status Combo Box
             m_cr = new BindingSource();
@@ -92,14 +75,35 @@ namespace Find_A_Name
             m_storageUnits = tl.getStorageUnits();
             m_su.DataSource = m_storageUnits;
             cmbStorageUnit.DataSource = m_storageUnits;
+            
+            m_dg = new BindingSource();
+            m_tasks = tl.getTasks();
+            m_dg.DataSource = m_tasks;
+            m_dg.ResetBindings(false);
+            this.dgdTasksList.DataSource = m_dg.DataSource;
         }
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
+            DateTime taskDate = dtTaskDate.Value;
+            Employee selectedEmployee = (Employee)cmbEmployees.SelectedItem;
+            int employeeId = selectedEmployee.Id;       
+            TaskType selectedTaskType = (TaskType)cmbTaskTypes.SelectedItem;
+            int taskTypeId = selectedTaskType.Id;
+            Crop selectedCrop = (Crop)cmbCrops.SelectedItem;
+            int cropId = selectedCrop.Id;
+            Field selectedField = (Field)cmbFields.SelectedItem;
+            int fieldId = selectedField.Id;
+            Vehicle selectedVehicle = (Vehicle)cmbVehicles.SelectedItem;
+            int vehicleId = selectedVehicle.Id;
+            StorageUnit selectedStorageUnit = (StorageUnit)cmbStorageUnit.SelectedItem;
+            int storageUnitId = selectedStorageUnit.Id;
+
             BusinessMetaLayer create = BusinessMetaLayer.instance();
             //DateTime taskDate = dtTaskDate;
             int success;
-            success = create.setTask(dtTaskDate.Value.ToString("dd/MM/yyyy"), cmbTimes.Text, cmbEmployees.Text, cmbTaskTypes.ValueMember, cmbCrops.Text, cmbFields.Text, cmbVehicles.Text, cmbStorageUnit.ValueMember);
+
+            success = create.setTask(taskDate, employeeId, taskTypeId, cropId, fieldId, vehicleId, storageUnitId);
 
             if (success == 1)
             {
