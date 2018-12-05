@@ -59,7 +59,7 @@ namespace Find_A_Name
             return retv;
         }
 
-        // Could just have a set of static helper methods rather than a singleton!
+        // 
         public List<Employee> getEmployees()
         {
             List<Employee> employees = new List<Employee>();
