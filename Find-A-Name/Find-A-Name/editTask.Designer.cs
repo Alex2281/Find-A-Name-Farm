@@ -28,64 +28,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbTaskType = new System.Windows.Forms.ComboBox();
+            this.cmbTaskTypeDesc = new System.Windows.Forms.ComboBox();
+            this.dataGridTaskType = new System.Windows.Forms.DataGridView();
+            this.lblEditTaskType = new System.Windows.Forms.Label();
+            this.lblEditTaskDesc = new System.Windows.Forms.Label();
+            this.btnEditTaskPrev = new System.Windows.Forms.Button();
+            this.btnEditTaskType = new System.Windows.Forms.Button();
+            this.btnEditTaskNext = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTaskType)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmbTaskType
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(228, 69);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cmbTaskType.FormattingEnabled = true;
+            this.cmbTaskType.Location = new System.Drawing.Point(121, 84);
+            this.cmbTaskType.Name = "cmbTaskType";
+            this.cmbTaskType.Size = new System.Drawing.Size(121, 21);
+            this.cmbTaskType.TabIndex = 2;
             // 
-            // comboBox2
+            // cmbTaskTypeDesc
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(228, 105);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 1;
+            this.cmbTaskTypeDesc.FormattingEnabled = true;
+            this.cmbTaskTypeDesc.Location = new System.Drawing.Point(121, 111);
+            this.cmbTaskTypeDesc.Name = "cmbTaskTypeDesc";
+            this.cmbTaskTypeDesc.Size = new System.Drawing.Size(121, 21);
+            this.cmbTaskTypeDesc.TabIndex = 3;
             // 
-            // comboBox3
+            // dataGridTaskType
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(228, 150);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 2;
+            this.dataGridTaskType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTaskType.Location = new System.Drawing.Point(55, 183);
+            this.dataGridTaskType.Name = "dataGridTaskType";
+            this.dataGridTaskType.Size = new System.Drawing.Size(455, 145);
+            this.dataGridTaskType.TabIndex = 4;
             // 
-            // comboBox4
+            // lblEditTaskType
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(228, 193);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 3;
+            this.lblEditTaskType.AutoSize = true;
+            this.lblEditTaskType.Location = new System.Drawing.Point(57, 87);
+            this.lblEditTaskType.Name = "lblEditTaskType";
+            this.lblEditTaskType.Size = new System.Drawing.Size(58, 13);
+            this.lblEditTaskType.TabIndex = 5;
+            this.lblEditTaskType.Text = "Task Type";
+            // 
+            // lblEditTaskDesc
+            // 
+            this.lblEditTaskDesc.AutoSize = true;
+            this.lblEditTaskDesc.Location = new System.Drawing.Point(28, 114);
+            this.lblEditTaskDesc.Name = "lblEditTaskDesc";
+            this.lblEditTaskDesc.Size = new System.Drawing.Size(87, 13);
+            this.lblEditTaskDesc.TabIndex = 6;
+            this.lblEditTaskDesc.Text = "Task Description";
+            // 
+            // btnEditTaskPrev
+            // 
+            this.btnEditTaskPrev.Location = new System.Drawing.Point(55, 145);
+            this.btnEditTaskPrev.Name = "btnEditTaskPrev";
+            this.btnEditTaskPrev.Size = new System.Drawing.Size(75, 23);
+            this.btnEditTaskPrev.TabIndex = 7;
+            this.btnEditTaskPrev.Text = "Previous";
+            this.btnEditTaskPrev.UseVisualStyleBackColor = true;
+            // 
+            // btnEditTaskType
+            // 
+            this.btnEditTaskType.Location = new System.Drawing.Point(149, 145);
+            this.btnEditTaskType.Name = "btnEditTaskType";
+            this.btnEditTaskType.Size = new System.Drawing.Size(75, 23);
+            this.btnEditTaskType.TabIndex = 8;
+            this.btnEditTaskType.Text = "Edit";
+            this.btnEditTaskType.UseVisualStyleBackColor = true;
+            // 
+            // btnEditTaskNext
+            // 
+            this.btnEditTaskNext.Location = new System.Drawing.Point(247, 145);
+            this.btnEditTaskNext.Name = "btnEditTaskNext";
+            this.btnEditTaskNext.Size = new System.Drawing.Size(75, 23);
+            this.btnEditTaskNext.TabIndex = 9;
+            this.btnEditTaskNext.Text = "Next";
+            this.btnEditTaskNext.UseVisualStyleBackColor = true;
             // 
             // editTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 442);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(580, 351);
+            this.Controls.Add(this.btnEditTaskNext);
+            this.Controls.Add(this.btnEditTaskType);
+            this.Controls.Add(this.btnEditTaskPrev);
+            this.Controls.Add(this.lblEditTaskDesc);
+            this.Controls.Add(this.lblEditTaskType);
+            this.Controls.Add(this.dataGridTaskType);
+            this.Controls.Add(this.cmbTaskTypeDesc);
+            this.Controls.Add(this.cmbTaskType);
             this.Name = "editTask";
             this.Text = "Edit Task";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTaskType)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbTaskType;
+        private System.Windows.Forms.ComboBox cmbTaskTypeDesc;
+        private System.Windows.Forms.DataGridView dataGridTaskType;
+        private System.Windows.Forms.Label lblEditTaskType;
+        private System.Windows.Forms.Label lblEditTaskDesc;
+        private System.Windows.Forms.Button btnEditTaskPrev;
+        private System.Windows.Forms.Button btnEditTaskType;
+        private System.Windows.Forms.Button btnEditTaskNext;
     }
 }
