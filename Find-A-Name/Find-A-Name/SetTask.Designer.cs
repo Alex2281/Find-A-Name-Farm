@@ -45,13 +45,17 @@
             this.cmbStorageUnit = new System.Windows.Forms.ComboBox();
             this.lblStorageUnits = new System.Windows.Forms.Label();
             this.btnAddTask = new System.Windows.Forms.Button();
+            this.bxSetTask = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.bxSetTask.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtTaskDate
             // 
             this.dtTaskDate.CustomFormat = "dd/MM/yyyy";
             this.dtTaskDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtTaskDate.Location = new System.Drawing.Point(42, 99);
+            this.dtTaskDate.Location = new System.Drawing.Point(38, 43);
             this.dtTaskDate.Name = "dtTaskDate";
             this.dtTaskDate.Size = new System.Drawing.Size(140, 20);
             this.dtTaskDate.TabIndex = 0;
@@ -60,7 +64,7 @@
             // lblDate
             // 
             this.lblDate.AutoSize = true;
-            this.lblDate.Location = new System.Drawing.Point(39, 83);
+            this.lblDate.Location = new System.Drawing.Point(35, 27);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(49, 13);
             this.lblDate.TabIndex = 1;
@@ -69,7 +73,7 @@
             // cmbEmployees
             // 
             this.cmbEmployees.FormattingEnabled = true;
-            this.cmbEmployees.Location = new System.Drawing.Point(586, 102);
+            this.cmbEmployees.Location = new System.Drawing.Point(582, 46);
             this.cmbEmployees.Name = "cmbEmployees";
             this.cmbEmployees.Size = new System.Drawing.Size(140, 21);
             this.cmbEmployees.TabIndex = 2;
@@ -77,7 +81,7 @@
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(337, 83);
+            this.lblTime.Location = new System.Drawing.Point(333, 27);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(49, 13);
             this.lblTime.TabIndex = 3;
@@ -86,7 +90,7 @@
             // cmbTimes
             // 
             this.cmbTimes.FormattingEnabled = true;
-            this.cmbTimes.Location = new System.Drawing.Point(337, 102);
+            this.cmbTimes.Location = new System.Drawing.Point(333, 46);
             this.cmbTimes.Name = "cmbTimes";
             this.cmbTimes.Size = new System.Drawing.Size(140, 21);
             this.cmbTimes.TabIndex = 4;
@@ -94,7 +98,7 @@
             // lblEmployees
             // 
             this.lblEmployees.AutoSize = true;
-            this.lblEmployees.Location = new System.Drawing.Point(583, 86);
+            this.lblEmployees.Location = new System.Drawing.Point(579, 30);
             this.lblEmployees.Name = "lblEmployees";
             this.lblEmployees.Size = new System.Drawing.Size(107, 13);
             this.lblEmployees.TabIndex = 5;
@@ -103,7 +107,7 @@
             // cmbTaskTypes
             // 
             this.cmbTaskTypes.FormattingEnabled = true;
-            this.cmbTaskTypes.Location = new System.Drawing.Point(42, 159);
+            this.cmbTaskTypes.Location = new System.Drawing.Point(38, 103);
             this.cmbTaskTypes.Name = "cmbTaskTypes";
             this.cmbTaskTypes.Size = new System.Drawing.Size(140, 21);
             this.cmbTaskTypes.TabIndex = 6;
@@ -111,7 +115,7 @@
             // lblTaskType
             // 
             this.lblTaskType.AutoSize = true;
-            this.lblTaskType.Location = new System.Drawing.Point(39, 143);
+            this.lblTaskType.Location = new System.Drawing.Point(35, 87);
             this.lblTaskType.Name = "lblTaskType";
             this.lblTaskType.Size = new System.Drawing.Size(70, 13);
             this.lblTaskType.TabIndex = 7;
@@ -120,7 +124,7 @@
             // cmbCrops
             // 
             this.cmbCrops.FormattingEnabled = true;
-            this.cmbCrops.Location = new System.Drawing.Point(340, 159);
+            this.cmbCrops.Location = new System.Drawing.Point(336, 103);
             this.cmbCrops.Name = "cmbCrops";
             this.cmbCrops.Size = new System.Drawing.Size(140, 21);
             this.cmbCrops.TabIndex = 8;
@@ -128,7 +132,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(337, 143);
+            this.label1.Location = new System.Drawing.Point(333, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 9;
@@ -137,7 +141,7 @@
             // cmbFields
             // 
             this.cmbFields.FormattingEnabled = true;
-            this.cmbFields.Location = new System.Drawing.Point(586, 159);
+            this.cmbFields.Location = new System.Drawing.Point(582, 103);
             this.cmbFields.Name = "cmbFields";
             this.cmbFields.Size = new System.Drawing.Size(140, 21);
             this.cmbFields.TabIndex = 10;
@@ -145,7 +149,7 @@
             // lblFields
             // 
             this.lblFields.AutoSize = true;
-            this.lblFields.Location = new System.Drawing.Point(586, 143);
+            this.lblFields.Location = new System.Drawing.Point(582, 87);
             this.lblFields.Name = "lblFields";
             this.lblFields.Size = new System.Drawing.Size(73, 13);
             this.lblFields.TabIndex = 11;
@@ -154,7 +158,7 @@
             // cmbVehicles
             // 
             this.cmbVehicles.FormattingEnabled = true;
-            this.cmbVehicles.Location = new System.Drawing.Point(42, 217);
+            this.cmbVehicles.Location = new System.Drawing.Point(38, 161);
             this.cmbVehicles.Name = "cmbVehicles";
             this.cmbVehicles.Size = new System.Drawing.Size(140, 21);
             this.cmbVehicles.TabIndex = 12;
@@ -162,7 +166,7 @@
             // lblVehicles
             // 
             this.lblVehicles.AutoSize = true;
-            this.lblVehicles.Location = new System.Drawing.Point(39, 201);
+            this.lblVehicles.Location = new System.Drawing.Point(35, 145);
             this.lblVehicles.Name = "lblVehicles";
             this.lblVehicles.Size = new System.Drawing.Size(81, 13);
             this.lblVehicles.TabIndex = 13;
@@ -171,7 +175,7 @@
             // cmbStorageUnit
             // 
             this.cmbStorageUnit.FormattingEnabled = true;
-            this.cmbStorageUnit.Location = new System.Drawing.Point(337, 217);
+            this.cmbStorageUnit.Location = new System.Drawing.Point(333, 161);
             this.cmbStorageUnit.Name = "cmbStorageUnit";
             this.cmbStorageUnit.Size = new System.Drawing.Size(140, 21);
             this.cmbStorageUnit.TabIndex = 14;
@@ -179,7 +183,7 @@
             // lblStorageUnits
             // 
             this.lblStorageUnits.AutoSize = true;
-            this.lblStorageUnits.Location = new System.Drawing.Point(334, 201);
+            this.lblStorageUnits.Location = new System.Drawing.Point(330, 145);
             this.lblStorageUnits.Name = "lblStorageUnits";
             this.lblStorageUnits.Size = new System.Drawing.Size(108, 13);
             this.lblStorageUnits.TabIndex = 15;
@@ -187,7 +191,7 @@
             // 
             // btnAddTask
             // 
-            this.btnAddTask.Location = new System.Drawing.Point(632, 215);
+            this.btnAddTask.Location = new System.Drawing.Point(628, 159);
             this.btnAddTask.Name = "btnAddTask";
             this.btnAddTask.Size = new System.Drawing.Size(75, 23);
             this.btnAddTask.TabIndex = 16;
@@ -195,32 +199,54 @@
             this.btnAddTask.UseVisualStyleBackColor = true;
             this.btnAddTask.Click += new System.EventHandler(this.btnAddTask_Click);
             // 
+            // bxSetTask
+            // 
+            this.bxSetTask.Controls.Add(this.btnAddTask);
+            this.bxSetTask.Controls.Add(this.lblStorageUnits);
+            this.bxSetTask.Controls.Add(this.cmbStorageUnit);
+            this.bxSetTask.Controls.Add(this.lblVehicles);
+            this.bxSetTask.Controls.Add(this.cmbVehicles);
+            this.bxSetTask.Controls.Add(this.lblFields);
+            this.bxSetTask.Controls.Add(this.cmbFields);
+            this.bxSetTask.Controls.Add(this.label1);
+            this.bxSetTask.Controls.Add(this.cmbCrops);
+            this.bxSetTask.Controls.Add(this.lblTaskType);
+            this.bxSetTask.Controls.Add(this.cmbTaskTypes);
+            this.bxSetTask.Controls.Add(this.lblEmployees);
+            this.bxSetTask.Controls.Add(this.cmbTimes);
+            this.bxSetTask.Controls.Add(this.lblTime);
+            this.bxSetTask.Controls.Add(this.cmbEmployees);
+            this.bxSetTask.Controls.Add(this.lblDate);
+            this.bxSetTask.Controls.Add(this.dtTaskDate);
+            this.bxSetTask.Location = new System.Drawing.Point(21, 243);
+            this.bxSetTask.Name = "bxSetTask";
+            this.bxSetTask.Size = new System.Drawing.Size(758, 189);
+            this.bxSetTask.TabIndex = 17;
+            this.bxSetTask.TabStop = false;
+            this.bxSetTask.Text = "Set New Task";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(21, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(758, 208);
+            this.dataGridView1.TabIndex = 18;
+            // 
             // setTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAddTask);
-            this.Controls.Add(this.lblStorageUnits);
-            this.Controls.Add(this.cmbStorageUnit);
-            this.Controls.Add(this.lblVehicles);
-            this.Controls.Add(this.cmbVehicles);
-            this.Controls.Add(this.lblFields);
-            this.Controls.Add(this.cmbFields);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cmbCrops);
-            this.Controls.Add(this.lblTaskType);
-            this.Controls.Add(this.cmbTaskTypes);
-            this.Controls.Add(this.lblEmployees);
-            this.Controls.Add(this.cmbTimes);
-            this.Controls.Add(this.lblTime);
-            this.Controls.Add(this.cmbEmployees);
-            this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.dtTaskDate);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.bxSetTask);
             this.Name = "setTask";
             this.Text = "SetTask";
+            this.bxSetTask.ResumeLayout(false);
+            this.bxSetTask.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -243,5 +269,7 @@
         private System.Windows.Forms.ComboBox cmbStorageUnit;
         private System.Windows.Forms.Label lblStorageUnits;
         private System.Windows.Forms.Button btnAddTask;
+        private System.Windows.Forms.GroupBox bxSetTask;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

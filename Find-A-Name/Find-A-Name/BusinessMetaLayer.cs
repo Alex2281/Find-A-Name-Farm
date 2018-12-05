@@ -58,7 +58,10 @@ namespace Find_A_Name
             }
             return retv;
         }
-
+        //public List<Task> getTasks()
+        //{
+        //    List<Task> tasks = new 
+        //}
         // 
         public List<Employee> getEmployees()
         {
@@ -89,7 +92,6 @@ namespace Find_A_Name
             }
             return employees;
         }
-
         public List<Vehicle> getVehicles()
         {
             List<Vehicle> vehicles = new List<Vehicle>();
@@ -416,7 +418,7 @@ namespace Find_A_Name
             return retv;
         }
 
-        public int setTask(string dtTaskDate, string cmbTimes, string cmbEmployee, string cmbTaskTypes, string cmbCrops, string cmbFields, string cmbVehicles, string cmbStorageUnits)
+        public int setTask(DateTime taskDate, int employeeId, int taskTypeId, int cropId, int fieldId, int vehicleId, int storageUnitId)
         {
             int success = 0;
 
@@ -424,7 +426,7 @@ namespace Find_A_Name
             {
                 int taskStatusId = 1;
 
-                int reader = con.Insert("INSERT INTO Tasks (taskDate, scheduleTime, employeeId, taskTypeId, taskStatusId, cropId, fieldId, vehicleId, storageUnitId) VALUES (" + dtTaskDate +',' + cmbTimes + ',' + taskStatusId + ",1,1,1,1,1,1)"); // /* + cmbEmployee + ',' + cmbTaskTypes + ',' + cmbCrops + ',' + cmbFields + ',' + cmbVehicles + ',' + cmbStorageUnits +
+                int reader = con.Insert("INSERT INTO Tasks (taskDate, employeeId, taskTypeId, taskStatusId, cropId, fieldId, vehicleId, storageUnitId) VALUES ('" + taskDate + "'" + ',' + taskStatusId + ',' + employeeId + ',' + taskTypeId + ',' + cropId + ',' + fieldId + ',' + vehicleId + ',' + storageUnitId + ")");
 
                 if (reader == 1)
                 {
