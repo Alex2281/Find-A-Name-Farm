@@ -85,7 +85,7 @@ namespace Find_A_Name
             }
             return tasks;
         }
-        public List<Task> getDaysTasks(string selectedDate)
+        public List<Task> getDaysTasks(DateTime selectedDate)
         {
             List<Task> daysTasks = new List<Task>();
 
@@ -493,13 +493,10 @@ namespace Find_A_Name
         {
             int success = 0;
             
-
             if (con.OpenConnection())
             {
                 String sql = "UPDATE Vehicles SET vehicleType = '" +txtType+ "', vehicleDescription = '" +txtDescription+"', vehicleStatusId = '"+ vehStatusType +"' WHERE vehicleId = " + ID + "";
                 int result = con.Insert(sql);
-
-
 
                 if (result == 1)
                 {

@@ -23,7 +23,8 @@ namespace Find_A_Name
         }
         private void AdminMain_Load(object sender, EventArgs e)
         {
-            string selectedDate = dtpSelectDay.Value.ToShortDateString();
+            DateTime selectedDate = Convert.ToDateTime(dtpSelectDay.Text);
+            selectedDate.ToShortDateString();
             m_dg = new BindingSource();
             m_tasks = ap.getDaysTasks(selectedDate);
             m_dg.DataSource = m_tasks;
