@@ -46,7 +46,11 @@
             this.cropToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.storageUnitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.farmShopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgdDailyTasks = new System.Windows.Forms.DataGridView();
+            this.dtpSelectDay = new System.Windows.Forms.DateTimePicker();
+            this.lblDaysTask = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgdDailyTasks)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -58,7 +62,7 @@
             this.farmShopToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(718, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(884, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -102,35 +106,35 @@
             // addEmployeeToolStripMenuItem
             // 
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
             this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
             // addVehicleToolStripMenuItem
             // 
             this.addVehicleToolStripMenuItem.Name = "addVehicleToolStripMenuItem";
-            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addVehicleToolStripMenuItem.Text = "Add Vehicle";
             this.addVehicleToolStripMenuItem.Click += new System.EventHandler(this.addVehicleToolStripMenuItem_Click);
             // 
             // addFieldToolStripMenuItem
             // 
             this.addFieldToolStripMenuItem.Name = "addFieldToolStripMenuItem";
-            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addFieldToolStripMenuItem.Text = "Add Field";
             this.addFieldToolStripMenuItem.Click += new System.EventHandler(this.addFieldToolStripMenuItem_Click);
             // 
             // addCropToolStripMenuItem
             // 
             this.addCropToolStripMenuItem.Name = "addCropToolStripMenuItem";
-            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addCropToolStripMenuItem.Text = "Add Crop";
             this.addCropToolStripMenuItem.Click += new System.EventHandler(this.addCropToolStripMenuItem_Click);
             // 
             // addStorageUnitToolStripMenuItem
             // 
             this.addStorageUnitToolStripMenuItem.Name = "addStorageUnitToolStripMenuItem";
-            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addStorageUnitToolStripMenuItem.Text = "Add Storage Unit";
             // 
             // deleteItemToolStripMenuItem
@@ -150,39 +154,39 @@
             // taskToolStripMenuItem
             // 
             this.taskToolStripMenuItem.Name = "taskToolStripMenuItem";
-            this.taskToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.taskToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.taskToolStripMenuItem.Text = "Task";
             // 
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.employeeToolStripMenuItem.Text = "Employee";
             this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
             // 
             // vehicleToolStripMenuItem
             // 
             this.vehicleToolStripMenuItem.Name = "vehicleToolStripMenuItem";
-            this.vehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vehicleToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.vehicleToolStripMenuItem.Text = "Vehicle";
             this.vehicleToolStripMenuItem.Click += new System.EventHandler(this.vehicleToolStripMenuItem_Click);
             // 
             // fieldToolStripMenuItem
             // 
             this.fieldToolStripMenuItem.Name = "fieldToolStripMenuItem";
-            this.fieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fieldToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.fieldToolStripMenuItem.Text = "Field";
             // 
             // cropToolStripMenuItem
             // 
             this.cropToolStripMenuItem.Name = "cropToolStripMenuItem";
-            this.cropToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cropToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.cropToolStripMenuItem.Text = "Crop";
             // 
             // storageUnitToolStripMenuItem
             // 
             this.storageUnitToolStripMenuItem.Name = "storageUnitToolStripMenuItem";
-            this.storageUnitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.storageUnitToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.storageUnitToolStripMenuItem.Text = "Storage Unit";
             // 
             // farmShopToolStripMenuItem
@@ -191,19 +195,55 @@
             this.farmShopToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.farmShopToolStripMenuItem.Text = "Farm Shop";
             // 
+            // dgdDailyTasks
+            // 
+            this.dgdDailyTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgdDailyTasks.Location = new System.Drawing.Point(479, 64);
+            this.dgdDailyTasks.Name = "dgdDailyTasks";
+            this.dgdDailyTasks.Size = new System.Drawing.Size(393, 150);
+            this.dgdDailyTasks.TabIndex = 5;
+            this.dgdDailyTasks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdDailyTasks_CellContentClick);
+            // 
+            // dtpSelectDay
+            // 
+            this.dtpSelectDay.CustomFormat = "M/dd/yyyy";
+            this.dtpSelectDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpSelectDay.Location = new System.Drawing.Point(732, 38);
+            this.dtpSelectDay.Name = "dtpSelectDay";
+            this.dtpSelectDay.Size = new System.Drawing.Size(140, 20);
+            this.dtpSelectDay.TabIndex = 6;
+            this.dtpSelectDay.Value = new System.DateTime(2018, 12, 6, 0, 0, 0, 0);
+            // 
+            // lblDaysTask
+            // 
+            this.lblDaysTask.AutoSize = true;
+            this.lblDaysTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDaysTask.Location = new System.Drawing.Point(481, 44);
+            this.lblDaysTask.Name = "lblDaysTask";
+            this.lblDaysTask.Size = new System.Drawing.Size(87, 15);
+            this.lblDaysTask.TabIndex = 7;
+            this.lblDaysTask.Text = "Daily Task Log";
+            // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 407);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.lblDaysTask);
+            this.Controls.Add(this.dtpSelectDay);
+            this.Controls.Add(this.dgdDailyTasks);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "AdminMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin page";
             this.Load += new System.EventHandler(this.AdminMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgdDailyTasks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +268,8 @@
         private System.Windows.Forms.ToolStripMenuItem viewInventoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setTaskToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem farmShopToolStripMenuItem;
+        private System.Windows.Forms.DataGridView dgdDailyTasks;
+        private System.Windows.Forms.DateTimePicker dtpSelectDay;
+        private System.Windows.Forms.Label lblDaysTask;
     }
 }

@@ -32,28 +32,38 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.Tester = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.FormLabel = new System.Windows.Forms.LinkLabel();
+            this.gbUserDetails = new System.Windows.Forms.GroupBox();
+            this.pbFarmLogo = new System.Windows.Forms.PictureBox();
+            this.gbUserDetails.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFarmLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(128, 191);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLogin.BackColor = System.Drawing.SystemColors.Control;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(559, 484);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(10);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(56, 19);
-            this.btnLogin.TabIndex = 0;
+            this.btnLogin.Padding = new System.Windows.Forms.Padding(2);
+            this.btnLogin.Size = new System.Drawing.Size(120, 30);
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(193, 191);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(726, 484);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(10);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(56, 19);
+            this.btnExit.Padding = new System.Windows.Forms.Padding(2);
+            this.btnExit.Size = new System.Drawing.Size(120, 30);
             this.btnExit.TabIndex = 1;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -62,10 +72,11 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(50, 113);
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(23, 66);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(55, 13);
+            this.lblUsername.Size = new System.Drawing.Size(73, 17);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Username";
             this.lblUsername.Click += new System.EventHandler(this.label1_Click);
@@ -73,70 +84,77 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(50, 151);
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(225, 66);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(53, 13);
+            this.lblPassword.Size = new System.Drawing.Size(69, 17);
             this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Password";
             // 
-            // txtUsername
+            // Tester
             // 
-            this.txtUsername.Location = new System.Drawing.Point(128, 113);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(122, 20);
-            this.txtUsername.TabIndex = 4;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+            this.Tester.Location = new System.Drawing.Point(22, 35);
+            this.Tester.Margin = new System.Windows.Forms.Padding(20);
+            this.Tester.Name = "Tester";
+            this.Tester.Size = new System.Drawing.Size(122, 23);
+            this.Tester.TabIndex = 4;
+            this.Tester.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(128, 151);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(224, 35);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(20);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(122, 20);
+            this.txtPassword.Size = new System.Drawing.Size(120, 23);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
-            // FormLabel
+            // gbUserDetails
             // 
-            this.FormLabel.ActiveLinkColor = System.Drawing.Color.Black;
-            this.FormLabel.AutoSize = true;
-            this.FormLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.FormLabel.Cursor = System.Windows.Forms.Cursors.No;
-            this.FormLabel.DisabledLinkColor = System.Drawing.Color.Black;
-            this.FormLabel.Enabled = false;
-            this.FormLabel.Font = new System.Drawing.Font("Lucida Sans Unicode", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormLabel.LinkColor = System.Drawing.Color.Black;
-            this.FormLabel.Location = new System.Drawing.Point(12, 28);
-            this.FormLabel.Name = "FormLabel";
-            this.FormLabel.Size = new System.Drawing.Size(213, 35);
-            this.FormLabel.TabIndex = 7;
-            this.FormLabel.TabStop = true;
-            this.FormLabel.Text = "FoundAName";
-            this.FormLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.FormLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.gbUserDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gbUserDetails.Controls.Add(this.txtPassword);
+            this.gbUserDetails.Controls.Add(this.Tester);
+            this.gbUserDetails.Controls.Add(this.lblPassword);
+            this.gbUserDetails.Controls.Add(this.lblUsername);
+            this.gbUserDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbUserDetails.Location = new System.Drawing.Point(46, 446);
+            this.gbUserDetails.Name = "gbUserDetails";
+            this.gbUserDetails.Size = new System.Drawing.Size(448, 96);
+            this.gbUserDetails.TabIndex = 8;
+            this.gbUserDetails.TabStop = false;
+            this.gbUserDetails.Text = "Enter User Details";
+            // 
+            // pbFarmLogo
+            // 
+            this.pbFarmLogo.Location = new System.Drawing.Point(17, 12);
+            this.pbFarmLogo.Name = "pbFarmLogo";
+            this.pbFarmLogo.Size = new System.Drawing.Size(850, 416);
+            this.pbFarmLogo.TabIndex = 9;
+            this.pbFarmLogo.TabStop = false;
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 300);
-            this.Controls.Add(this.FormLabel);
-            this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.lblPassword);
-            this.Controls.Add(this.lblUsername);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.pbFarmLogo);
+            this.Controls.Add(this.gbUserDetails);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(900, 600);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Find A Name Farm - Login Page";
             this.Load += new System.EventHandler(this.farmLogin_Load);
+            this.gbUserDetails.ResumeLayout(false);
+            this.gbUserDetails.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFarmLogo)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -146,8 +164,9 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox Tester;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.LinkLabel FormLabel;
+        private System.Windows.Forms.GroupBox gbUserDetails;
+        private System.Windows.Forms.PictureBox pbFarmLogo;
     }
 }

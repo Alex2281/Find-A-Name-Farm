@@ -83,7 +83,7 @@ namespace Find_A_Name
             this.dgdTasksList.DataSource = m_dg.DataSource;
             this.dgdTasksList.RowHeadersVisible = false;
             this.dgdTasksList.Columns[0].Visible = false;
-       }
+        }
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
@@ -116,6 +116,11 @@ namespace Find_A_Name
             {
                 MessageBox.Show("A Input is Incorrect.");
             }
+        }
+
+        private void bxSetTask_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

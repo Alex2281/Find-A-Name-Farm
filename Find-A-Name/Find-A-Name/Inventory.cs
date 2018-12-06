@@ -36,6 +36,8 @@ namespace Find_A_Name
             m_bs.DataSource = m_employees;
             m_bs.ResetBindings(false);
             this.dataGridView1.DataSource = m_bs.DataSource;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Columns[0].Visible = false;
         }
         private void lstVehicles_Click(object sender, EventArgs e)
         {
@@ -44,6 +46,8 @@ namespace Find_A_Name
             m_bs.DataSource = m_vehicles;
             m_bs.ResetBindings(false);
             this.dataGridView1.DataSource = m_bs.DataSource;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Columns[0].Visible = false;
         }
         private void lstFields_Click(object sender, EventArgs e)
         {
@@ -52,6 +56,8 @@ namespace Find_A_Name
             m_bs.DataSource = m_fields;
             m_bs.ResetBindings(false);
             this.dataGridView1.DataSource = m_bs.DataSource;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Columns[0].Visible = false;
         }
         private void lstCrops_Click(object sender, EventArgs e)
         {
@@ -60,6 +66,8 @@ namespace Find_A_Name
             m_bs.DataSource = m_crops;
             m_bs.ResetBindings(false);
             this.dataGridView1.DataSource = m_bs.DataSource;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Columns[0].Visible = false;
         }
         private void btnFertiliser_Click(object sender, EventArgs e)
         {
@@ -68,6 +76,8 @@ namespace Find_A_Name
             m_bs.DataSource = m_fertilisers;
             m_bs.ResetBindings(false);
             this.dataGridView1.DataSource = m_bs.DataSource;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Columns[0].Visible = false;
         }
         private void lstStorage_Click(object sender, EventArgs e)
         {
@@ -76,6 +86,8 @@ namespace Find_A_Name
             m_bs.DataSource = m_storageUnits;
             m_bs.ResetBindings(false);
             this.dataGridView1.DataSource = m_bs.DataSource;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Columns[0].Visible = false;
         }
         private void btnBack_Click(object sender, EventArgs e)
         {

@@ -12,13 +12,25 @@ namespace Find_A_Name
 {
     public partial class AdminMain : Form
     {
+        BusinessMetaLayer ap = BusinessMetaLayer.instance();
+
+        List<Task> m_tasks;
+        BindingSource m_dg;
+
         public AdminMain()
         {
             InitializeComponent();
         }
         private void AdminMain_Load(object sender, EventArgs e)
         {
-
+            string selectedDate = dtpSelectDay.Value.ToShortDateString();
+            m_dg = new BindingSource();
+            m_tasks = ap.getDaysTasks(selectedDate);
+            m_dg.DataSource = m_tasks;
+            m_dg.ResetBindings(true);
+            this.dgdDailyTasks.DataSource = m_dg.DataSource;
+            this.dgdDailyTasks.RowHeadersVisible = false;
+            this.dgdDailyTasks.Columns[0].Visible = false;
         }
         private void viewInventoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -79,6 +91,17 @@ namespace Find_A_Name
         {
             editEmployee EditEmp = new editEmployee();
             EditEmp.ShowDialog();
+        }
+
+        private void dgdDailyTasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            m_dg = new BindingSource();
+            m_tasks = ap.getTasks();
+            m_dg.DataSource = m_tasks;
+            m_dg.ResetBindings(true);
+            this.dgdDailyTasks.DataSource = m_dg.DataSource;
+            this.dgdDailyTasks.RowHeadersVisible = false;
+            this.dgdDailyTasks.Columns[0].Visible = false;
         }
     }
 }

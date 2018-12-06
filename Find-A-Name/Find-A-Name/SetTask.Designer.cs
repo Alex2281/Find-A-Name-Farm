@@ -31,8 +31,6 @@
             this.dtTaskDate = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
             this.cmbEmployees = new System.Windows.Forms.ComboBox();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.cmbTimes = new System.Windows.Forms.ComboBox();
             this.lblEmployees = new System.Windows.Forms.Label();
             this.cmbTaskTypes = new System.Windows.Forms.ComboBox();
             this.lblTaskType = new System.Windows.Forms.Label();
@@ -73,32 +71,15 @@
             // cmbEmployees
             // 
             this.cmbEmployees.FormattingEnabled = true;
-            this.cmbEmployees.Location = new System.Drawing.Point(582, 46);
+            this.cmbEmployees.Location = new System.Drawing.Point(38, 103);
             this.cmbEmployees.Name = "cmbEmployees";
             this.cmbEmployees.Size = new System.Drawing.Size(140, 21);
             this.cmbEmployees.TabIndex = 2;
             // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(333, 27);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(49, 13);
-            this.lblTime.TabIndex = 3;
-            this.lblTime.Text = "Set Time";
-            // 
-            // cmbTimes
-            // 
-            this.cmbTimes.FormattingEnabled = true;
-            this.cmbTimes.Location = new System.Drawing.Point(333, 46);
-            this.cmbTimes.Name = "cmbTimes";
-            this.cmbTimes.Size = new System.Drawing.Size(140, 21);
-            this.cmbTimes.TabIndex = 4;
-            // 
             // lblEmployees
             // 
             this.lblEmployees.AutoSize = true;
-            this.lblEmployees.Location = new System.Drawing.Point(579, 30);
+            this.lblEmployees.Location = new System.Drawing.Point(35, 87);
             this.lblEmployees.Name = "lblEmployees";
             this.lblEmployees.Size = new System.Drawing.Size(107, 13);
             this.lblEmployees.TabIndex = 5;
@@ -107,7 +88,7 @@
             // cmbTaskTypes
             // 
             this.cmbTaskTypes.FormattingEnabled = true;
-            this.cmbTaskTypes.Location = new System.Drawing.Point(38, 103);
+            this.cmbTaskTypes.Location = new System.Drawing.Point(310, 42);
             this.cmbTaskTypes.Name = "cmbTaskTypes";
             this.cmbTaskTypes.Size = new System.Drawing.Size(140, 21);
             this.cmbTaskTypes.TabIndex = 6;
@@ -115,7 +96,7 @@
             // lblTaskType
             // 
             this.lblTaskType.AutoSize = true;
-            this.lblTaskType.Location = new System.Drawing.Point(35, 87);
+            this.lblTaskType.Location = new System.Drawing.Point(307, 26);
             this.lblTaskType.Name = "lblTaskType";
             this.lblTaskType.Size = new System.Drawing.Size(70, 13);
             this.lblTaskType.TabIndex = 7;
@@ -124,7 +105,7 @@
             // cmbCrops
             // 
             this.cmbCrops.FormattingEnabled = true;
-            this.cmbCrops.Location = new System.Drawing.Point(336, 103);
+            this.cmbCrops.Location = new System.Drawing.Point(310, 103);
             this.cmbCrops.Name = "cmbCrops";
             this.cmbCrops.Size = new System.Drawing.Size(140, 21);
             this.cmbCrops.TabIndex = 8;
@@ -132,7 +113,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(333, 87);
+            this.label1.Location = new System.Drawing.Point(307, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 9;
@@ -175,7 +156,7 @@
             // cmbStorageUnit
             // 
             this.cmbStorageUnit.FormattingEnabled = true;
-            this.cmbStorageUnit.Location = new System.Drawing.Point(333, 161);
+            this.cmbStorageUnit.Location = new System.Drawing.Point(307, 161);
             this.cmbStorageUnit.Name = "cmbStorageUnit";
             this.cmbStorageUnit.Size = new System.Drawing.Size(140, 21);
             this.cmbStorageUnit.TabIndex = 14;
@@ -183,7 +164,7 @@
             // lblStorageUnits
             // 
             this.lblStorageUnits.AutoSize = true;
-            this.lblStorageUnits.Location = new System.Drawing.Point(330, 145);
+            this.lblStorageUnits.Location = new System.Drawing.Point(304, 145);
             this.lblStorageUnits.Name = "lblStorageUnits";
             this.lblStorageUnits.Size = new System.Drawing.Size(108, 13);
             this.lblStorageUnits.TabIndex = 15;
@@ -213,8 +194,6 @@
             this.bxSetTask.Controls.Add(this.lblTaskType);
             this.bxSetTask.Controls.Add(this.cmbTaskTypes);
             this.bxSetTask.Controls.Add(this.lblEmployees);
-            this.bxSetTask.Controls.Add(this.cmbTimes);
-            this.bxSetTask.Controls.Add(this.lblTime);
             this.bxSetTask.Controls.Add(this.cmbEmployees);
             this.bxSetTask.Controls.Add(this.lblDate);
             this.bxSetTask.Controls.Add(this.dtTaskDate);
@@ -224,10 +203,12 @@
             this.bxSetTask.TabIndex = 17;
             this.bxSetTask.TabStop = false;
             this.bxSetTask.Text = "Set New Task";
+            this.bxSetTask.Enter += new System.EventHandler(this.bxSetTask_Enter);
             // 
             // dgdTasksList
             // 
             this.dgdTasksList.AllowUserToOrderColumns = true;
+            this.dgdTasksList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgdTasksList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgdTasksList.Location = new System.Drawing.Point(21, 20);
             this.dgdTasksList.Name = "dgdTasksList";
@@ -255,8 +236,6 @@
         private System.Windows.Forms.DateTimePicker dtTaskDate;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.ComboBox cmbEmployees;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.ComboBox cmbTimes;
         private System.Windows.Forms.Label lblEmployees;
         private System.Windows.Forms.ComboBox cmbTaskTypes;
         private System.Windows.Forms.Label lblTaskType;

@@ -32,7 +32,7 @@ namespace Find_A_Name
         {
             BusinessMetaLayer ln = BusinessMetaLayer.instance();
             
-            m_privilage = ln.farmLogin(txtUsername.Text, txtPassword.Text);
+            m_privilage = ln.farmLogin(Tester.Text, txtPassword.Text);
             
             if (m_privilage == 0)
             {
