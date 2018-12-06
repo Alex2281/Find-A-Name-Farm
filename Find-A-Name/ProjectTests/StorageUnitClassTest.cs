@@ -34,10 +34,10 @@ namespace ProjectTests
             Assert.AreEqual(600, su.CurrentCapacity);
         }
         [TestMethod]
-        public void CropIdTest()
+        public void StoredCropTest()
         {
-            su.CropId = 1;
-            Assert.AreEqual(1, su.CropId);
+            su.StoredCrop = "Wheat";
+            Assert.AreEqual("Wheat", su.StoredCrop);
         }
     }
 }

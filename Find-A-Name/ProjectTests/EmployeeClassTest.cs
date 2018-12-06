@@ -54,13 +54,14 @@ namespace ProjectTests
         [TestMethod]
         public void PrivilageTest()
         {
-            e.Privilage = true;
-            Assert.IsTrue(e.Privilage);
+            e.Privilage = "yes";
+            Assert.AreEqual("yes", e.Privilage);
         }
         [TestMethod]
-        public void DateTimeTest()
+        public void DateCreated()
         {
-            e.Created = DateTime.(10 / 10 / 2010);
+            e.Created = "01/01/2019";
+            Assert.AreEqual("01/01/2019",e.Created);
         }
     }
 }

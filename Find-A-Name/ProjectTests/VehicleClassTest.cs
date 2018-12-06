@@ -30,8 +30,8 @@ namespace ProjectTests
         [TestMethod]
         public void VehicleStatusTest()
         {
-            v.VehicleStatusId = 1;
-            Assert.AreEqual(1, v.VehicleStatusId);
+            v.Status = "Available";
+            Assert.AreEqual("Available", v.Status);
         }
     }
 }

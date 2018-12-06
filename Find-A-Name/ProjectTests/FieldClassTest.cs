@@ -28,10 +28,10 @@ namespace ProjectTests
             Assert.AreEqual(256, f.Size);
         }
         [TestMethod]
-        public void StatusIdTest()
+        public void StatusTest()
         {
-            f.StatusId = 1;
-            Assert.AreEqual(1, f.StatusId);
+            f.Status = "Available";
+            Assert.AreEqual("Available", f.Status);
         }
     }
 }

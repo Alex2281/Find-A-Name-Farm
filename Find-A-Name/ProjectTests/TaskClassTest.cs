@@ -28,46 +28,46 @@ namespace ProjectTests
             //Assert.AreEqual(, t.ScheduledDate);
         }
         [TestMethod]
-        public void EmployeeIdTest()
+        public void EmployeeNameTest()
         {
-            t.EmployeeId = 1;
-            Assert.AreEqual(1, t.EmployeeId);
+            t.Employee = "Henery";
+            Assert.AreEqual("Henery", t.Employee);
         }
         [TestMethod]
-        public void TaskTypeIdTest()
+        public void TaskTypeTest()
         {
-            t.TaskTypeId = 1;
-            Assert.AreEqual(1, t.TaskTypeId);
+            t.TaskType = "Harvest";
+            Assert.AreEqual("Harvest", t.TaskType);
         }
         [TestMethod]
         public void TaskStatusIdTest()
         {
-            t.TaskStatusId = 1;
-            Assert.AreEqual(1, t.TaskStatusId);
+            t.TaskStatus = "Pending";
+            Assert.AreEqual("Pending", t.TaskStatus);
         }
         [TestMethod]
-        public void CropIdTest()
+        public void CropTest()
         {
-            t.CropId = 1;
-            Assert.AreEqual(1, t.CropId);
+            t.Crop = "Barley";
+            Assert.AreEqual("Barley", t.Crop);
         }
         [TestMethod]
         public void FieldIdTest()
         {
-            t.FieldId = 1;
-            Assert.AreEqual(1, t.FieldId);
+            t.Field = "Field 1";
+            Assert.AreEqual("Field 1", t.Field);
         }
         [TestMethod]
         public void VehicleIdTest()
         {
-            t.VehicleId = 1;
-            Assert.AreEqual(1, t.VehicleId);
+            t.Vehicle = "Tractor";
+            Assert.AreEqual("Tractor", t.Vehicle);
         }
         [TestMethod]
         public void StorageUnitIdTest()
         {
-            t.StorageUnitId = 1;
-            Assert.AreEqual(1, t.StorageUnitId);
+            t.StorageUnit = "Unit 2";
+            Assert.AreEqual("Unit 2", t.StorageUnit);
         }
     }
 }
