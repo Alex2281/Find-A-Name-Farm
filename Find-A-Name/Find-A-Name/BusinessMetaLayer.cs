@@ -25,38 +25,91 @@ namespace Find_A_Name
 
         DbConection con = DbFactory.instance();
 
-        public int farmLogin(String txtUsername, String txtPassword)
+        public int[] farmLogin(String txtUsername, String txtPassword)
         {
-            int retv = -1;  
-            
+            int []retv = new int[2];
+
             if (con.OpenConnection())
             {
-                String sql = "SELECT accessPrivilage FROM Employees WHERE userName = '" + txtUsername + "' AND password = '" + txtPassword +"'";
+                String sql = "SELECT employeeId, accessPrivilage FROM Employees WHERE userName = '" + txtUsername + "' AND password = '" + txtPassword +"'";
                 DbDataReader reader = con.Select(sql);
+                Employee info = new Employee();
 
-                if (reader.Read())
+                //Read the data                
+                while (reader.Read())
                 {
-                    //Read the data
-                    string privilage = reader.GetString(0);
-
-                    if (privilage == "Yes")
-                    {
-                        retv = 0;
-                    }
-                    else if (privilage == "No")
-                    {
-                        retv = 1;
-                    }
-                    else
-                    {
-                        retv = 2;
-                    }
-                    //close Data Reader
-                    reader.Close();
+                    info.Id = reader.GetInt32(0);
+                    info.Privilage = reader.GetString(1);
                 }
+
+                if (info.Privilage == "Yes")
+                {
+                    retv[0] = 0;
+                    retv[1] = info.Id;
+                }
+                else if (info.Privilage == "No")
+                {
+                    retv[0] = 1;
+                    retv[1] = info.Id;
+                }
+                else
+                {
+                    retv[0] = 2;
+                    retv[1] = info.Id;
+                }
+                //close Data Reader
+                reader.Close();
                 con.CloseConnection();
             }
             return retv;
+        }
+        public Employee getUserDetails(int userId)
+        {
+            Employee user = new Employee();
+
+            if (con.OpenConnection())
+            {
+                DbDataReader ud = con.Select("SELECT e.employeeId, e.firstName + ',' + e.lastname AS Name, e.postCode, contactNumber, e.emailAddress, e.userName FROM Employees AS e WHERE e.employeeId =" + userId + ";");
+
+                if (ud.Read())
+                {
+                    user.Id = ud.GetInt32(0);
+                    user.Name = ud.GetString(1);
+                    user.Address = ud.GetString(2);
+                    user.Phone = ud.GetString(3);
+                    user.Email = ud.GetString(4);
+                    user.Username = ud.GetString(5);
+                }
+                ud.Close();
+                con.CloseConnection();
+            }
+            return user;
+        }
+        public List<Task> getUserTasks(int userId)
+        {
+            List<Task> userTasks = new List<Task>();
+
+            if (con.OpenConnection())
+            {
+                DbDataReader ut = con.Select("SELECT t.taskDate AS ScheduleDate, tt.taskName AS Task, ts.statusType AS Status, c.cropName AS Crop, f.fieldReference AS field, v.vehicleType AS Vehicle, s.storageReference AS StorageUnit FROM Tasks AS T, TaskType AS tt, TaskStatus AS ts, Crops AS c, Fields AS f, Vehicles AS v, StorageUnits AS s WHERE t.employeeId =" + userId +  " AND t.taskTypeId = tt.taskTypeId AND t.taskStatusId = ts.taskStatusId AND t.cropId = c.cropId AND t.fieldId = f.fieldId AND t.vehicleId = v.vehicleId AND t.storageUnitId = s.storageUnitId;");
+
+                Task task = new Task();
+
+                while (ut.Read())
+                {
+                    task.TaskDate = ut.GetDateTime(0);
+                    task.TaskType = ut.GetString(1);
+                    task.TaskStatus = ut.GetString(4);
+                    task.Crop = ut.GetString(5);
+                    task.Field = ut.GetString(6);
+                    task.Vehicle = ut.GetString(7);
+                    task.StorageUnit = ut.GetString(8);
+                    userTasks.Add(task);
+                }
+                ut.Close();
+                con.CloseConnection();
+            }
+            return userTasks;
         }
         public List<Task> getTasks()
         {

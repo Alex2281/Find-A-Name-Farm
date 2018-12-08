@@ -13,7 +13,8 @@ namespace Find_A_Name
 {
     public partial class Login : Form
     {
-        private int m_privilage = -1;
+        private int[] user = new int[2];
+        
         public Login()
         {
             InitializeComponent();
@@ -32,21 +33,21 @@ namespace Find_A_Name
         {
             BusinessMetaLayer ln = BusinessMetaLayer.instance();
             
-            m_privilage = ln.farmLogin(Tester.Text, txtPassword.Text);
+            user = ln.farmLogin(Tester.Text, txtPassword.Text);
             
-            if (m_privilage == 0)
+            if (user[0] == 0)
             {
                 this.Hide();
                 AdminMain n = new AdminMain();
                 n.ShowDialog();
             }
-            else if (m_privilage == 1)
+            else if (user[0] == 1)
             {
                 this.Hide();
-                LabourerMain n = new LabourerMain();
+                LabourerMain n = new LabourerMain(user[1]);
                 n.ShowDialog();
             }
-            else if (m_privilage == -1)
+            else if (user[0] == -1)
             {
                 MessageBox.Show("Please Enter a valid 'Username' & 'Password' in the fields provided!");
             }
