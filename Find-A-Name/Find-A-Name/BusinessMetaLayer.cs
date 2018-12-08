@@ -91,19 +91,20 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                DbDataReader ut = con.Select("SELECT t.taskDate AS ScheduleDate, tt.taskName AS Task, ts.statusType AS Status, c.cropName AS Crop, f.fieldReference AS field, v.vehicleType AS Vehicle, s.storageReference AS StorageUnit FROM Tasks AS T, TaskType AS tt, TaskStatus AS ts, Crops AS c, Fields AS f, Vehicles AS v, StorageUnits AS s WHERE t.employeeId =" + userId +  " AND t.taskTypeId = tt.taskTypeId AND t.taskStatusId = ts.taskStatusId AND t.cropId = c.cropId AND t.fieldId = f.fieldId AND t.vehicleId = v.vehicleId AND t.storageUnitId = s.storageUnitId;");
+                DbDataReader ut = con.Select("SELECT t.taskId AS TaskId, t.taskDate AS ScheduleDate, tt.taskName AS Task, ts.statusType AS Status, c.cropName AS Crop, f.fieldReference AS field, v.vehicleType AS Vehicle, s.storageReference AS StorageUnit FROM Tasks AS t, TaskType AS tt, TaskStatus AS ts, Crops AS c, Fields AS f, Vehicles AS v, StorageUnits AS s WHERE ((t.employeeId) = " + userId + ") AND t.taskTypeId = tt.taskTypeId AND t.taskStatusId = ts.taskStatusId AND t.cropId = c.cropId AND t.fieldId = f.fieldId AND t.vehicleId = v.vehicleId AND t.storageUnitId = s.storageUnitId;");
 
                 Task task = new Task();
 
                 while (ut.Read())
                 {
-                    task.TaskDate = ut.GetDateTime(0);
-                    task.TaskType = ut.GetString(1);
-                    task.TaskStatus = ut.GetString(4);
-                    task.Crop = ut.GetString(5);
-                    task.Field = ut.GetString(6);
-                    task.Vehicle = ut.GetString(7);
-                    task.StorageUnit = ut.GetString(8);
+                    task.Id = ut.GetInt32(0);
+                    task.TaskDate = ut.GetDateTime(1);
+                    task.TaskType = ut.GetString(2);
+                    task.TaskStatus = ut.GetString(3);
+                    task.Crop = ut.GetString(4);
+                    task.Field = ut.GetString(5);
+                    task.Vehicle = ut.GetString(6);
+                    task.StorageUnit = ut.GetString(7);
                     userTasks.Add(task);
                 }
                 ut.Close();
