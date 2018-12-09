@@ -14,10 +14,11 @@ namespace Find_A_Name
     {
 
         
-        BusinessMetaLayer bml = BusinessMetaLayer.instance();
+        BusinessMetaLayer ml = BusinessMetaLayer.instance();
         List<Employee> m_employees;
         BindingSource m_bs;
 
+        String ID;
         int rowNum = 1;
         string firstName;
         string lastName;
@@ -26,7 +27,7 @@ namespace Find_A_Name
         string email;
         string postcode;
         string phoneNumber;
-        string privilege;
+        int privilege;
 
 
         public editEmployee()
@@ -81,10 +82,6 @@ namespace Find_A_Name
                 if(i == 6)
                 {
                     phoneNumber = result;
-                }
-                if(i == 7)
-                {
-                    privilege = result;
                 }
             }
 
@@ -153,6 +150,51 @@ namespace Find_A_Name
 
 
 
+        }
+
+        private void btnEditEmp_Click(object sender, EventArgs e)
+        {
+            BusinessMetaLayer create = BusinessMetaLayer.instance();
+            int success;
+
+            String privilege;
+
+            if(cboxEdPrivilege.Checked == true)
+            {
+                privilege = "Yes";
+            }
+            else
+            {
+                privilege = "No";
+            }
+
+            String firstName = txtEdEmpFirstName.Text;
+            String lastName = txtEdEmpSurname.Text;
+            String userName = txtEdEmpUsern.Text;
+            String password = txtEdEmpPass.Text;
+            String email = txtEdEmpEmail.Text;
+            String postcode = txtEdEmpPost.Text;
+            String phoneNumber = txtEdEmpPhone.Text;
+
+            success = ml.EditEmployee(ID, firstName, lastName, userName, password, email, postcode, phoneNumber, privilege);
+
+            if(success == 1)
+            {
+                MessageBox.Show("Account edited");
+                m_bs = new BindingSource();
+                m_employees = ml.getEmployees();
+                m_bs.DataSource = m_employees;
+                m_bs.ResetBindings(false);
+                this.dataEmployee.DataSource = m_bs.DataSource;
+                txtEdEmpFirstName.Clear();
+                txtEdEmpSurname.Clear();
+                txtEdEmpUsern.Clear();
+                txtEdEmpPass.Clear();
+                txtEdEmpEmail.Clear();
+                txtEdEmpPost.Clear();
+                txtEdEmpPhone.Clear();
+                cboxEdPrivilege.Checked = false;
+            }
         }
     }
 }

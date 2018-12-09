@@ -565,5 +565,26 @@ namespace Find_A_Name
             }
             return success;
         }
+        public int EditEmployee(String ID, String txtFirstname, String txtSurname, String txtUsername, String txtPassword, String txtEmail, String txtPostcode, String txtPhone, String Privilege)
+        {
+            int success = 0;
+
+            if(con.OpenConnection())
+            {
+                String sql = "UPDATE Employees Set firstName = '" + txtFirstname + "', lastName = '" + txtSurname + "', userName = '" + txtUsername + "', password = '" + txtPassword + "', emailAddress = '" + txtEmail + "', postCode = '" + txtPostcode + "', contactNumber = '" + txtPhone + "', accessPrivilage = '" + Privilege + "' WHERE employeeId = " + ID + "";
+                int result = con.Insert(sql);
+
+                if(result == 1)
+                {
+                    success = 1;
+                }
+                else
+                {
+                    success = 0;
+                }
+                con.CloseConnection();
+            }
+            return success;
+        }
     }
 }
