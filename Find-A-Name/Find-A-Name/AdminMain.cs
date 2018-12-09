@@ -47,53 +47,41 @@ namespace Find_A_Name
         {
 
         }
-
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             addEmployee AddEmploy = new addEmployee();
             AddEmploy.ShowDialog();
         }
-
-        private void deleteItemToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void addVehicleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             addVehicle AddVehicle = new addVehicle();
             AddVehicle.ShowDialog();
         }
-
         private void addFieldToolStripMenuItem_Click(object sender, EventArgs e)
         {
             addField AddField = new addField();
             AddField.ShowDialog();
         }
-
-        private void setTaskToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void addStorageUnitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            setTask SetTask = new setTask();
-            SetTask.ShowDialog();
-        }
-
-        private void vehicleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            editVehicle editVeh = new editVehicle();
-            editVeh.ShowDialog();
+            addStorageUnit AddStorage = new addStorageUnit();
+            AddStorage.ShowDialog();
         }
         private void addCropToolStripMenuItem_Click(object sender, EventArgs e)
         {
             addCrop AddCrop = new addCrop();
             AddCrop.ShowDialog();
         }
-
+        private void vehicleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            editVehicle editVeh = new editVehicle();
+            editVeh.ShowDialog();
+        }
         private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             editEmployee EditEmp = new editEmployee();
             EditEmp.ShowDialog();
         }
-
         private void dgdDailyTasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             m_dg = new BindingSource();
@@ -103,6 +91,15 @@ namespace Find_A_Name
             this.dgdDailyTasks.DataSource = m_dg.DataSource;
             this.dgdDailyTasks.RowHeadersVisible = false;
             this.dgdDailyTasks.Columns[0].Visible = false;
+        }
+        private void setTaskToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            setTask SetTask = new setTask();
+            SetTask.ShowDialog();
+        }
+        private void deleteItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

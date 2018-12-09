@@ -27,16 +27,7 @@ namespace Find_A_Name
         private void btnAddField_Click(object sender, EventArgs e)
         {
             BusinessMetaLayer create = BusinessMetaLayer.instance();
-            int inUse;
-            if (chboxFieldStatus.Checked == true)
-            {
-                inUse = 1;
-            }
-            else
-            {
-                inUse = 2;
-            }
-
+            int inUse = 0;
             int success;
             int fieldSize = Convert.ToInt32(this.txtFieldSize.Text);
             success = create.addField(txtFieldRef.Text, fieldSize, inUse);
@@ -46,7 +37,6 @@ namespace Find_A_Name
                 MessageBox.Show("Field Created");
                 txtFieldRef.Clear();
                 txtFieldSize.Clear();
-                chboxFieldStatus.Checked = false;
             }
             else
             {

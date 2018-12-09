@@ -479,19 +479,16 @@ namespace Find_A_Name
 
             if (con.OpenConnection())
             {
-                String sql = "INSERT INTO StorageUnits (storageReference, totalCapacity, currentCapacity, currentCrop) VALUES (" + txtReference + ',' + txtTotalCapicity + ',' + txtCurrentCapacity +',' + txtCurrentCrop + ")";
-                DbDataReader reader = con.Select(sql);
+                String sql = "INSERT INTO StorageUnits (storageReference, storageUnitCapacity, storedCapacity, storedCropId) VALUES ('" + txtReference + "','" + txtTotalCapicity + "','" + txtCurrentCapacity + "','" + txtCurrentCrop + "')";
+                int reader = con.Insert(sql);
 
-
-                if (reader.Read())
+                if (reader == 1)
                 {
                     retv = 1;
-                    reader.Close();
                 }
                 else
                 {
                     retv = 2;
-                    reader.Close();
                 }
                 con.CloseConnection();
             }

@@ -42,24 +42,24 @@
             // lblAddVehicle
             // 
             this.lblAddVehicle.AutoSize = true;
-            this.lblAddVehicle.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddVehicle.Location = new System.Drawing.Point(142, 36);
+            this.lblAddVehicle.Font = new System.Drawing.Font("MS Reference Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddVehicle.Location = new System.Drawing.Point(12, 9);
             this.lblAddVehicle.Name = "lblAddVehicle";
-            this.lblAddVehicle.Size = new System.Drawing.Size(135, 26);
+            this.lblAddVehicle.Size = new System.Drawing.Size(183, 34);
             this.lblAddVehicle.TabIndex = 15;
             this.lblAddVehicle.Text = "Add Vehicle";
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(177, 130);
+            this.txtDescription.Location = new System.Drawing.Point(159, 86);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(100, 20);
+            this.txtDescription.Size = new System.Drawing.Size(116, 20);
             this.txtDescription.TabIndex = 20;
             // 
             // lblVehicleDescription
             // 
             this.lblVehicleDescription.AutoSize = true;
-            this.lblVehicleDescription.Location = new System.Drawing.Point(79, 133);
+            this.lblVehicleDescription.Location = new System.Drawing.Point(156, 69);
             this.lblVehicleDescription.Margin = new System.Windows.Forms.Padding(12);
             this.lblVehicleDescription.Name = "lblVehicleDescription";
             this.lblVehicleDescription.Size = new System.Drawing.Size(98, 13);
@@ -69,7 +69,7 @@
             // lblVehicleType
             // 
             this.lblVehicleType.AutoSize = true;
-            this.lblVehicleType.Location = new System.Drawing.Point(106, 97);
+            this.lblVehicleType.Location = new System.Drawing.Point(15, 69);
             this.lblVehicleType.Margin = new System.Windows.Forms.Padding(12);
             this.lblVehicleType.Name = "lblVehicleType";
             this.lblVehicleType.Size = new System.Drawing.Size(69, 13);
@@ -78,15 +78,15 @@
             // 
             // txtType
             // 
-            this.txtType.Location = new System.Drawing.Point(177, 94);
+            this.txtType.Location = new System.Drawing.Point(12, 86);
             this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(100, 20);
+            this.txtType.Size = new System.Drawing.Size(116, 20);
             this.txtType.TabIndex = 16;
             // 
             // lblVehicleStatus
             // 
             this.lblVehicleStatus.AutoSize = true;
-            this.lblVehicleStatus.Location = new System.Drawing.Point(100, 169);
+            this.lblVehicleStatus.Location = new System.Drawing.Point(12, 129);
             this.lblVehicleStatus.Name = "lblVehicleStatus";
             this.lblVehicleStatus.Size = new System.Drawing.Size(75, 13);
             this.lblVehicleStatus.TabIndex = 19;
@@ -94,9 +94,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(221, 215);
+            this.btnBack.Location = new System.Drawing.Point(12, 201);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(100, 35);
             this.btnBack.TabIndex = 25;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -104,9 +104,9 @@
             // 
             // btnAddVeh
             // 
-            this.btnAddVeh.Location = new System.Drawing.Point(132, 215);
+            this.btnAddVeh.Location = new System.Drawing.Point(175, 201);
             this.btnAddVeh.Name = "btnAddVeh";
-            this.btnAddVeh.Size = new System.Drawing.Size(75, 23);
+            this.btnAddVeh.Size = new System.Drawing.Size(100, 35);
             this.btnAddVeh.TabIndex = 24;
             this.btnAddVeh.Text = "Create";
             this.btnAddVeh.UseVisualStyleBackColor = true;
@@ -116,7 +116,7 @@
             // 
             this.cmbVehStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmbVehStatus.FormattingEnabled = true;
-            this.cmbVehStatus.Location = new System.Drawing.Point(177, 166);
+            this.cmbVehStatus.Location = new System.Drawing.Point(12, 154);
             this.cmbVehStatus.Name = "cmbVehStatus";
             this.cmbVehStatus.Size = new System.Drawing.Size(121, 21);
             this.cmbVehStatus.TabIndex = 26;
@@ -126,7 +126,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(445, 326);
+            this.ClientSize = new System.Drawing.Size(296, 249);
             this.Controls.Add(this.cmbVehStatus);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnAddVeh);
@@ -137,6 +137,7 @@
             this.Controls.Add(this.txtType);
             this.Controls.Add(this.lblAddVehicle);
             this.Name = "addVehicle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "addVehicle";
             this.ResumeLayout(false);
             this.PerformLayout();

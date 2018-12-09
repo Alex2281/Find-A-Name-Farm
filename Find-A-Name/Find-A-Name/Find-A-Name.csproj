@@ -70,6 +70,12 @@
     <Compile Include="addField.Designer.cs">
       <DependentUpon>addField.cs</DependentUpon>
     </Compile>
+    <Compile Include="addStorageUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addStorageUnit.Designer.cs">
+      <DependentUpon>addStorageUnit.cs</DependentUpon>
+    </Compile>
     <Compile Include="addTask.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="addField.resx">
       <DependentUpon>addField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addStorageUnit.resx">
+      <DependentUpon>addStorageUnit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="addTask.resx">
       <DependentUpon>addTask.cs</DependentUpon>

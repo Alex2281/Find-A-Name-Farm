@@ -106,36 +106,37 @@
             // addEmployeeToolStripMenuItem
             // 
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
             this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
             // addVehicleToolStripMenuItem
             // 
             this.addVehicleToolStripMenuItem.Name = "addVehicleToolStripMenuItem";
-            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addVehicleToolStripMenuItem.Text = "Add Vehicle";
             this.addVehicleToolStripMenuItem.Click += new System.EventHandler(this.addVehicleToolStripMenuItem_Click);
             // 
             // addFieldToolStripMenuItem
             // 
             this.addFieldToolStripMenuItem.Name = "addFieldToolStripMenuItem";
-            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addFieldToolStripMenuItem.Text = "Add Field";
             this.addFieldToolStripMenuItem.Click += new System.EventHandler(this.addFieldToolStripMenuItem_Click);
             // 
             // addCropToolStripMenuItem
             // 
             this.addCropToolStripMenuItem.Name = "addCropToolStripMenuItem";
-            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addCropToolStripMenuItem.Text = "Add Crop";
             this.addCropToolStripMenuItem.Click += new System.EventHandler(this.addCropToolStripMenuItem_Click);
             // 
             // addStorageUnitToolStripMenuItem
             // 
             this.addStorageUnitToolStripMenuItem.Name = "addStorageUnitToolStripMenuItem";
-            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addStorageUnitToolStripMenuItem.Text = "Add Storage Unit";
+            this.addStorageUnitToolStripMenuItem.Click += new System.EventHandler(this.addStorageUnitToolStripMenuItem_Click);
             // 
             // deleteItemToolStripMenuItem
             // 

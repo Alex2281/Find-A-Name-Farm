@@ -35,7 +35,7 @@ namespace Find_A_Name
             }
             else
             {
-                MessageBox.Show("An input is correct");
+                MessageBox.Show("An input is Incorrect");
             }
         }
     }
