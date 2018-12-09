@@ -30,10 +30,10 @@ namespace Find_A_Name
 
             user = u.getUserDetails(employeeId);
             this.gbUserDetails.Text = user.Username;
-            this.lblName.Text = user.Name;
-            this.lblAddress.Text = user.Address;
-            this.lblPhoneNumber.Text = user.Phone;
-            this.lblEmailAddress.Text = user.Email;
+            this.lbvName.Text = user.Name;
+            this.lbvAddress.Text = user.Address;
+            this.lbvPhoneNumber.Text = user.Phone;
+            this.lbvEmailAddress.Text = user.Email;
             utl = new BindingSource();
             m_tasks = u.getUserTasks(employeeId);
             utl.DataSource = m_tasks;
@@ -41,7 +41,7 @@ namespace Find_A_Name
             this.dgdUserTasks.DataSource = utl.DataSource;
             this.dgdUserTasks.RowHeadersVisible = false;
             this.dgdUserTasks.Columns[0].Visible = false;
-
+            this.dgdUserTasks.Columns[2].Visible = false;
 
         }
         private void LabourerPage_Load(object sender, EventArgs e)

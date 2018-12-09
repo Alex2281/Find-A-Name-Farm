@@ -198,29 +198,30 @@
             // dgdDailyTasks
             // 
             this.dgdDailyTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgdDailyTasks.Location = new System.Drawing.Point(479, 64);
+            this.dgdDailyTasks.Location = new System.Drawing.Point(323, 64);
             this.dgdDailyTasks.Name = "dgdDailyTasks";
-            this.dgdDailyTasks.Size = new System.Drawing.Size(393, 150);
+            this.dgdDailyTasks.Size = new System.Drawing.Size(549, 287);
             this.dgdDailyTasks.TabIndex = 5;
             this.dgdDailyTasks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgdDailyTasks_CellContentClick);
             // 
             // dtpSelectDay
             // 
             this.dtpSelectDay.CustomFormat = "MM/dd/yyyy";
+            this.dtpSelectDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpSelectDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpSelectDay.Location = new System.Drawing.Point(732, 38);
             this.dtpSelectDay.Name = "dtpSelectDay";
-            this.dtpSelectDay.Size = new System.Drawing.Size(140, 20);
+            this.dtpSelectDay.Size = new System.Drawing.Size(140, 23);
             this.dtpSelectDay.TabIndex = 6;
             this.dtpSelectDay.Value = new System.DateTime(2018, 12, 6, 0, 0, 0, 0);
             // 
             // lblDaysTask
             // 
             this.lblDaysTask.AutoSize = true;
-            this.lblDaysTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDaysTask.Location = new System.Drawing.Point(481, 44);
+            this.lblDaysTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDaysTask.Location = new System.Drawing.Point(322, 44);
             this.lblDaysTask.Name = "lblDaysTask";
-            this.lblDaysTask.Size = new System.Drawing.Size(87, 15);
+            this.lblDaysTask.Size = new System.Drawing.Size(102, 17);
             this.lblDaysTask.TabIndex = 7;
             this.lblDaysTask.Text = "Daily Task Log";
             // 
