@@ -122,5 +122,12 @@ namespace Find_A_Name
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminMain f = new AdminMain();
+            f.ShowDialog();
+        }
     }
 }

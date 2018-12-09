@@ -35,9 +35,13 @@ namespace Find_A_Name
         }
         private void viewInventoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Inventory n = new Inventory();
-            n.ShowDialog();
+            Inventory showInventory = new Inventory();
+            showInventory.ShowDialog();
+        }
+        private void setTaskToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            setTask SetTask = new setTask();
+            SetTask.ShowDialog();
         }
         private void mainToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -92,11 +96,7 @@ namespace Find_A_Name
             this.dgdDailyTasks.RowHeadersVisible = false;
             this.dgdDailyTasks.Columns[0].Visible = false;
         }
-        private void setTaskToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            setTask SetTask = new setTask();
-            SetTask.ShowDialog();
-        }
+
         private void deleteItemToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

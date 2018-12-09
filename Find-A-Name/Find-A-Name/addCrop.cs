@@ -51,6 +51,13 @@ namespace Find_A_Name
             AdminMain f = new AdminMain();
             f.ShowDialog();
         }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminMain f = new AdminMain();
+            f.ShowDialog();
+        }
     }
     
 }

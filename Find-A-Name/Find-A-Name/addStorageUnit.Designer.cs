@@ -39,14 +39,14 @@
             // 
             // txtStorageUnitReference
             // 
-            this.txtStorageUnitReference.Location = new System.Drawing.Point(20, 86);
+            this.txtStorageUnitReference.Location = new System.Drawing.Point(17, 86);
             this.txtStorageUnitReference.Name = "txtStorageUnitReference";
             this.txtStorageUnitReference.Size = new System.Drawing.Size(116, 20);
             this.txtStorageUnitReference.TabIndex = 0;
             // 
             // txtStorageUnitCapacity
             // 
-            this.txtStorageUnitCapacity.Location = new System.Drawing.Point(157, 86);
+            this.txtStorageUnitCapacity.Location = new System.Drawing.Point(164, 86);
             this.txtStorageUnitCapacity.Name = "txtStorageUnitCapacity";
             this.txtStorageUnitCapacity.Size = new System.Drawing.Size(116, 20);
             this.txtStorageUnitCapacity.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(14, 9);
+            this.lblTitle.Location = new System.Drawing.Point(12, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(260, 31);
             this.lblTitle.TabIndex = 2;
@@ -65,7 +65,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(17, 70);
+            this.label2.Location = new System.Drawing.Point(15, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 13);
             this.label2.TabIndex = 3;
@@ -75,7 +75,7 @@
             // 
             this.lblUnitCapacity.AutoSize = true;
             this.lblUnitCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnitCapacity.Location = new System.Drawing.Point(154, 70);
+            this.lblUnitCapacity.Location = new System.Drawing.Point(161, 70);
             this.lblUnitCapacity.Name = "lblUnitCapacity";
             this.lblUnitCapacity.Size = new System.Drawing.Size(110, 13);
             this.lblUnitCapacity.TabIndex = 4;
@@ -84,19 +84,20 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(20, 147);
+            this.btnBack.Location = new System.Drawing.Point(18, 134);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(100, 35);
+            this.btnBack.Size = new System.Drawing.Size(86, 35);
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(173, 147);
+            this.button2.Location = new System.Drawing.Point(194, 134);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 35);
+            this.button2.Size = new System.Drawing.Size(86, 35);
             this.button2.TabIndex = 6;
             this.button2.Text = "Add New";
             this.button2.UseVisualStyleBackColor = true;
@@ -104,10 +105,10 @@
             // 
             // addStorageUnit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(296, 194);
+            this.ClientSize = new System.Drawing.Size(296, 188);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblUnitCapacity);
@@ -115,7 +116,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.txtStorageUnitCapacity);
             this.Controls.Add(this.txtStorageUnitReference);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "addStorageUnit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "addStorageUnit";

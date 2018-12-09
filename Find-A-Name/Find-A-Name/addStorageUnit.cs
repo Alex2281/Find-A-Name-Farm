@@ -41,5 +41,12 @@ namespace Find_A_Name
                 MessageBox.Show("An input is correct");
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminMain f = new AdminMain();
+            f.ShowDialog();
+        }
     }
 }
