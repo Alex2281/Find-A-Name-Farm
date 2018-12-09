@@ -138,7 +138,21 @@ namespace Find_A_Name
                     }
                     
                 }
+                txtEdEmpEmail.Text = email;
+                txtEdEmpFirstName.Text = firstName;
+                txtEdEmpSurname.Text = lastName;
+                txtEdEmpPass.Text = password;
+                txtEdEmpPhone.Text = phoneNumber;
+                txtEdEmpPost.Text = postcode;
+                txtEdEmpUsern.Text = userName;
             }
+            else
+            {
+                MessageBox.Show("Lower than minimum");
+            }
+
+
+
         }
     }
 }
