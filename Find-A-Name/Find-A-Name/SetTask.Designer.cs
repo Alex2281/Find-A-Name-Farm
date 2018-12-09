@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtTaskDate = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
             this.cmbEmployees = new System.Windows.Forms.ComboBox();
@@ -130,7 +132,7 @@
             // lblFields
             // 
             this.lblFields.AutoSize = true;
-            this.lblFields.Location = new System.Drawing.Point(582, 87);
+            this.lblFields.Location = new System.Drawing.Point(242, 0);
             this.lblFields.Name = "lblFields";
             this.lblFields.Size = new System.Drawing.Size(73, 13);
             this.lblFields.TabIndex = 11;
@@ -172,9 +174,9 @@
             // 
             // btnAddTask
             // 
-            this.btnAddTask.Location = new System.Drawing.Point(628, 159);
+            this.btnAddTask.Location = new System.Drawing.Point(622, 148);
             this.btnAddTask.Name = "btnAddTask";
-            this.btnAddTask.Size = new System.Drawing.Size(75, 23);
+            this.btnAddTask.Size = new System.Drawing.Size(100, 35);
             this.btnAddTask.TabIndex = 16;
             this.btnAddTask.Text = "Add Task";
             this.btnAddTask.UseVisualStyleBackColor = true;
@@ -182,6 +184,8 @@
             // 
             // bxSetTask
             // 
+            this.bxSetTask.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.bxSetTask.Controls.Add(this.btnAddTask);
             this.bxSetTask.Controls.Add(this.lblStorageUnits);
             this.bxSetTask.Controls.Add(this.cmbStorageUnit);
@@ -197,7 +201,7 @@
             this.bxSetTask.Controls.Add(this.cmbEmployees);
             this.bxSetTask.Controls.Add(this.lblDate);
             this.bxSetTask.Controls.Add(this.dtTaskDate);
-            this.bxSetTask.Location = new System.Drawing.Point(21, 243);
+            this.bxSetTask.Location = new System.Drawing.Point(21, 256);
             this.bxSetTask.Name = "bxSetTask";
             this.bxSetTask.Size = new System.Drawing.Size(758, 189);
             this.bxSetTask.TabIndex = 17;
@@ -208,8 +212,28 @@
             // dgdTasksList
             // 
             this.dgdTasksList.AllowUserToOrderColumns = true;
+            this.dgdTasksList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgdTasksList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgdTasksList.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgdTasksList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgdTasksList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgdTasksList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgdTasksList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgdTasksList.Location = new System.Drawing.Point(21, 20);
             this.dgdTasksList.Name = "dgdTasksList";
             this.dgdTasksList.Size = new System.Drawing.Size(758, 208);
@@ -219,6 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgdTasksList);
             this.Controls.Add(this.bxSetTask);
