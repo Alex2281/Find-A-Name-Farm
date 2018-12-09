@@ -18,16 +18,15 @@ namespace Find_A_Name
         List<Employee> m_employees;
         BindingSource m_bs;
 
-        String ID;
+        int Id;
         int rowNum = 1;
-        string firstName;
-        string lastName;
+        string Name;
         string userName;
         string password;
         string email;
         string postcode;
         string phoneNumber;
-        int privilege;
+        string privilege;
 
 
         public editEmployee()
@@ -53,23 +52,23 @@ namespace Find_A_Name
             for (int i = 0; i < dataEmployee.Rows[rowNum].Cells.Count; i++)
             {
                 string result = dataEmployee.Rows[rowNum].Cells[i].Value.ToString();
-                MessageBox.Show(result);
+                //MessageBox.Show(result);
 
                 if(i == 0)
                 {
-                    firstName = result;
+                    Id = Convert.ToInt32(result);
                 }
                 if(i == 1)
                 {
-                    lastName = result;
+                    Name = result;
                 }
                 if(i == 2)
                 {
-                    userName = result;
+                    postcode = result;
                 }
                 if(i == 3)
                 {
-                    password = result;
+                    phoneNumber = result;
                 }
                 if(i == 4)
                 {
@@ -77,21 +76,33 @@ namespace Find_A_Name
                 }
                 if(i== 5)
                 {
-                    postcode = result;
+                    userName = result;
                 }
                 if(i == 6)
                 {
-                    phoneNumber = result;
+                    password = result;
+                }
+                if(i==7)
+                {
+                    privilege = result;
                 }
             }
 
-            txtEdEmpFirstName.Text = firstName;
-            txtEdEmpSurname.Text = lastName;
+            txtEdEmpId.Text = Id.ToString();
+            txtEdEmpName.Text = Name;
             txtEdEmpUsern.Text = userName;
             txtEdEmpPass.Text = password;
             txtEdEmpEmail.Text = email;
             txtEdEmpPost.Text = postcode;
             txtEdEmpPhone.Text = phoneNumber;
+            if(privilege == "Yes")
+            {
+                cboxEdPrivilege.Checked = true;
+            }
+            else
+            {
+                cboxEdPrivilege.Checked = false;
+            }
         }
 
         private void btnEditEmpPrev_Click(object sender, EventArgs e)
@@ -107,15 +118,15 @@ namespace Find_A_Name
 
                     if(i == 0)
                     {
-                        firstName = result;
+                        Id = Convert.ToInt32(result);
                     }
                     if(i == 1)
                     {
-                        lastName = result;
+                        Name = result;
                     }
                     if(i == 2)
                     {
-                        userName = result;
+                        postcode = result;
                     }
                     if(i == 3)
                     {
@@ -127,7 +138,7 @@ namespace Find_A_Name
                     }
                     if(i == 5)
                     {
-                        postcode = result;
+                        userName = result;
                     }
                     if(i == 6)
                     {
@@ -136,8 +147,8 @@ namespace Find_A_Name
                     
                 }
                 txtEdEmpEmail.Text = email;
-                txtEdEmpFirstName.Text = firstName;
-                txtEdEmpSurname.Text = lastName;
+                txtEdEmpId.Text = Id.ToString();
+                txtEdEmpName.Text = Name;
                 txtEdEmpPass.Text = password;
                 txtEdEmpPhone.Text = phoneNumber;
                 txtEdEmpPost.Text = postcode;
@@ -168,15 +179,14 @@ namespace Find_A_Name
                 privilege = "No";
             }
 
-            String firstName = txtEdEmpFirstName.Text;
-            String lastName = txtEdEmpSurname.Text;
+            String Name = txtEdEmpName.Text;
             String userName = txtEdEmpUsern.Text;
             String password = txtEdEmpPass.Text;
             String email = txtEdEmpEmail.Text;
             String postcode = txtEdEmpPost.Text;
             String phoneNumber = txtEdEmpPhone.Text;
 
-            success = ml.EditEmployee(ID, firstName, lastName, userName, password, email, postcode, phoneNumber, privilege);
+            success = ml.EditEmployee(Id, postcode, phoneNumber, email, userName, password, privilege);
 
             if(success == 1)
             {
@@ -186,8 +196,7 @@ namespace Find_A_Name
                 m_bs.DataSource = m_employees;
                 m_bs.ResetBindings(false);
                 this.dataEmployee.DataSource = m_bs.DataSource;
-                txtEdEmpFirstName.Clear();
-                txtEdEmpSurname.Clear();
+                txtEdEmpName.Clear();
                 txtEdEmpUsern.Clear();
                 txtEdEmpPass.Clear();
                 txtEdEmpEmail.Clear();

@@ -566,13 +566,14 @@ namespace Find_A_Name
             }
             return success;
         }
-        public int EditEmployee(String ID, String txtFirstname, String txtSurname, String txtUsername, String txtPassword, String txtEmail, String txtPostcode, String txtPhone, String Privilege)
+        public int EditEmployee(int Id, String txtPostcode, String txtPhone, String txtEmail, String txtUsername, String txtPassword,  String Privilege)
         {
             int success = 0;
 
             if(con.OpenConnection())
             {
-                String sql = "UPDATE Employees Set firstName = '" + txtFirstname + "', lastName = '" + txtSurname + "', userName = '" + txtUsername + "', password = '" + txtPassword + "', emailAddress = '" + txtEmail + "', postCode = '" + txtPostcode + "', contactNumber = '" + txtPhone + "', accessPrivilage = '" + Privilege + "' WHERE employeeId = " + ID + "";
+                //Query Syntax Needs Fixing - All else is sorted to this point
+                String sql = "UPDATE Employees Set  postCode = '" + txtPostcode + "', contactNumber = '" + txtPhone + "', emailAddress = '" + txtEmail + "', userName = '" + txtUsername + "', password = '" + txtPassword + "', accessPrivilage = '" + Privilege + "' WHERE employeeId = " + Id + "";
                 int result = con.Insert(sql);
 
                 if(result == 1)
