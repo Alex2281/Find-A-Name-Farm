@@ -101,5 +101,12 @@ namespace Find_A_Name
         {
 
         }
+
+        private void btnLogOutAdmin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login f = new Login();
+            f.ShowDialog();
+        }
     }
 }

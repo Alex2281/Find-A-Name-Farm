@@ -48,5 +48,12 @@ namespace Find_A_Name
         {
 
         }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login f = new Login();
+            f.ShowDialog();
+        }
     }
 }

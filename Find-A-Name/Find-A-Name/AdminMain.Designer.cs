@@ -49,6 +49,7 @@
             this.dgdDailyTasks = new System.Windows.Forms.DataGridView();
             this.dtpSelectDay = new System.Windows.Forms.DateTimePicker();
             this.lblDaysTask = new System.Windows.Forms.Label();
+            this.btnLogOutAdmin = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgdDailyTasks)).BeginInit();
             this.SuspendLayout();
@@ -106,35 +107,35 @@
             // addEmployeeToolStripMenuItem
             // 
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
             this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
             // addVehicleToolStripMenuItem
             // 
             this.addVehicleToolStripMenuItem.Name = "addVehicleToolStripMenuItem";
-            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addVehicleToolStripMenuItem.Text = "Add Vehicle";
             this.addVehicleToolStripMenuItem.Click += new System.EventHandler(this.addVehicleToolStripMenuItem_Click);
             // 
             // addFieldToolStripMenuItem
             // 
             this.addFieldToolStripMenuItem.Name = "addFieldToolStripMenuItem";
-            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addFieldToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addFieldToolStripMenuItem.Text = "Add Field";
             this.addFieldToolStripMenuItem.Click += new System.EventHandler(this.addFieldToolStripMenuItem_Click);
             // 
             // addCropToolStripMenuItem
             // 
             this.addCropToolStripMenuItem.Name = "addCropToolStripMenuItem";
-            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addCropToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addCropToolStripMenuItem.Text = "Add Crop";
             this.addCropToolStripMenuItem.Click += new System.EventHandler(this.addCropToolStripMenuItem_Click);
             // 
             // addStorageUnitToolStripMenuItem
             // 
             this.addStorageUnitToolStripMenuItem.Name = "addStorageUnitToolStripMenuItem";
-            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addStorageUnitToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.addStorageUnitToolStripMenuItem.Text = "Add Storage Unit";
             this.addStorageUnitToolStripMenuItem.Click += new System.EventHandler(this.addStorageUnitToolStripMenuItem_Click);
             // 
@@ -226,12 +227,23 @@
             this.lblDaysTask.TabIndex = 7;
             this.lblDaysTask.Text = "Daily Task Log";
             // 
+            // btnLogOutAdmin
+            // 
+            this.btnLogOutAdmin.Location = new System.Drawing.Point(732, 501);
+            this.btnLogOutAdmin.Name = "btnLogOutAdmin";
+            this.btnLogOutAdmin.Size = new System.Drawing.Size(136, 35);
+            this.btnLogOutAdmin.TabIndex = 12;
+            this.btnLogOutAdmin.Text = "Log Out";
+            this.btnLogOutAdmin.UseVisualStyleBackColor = true;
+            this.btnLogOutAdmin.Click += new System.EventHandler(this.btnLogOutAdmin_Click);
+            // 
             // AdminMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.btnLogOutAdmin);
             this.Controls.Add(this.lblDaysTask);
             this.Controls.Add(this.dtpSelectDay);
             this.Controls.Add(this.dgdDailyTasks);
@@ -273,5 +285,6 @@
         private System.Windows.Forms.DataGridView dgdDailyTasks;
         private System.Windows.Forms.DateTimePicker dtpSelectDay;
         private System.Windows.Forms.Label lblDaysTask;
+        private System.Windows.Forms.Button btnLogOutAdmin;
     }
 }
